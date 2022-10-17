@@ -21,14 +21,14 @@
 
     <section class="flex flex-col items-center space-y-4 min-h-screen">
       <h1 class="text-xl">
-        <NuxtLink to="shops">店舗一覧</NuxtLink>
+        <NuxtLink to="/shops/">店舗一覧</NuxtLink>
       </h1>
       <ul class="flex flex-col sm:flex-row gap-4">
         <li
           v-for="area in areas.items"
           :key="area._id"
           class="w-32 text-center border border-solid">
-          <NuxtLink :to="{path: `shops/${area.slug}/`}" class="block p-4">{{ area.name }}</NuxtLink>
+          <NuxtLink :to="`shops/${area.slug}/`" class="block p-4">{{ area.name }}</NuxtLink>
         </li>
       </ul>
     </section>

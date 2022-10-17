@@ -41,16 +41,16 @@
             "
           >
             <li class="w-full sm:text-center">
-              <NuxtLink to="/shops/">店舗一覧</NuxtLink>
+              <NuxtLink to="/shops/" @click.native="close">店舗一覧</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="/">お知らせ</NuxtLink>
+              <NuxtLink to="/" @click.native="close">お知らせ</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="/">宮崎餃子とは</NuxtLink>
+              <NuxtLink to="/" @click.native="close">宮崎餃子とは</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="/">お問い合わせ</NuxtLink>
+              <NuxtLink to="/" @click.native="close">お問い合わせ</NuxtLink>
             </li>
           </ul>
         </nav>
@@ -78,6 +78,9 @@ export default {
   methods: {
     toggle() {
       this.open = !this.open
+    },
+    close() {
+      this.open = false
     },
   },
   async asyncData({$axios, $config}){
@@ -110,8 +113,8 @@ export default {
 .nav {
   @apply z-0 flex-1 flex w-full items-start sm:items-center;
   @apply absolute sm:relative inset-0 h-screen sm:h-16;
-  @apply backdrop-blur-sm sm:backdrop-blur-none;
-  @apply transition;
+  @apply backdrop-blur-sm bg-white/90;
+  @apply transition duration-500 ease-out;
   @apply -translate-y-full sm:translate-y-0;
 }
 .open .nav {
