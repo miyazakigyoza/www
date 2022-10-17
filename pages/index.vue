@@ -3,12 +3,12 @@
 
     <section>
       <p class="h-screen flex justify-center items-center">
-        HERO
+        太陽の恵みがぎゅっと詰まった宮崎餃子
       </p>
     </section>
 
     <section>
-      <p class="h-4 flex justify-center items-center">
+      <p class="bg-slate-300 p-4 text-left">
         お知らせ
       </p>
     </section>
@@ -19,10 +19,18 @@
       </p>
     </section>
 
-    <section>
-      <p class="h-screen flex justify-center items-center">
-        店舗一覧
-      </p>
+    <section class="flex flex-col items-center space-y-4 min-h-screen">
+      <h1 class="text-xl">
+        <NuxtLink to="shops">店舗一覧</NuxtLink>
+      </h1>
+      <ul class="flex flex-col sm:flex-row gap-4">
+        <li
+          v-for="area in areas.items"
+          :key="area._id"
+          class="w-32 text-center border border-solid">
+          <NuxtLink :to="{path: `shops/${area.slug}/`}" class="block p-4">{{ area.name }}</NuxtLink>
+        </li>
+      </ul>
     </section>
 
     <section>
@@ -54,5 +62,15 @@
 
 <script>
 export default {
+  data: () => ({
+    areas: [],
+  }),
+  async asyncData({$axios, $config}){
+    $axios.setToken($config.TOKEN, 'Bearer')
+    const areas = await $axios.$get($config.API + '/members/areas')
+    return {
+      areas,
+    }
+  },
 }
 </script>

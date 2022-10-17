@@ -1,4 +1,8 @@
 export default {
+  publicRuntimeConfig: {
+    API: process.env.API_URL,
+    TOKEN: process.env.API_TOKEN,
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -38,7 +42,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
   ],
+
+  router: {
+    trailingSlash: true,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

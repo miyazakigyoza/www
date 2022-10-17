@@ -2,8 +2,9 @@
   <div>
 
     <Nuxt></Nuxt>
+
     <footer class="bg-amber-400">
-      <p class="container mx-auto py-4 text-center">
+      <p class="container mx-auto mt-8 py-4 text-center">
         Copyright &copy; 宮崎県ひなた餃子連合会 2022
       </p>
     </footer>
@@ -40,16 +41,16 @@
             "
           >
             <li class="w-full sm:text-center">
-              <NuxtLink to="">店舗一覧</NuxtLink>
+              <NuxtLink to="/shops/">店舗一覧</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="">お知らせ</NuxtLink>
+              <NuxtLink to="/">お知らせ</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="">宮崎餃子とは</NuxtLink>
+              <NuxtLink to="/">宮崎餃子とは</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="">お問い合わせ</NuxtLink>
+              <NuxtLink to="/">お問い合わせ</NuxtLink>
             </li>
           </ul>
         </nav>
@@ -71,12 +72,23 @@
 export default {
   data: () => ({
     open: false,
+    areas: [],
+    shops: [],
   }),
   methods: {
     toggle() {
       this.open = !this.open
     },
-  }
+  },
+  async asyncData({$axios, $config}){
+    $axios.setToken($config.TOKEN, 'Bearer')
+    const areas = await $axios.$get($config.API + '/members/areas')
+    const shops = await $axios.$get($config.API + '/members/shops')
+    return {
+      areas,
+      shops,
+    }
+  },
 }
 </script>
 
