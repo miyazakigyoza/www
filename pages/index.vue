@@ -6,31 +6,31 @@
         <img
           :src="`${shop.profileImage.src}?w=1536&ar=16:9&fit=crop`"
           class="object-cover h-full w-full" />
-          <p class="absolute right-1 bottom-1 bg-white text-black p-4">
-            <NuxtLink :to="`/shops/detail/${shop._id}/`">
+          <p class="absolute right-1 bottom-1">
+            <NuxtLink :to="`/shops/detail/${shop._id}/`" class="block bg-white text-black p-4">
               {{ shop.name }}
             </NuxtLink>
           </p>
       </div>
-      <p class="z-10 bg-amber-400 text-xl">
-        太陽の恵みがぎゅっと詰まった宮崎餃子
+      <p class="z-10 bg-amber-400/70 text-center text-3xl leading-relaxed p-8">
+        太陽の恵みが<br />ぎゅっと詰まった<br />宮崎餃子
       </p>
     </section>
 
-    <div class="container mx-auto flex flex-col space-y-4">
+    <div class="mt-4 container mx-auto flex flex-col space-y-4">
       <section>
-        <p class="bg-slate-300 p-4 text-left">
+        <p class="bg-slate-300 p-4 text-left text-sm">
           お知らせ
         </p>
       </section>
 
-      <section>
+      <section class="border border-solid">
         <p class="h-screen flex justify-center items-center">
           宮崎の餃子について
         </p>
       </section>
 
-      <section class="flex flex-col items-center space-y-4 min-h-screen">
+      <section class="flex flex-col justify-center items-center space-y-4 min-h-screen">
         <h1 class="text-xl">
           <NuxtLink to="/shops/">店舗一覧</NuxtLink>
         </h1>
@@ -44,25 +44,25 @@
         </ul>
       </section>
 
-      <section>
-        <p class="flex justify-center">
+      <section class="flex flex-col justify-center items-center">
+        <p class="">
           <img src="/img/gyozaday-monthly.png" alt="毎月3日は餃子の日" />
         </p>
       </section>
 
-      <section>
+      <section class="border border-solid flex flex-col justify-center items-center">
         <p class="h-screen flex justify-center items-center">
           協賛バナー
         </p>
       </section>
 
-      <section>
+      <section class="border border-solid flex flex-col justify-center items-center">
         <p class="h-screen flex justify-center items-center">
           お問い合わせ先
         </p>
       </section>
 
-      <section>
+      <section class="border border-solid flex flex-col justify-center items-center">
         <p class="h-screen flex justify-center items-center">
           サイトマップ
         </p>

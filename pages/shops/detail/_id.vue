@@ -92,9 +92,15 @@
         </div>
       </section>
 
-      <section v-if="relateds">
+      <section v-if="relateds && relateds.items.length > 0">
         <h2>関連店舗</h2>
-        <Card v-for="related in relateds.items" :key="related._id" :shop="related"></Card>
+        <ul class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <li
+            v-for="related in relateds.items"
+            :key="related._id">
+            <Card :shop="related"></Card>
+          </li>
+        </ul>
       </section>
     </article>
   </main>
@@ -113,12 +119,13 @@ export default {
     $axios.setToken($config.TOKEN, 'Bearer')
     const areas = await $axios.$get($config.API + '/members/areas')
     const shop = await $axios.$get($config.API + '/members/shops/' + id)
-    let apiparams = {}
-    if (shop.company) {
-      apiparams['company._id'] = shop.company._id
-    }
-    const relateds = shop.company ? await $axios.$get($config.API + '/members/shops', { apiparams }) : null
-    console.log(relateds)
+    const relateds = shop.company
+      ? await $axios.$get($config.API + '/members/shops', {
+          params: {
+            'company._id': shop.company._id
+          }
+        })
+      : null
     return {
       areas,
       shop,
