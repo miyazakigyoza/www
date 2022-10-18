@@ -5,7 +5,8 @@
       <p class="py-4">
         <img v-if="shop.profileImage" :src="`${shop.profileImage.src}?w=1200&ar=1200:630&fit=crop`" />
       </p>
-      <div class="flex flex-col sm:flex-row sm:justify-around">
+
+      <section class="flex flex-col sm:flex-row sm:justify-around">
 
         <div class="flex flex-col gap-4">
 
@@ -67,14 +68,14 @@
 
         <div class="flex flex-col gap-4">
 
-          <dl>
+          <dl v-if="shop.company">
             <dt>会社名</dt>
             <dd>
               <p>{{ shop.company.name }}</p>
             </dd>
           </dl>
 
-          <dl>
+          <dl v-if="shop.company">
             <dt>代表者</dt>
             <dd><p>{{ shop.company.CEO }}</p></dd>
           </dl>
@@ -89,8 +90,12 @@
           </dl>
 
         </div>
-      </div>
+      </section>
 
+      <section v-if="relateds">
+        <h2>関連店舗</h2>
+        <Card v-for="related in relateds.items" :key="related._id" :shop="related"></Card>
+      </section>
     </article>
   </main>
 </template>
@@ -100,6 +105,7 @@ export default {
   data: () => ({
     areas: [],
     shops: null,
+    relateds: [],
   }),
   async asyncData({$axios, $config, params}){
     const id = params.id
@@ -107,9 +113,16 @@ export default {
     $axios.setToken($config.TOKEN, 'Bearer')
     const areas = await $axios.$get($config.API + '/members/areas')
     const shop = await $axios.$get($config.API + '/members/shops/' + id)
+    let apiparams = {}
+    if (shop.company) {
+      apiparams['company._id'] = shop.company._id
+    }
+    const relateds = shop.company ? await $axios.$get($config.API + '/members/shops', { apiparams }) : null
+    console.log(relateds)
     return {
       areas,
       shop,
+      relateds,
     }
   },
 }

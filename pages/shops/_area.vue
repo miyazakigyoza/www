@@ -1,9 +1,9 @@
 <template>
   <main class="pt-20 container mx-auto">
 
-    <Areas></Areas>
+    <Areas :select="slug"></Areas>
 
-    <ul class="mt-8 grid sm:grid-cols-4 gap-4">
+    <ul class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <li
         v-for="shop in shops.items"
         :key="shop._id">
@@ -18,10 +18,11 @@
 export default {
   data: () => ({
     shops: [],
+    slug: null,
   }),
   async asyncData({$axios, $config, params}){
     const order = 'furigana'
-    const slug = params.slug
+    const slug = params.area
 
     $axios.setToken($config.TOKEN, 'Bearer')
     const areas = await $axios.$get($config.API + '/members/areas', {
@@ -32,13 +33,14 @@ export default {
     const area = areas.items.find(item => item.slug === slug)
     const shops = await $axios.$get($config.API + '/members/shops', {
       params: {
-        select: ['_id', 'name', 'area', 'profileImage'].join(','),
+        select: ['_id', 'name', 'area', 'address', 'profileImage'].join(','),
         order,
         area: area._id,
       }
     })
     return {
       shops,
+      slug,
     }
   },
 }

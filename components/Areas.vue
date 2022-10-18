@@ -1,19 +1,21 @@
 <template>
-  <ul class="flex flex-col sm:flex-row gap-4">
-    <li class="w-32 text-center border border-solid">
+  <ul class="grid grid-cols-3 sm:grid-cols-5 gap-4 text-xs">
+    <li class="border border-solid row-span-2 sm:row-span-1 flex justify-center items-center" :class="{select:select==='all'}">
       <NuxtLink to="/shops/" class="block p-4">All</NuxtLink>
     </li>
     <li
       v-for="area in areas.items"
       :key="area._id"
-      class="w-32 text-center border border-solid">
+      class="text-center border border-solid flex justify-center items-center"
+      :class="{select:area.slug===select}">
       <NuxtLink :to="{path: `/shops/${area.slug}/`}" class="block p-4">{{ area.name }}</NuxtLink>
     </li>
   </ul>
   </template>
 
-  <<script>
+<script>
   export default {
+    props: ['select'],
     data: () =>({
       areas: [],
     }),
@@ -28,5 +30,10 @@
       this.areas = areas
     },
   }
-  </script>
+</script>
   
+<style scoped lang="postcss">
+.select {
+  @apply bg-amber-400;
+}
+</style>

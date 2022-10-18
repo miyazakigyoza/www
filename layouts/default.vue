@@ -10,7 +10,7 @@
     </footer>
 
     <header
-      class="fixed top-0 w-full flex flex-row backdrop-blur-sm"
+      class="fixed top-0 w-full flex flex-row backdrop-blur-sm bg-white/95 text-black"
     >
       <div
         class="
@@ -21,11 +21,10 @@
           justify-between
           items-center
           sm:space-x-4
-          bg-white/95 text-black
         "
         :class="{open}"
       >
-        <NuxtLink to="/" class="h-8 z-10">
+        <NuxtLink to="/" class="h-8 z-10 bg-white">
           <img src="~/assets/img/logo-h.svg" alt="" class="h-full" />
         </NuxtLink>
 
@@ -38,6 +37,7 @@
               grid grid-cols-1 sm:grid-cols-4
               place-items-center
               sm:divide-x sm:divide-solid sm:divide-amber-400
+              text-sm
             "
           >
             <li class="w-full sm:text-center">
@@ -111,9 +111,9 @@ export default {
 }
 
 .nav {
-  @apply z-0 flex-1 flex w-full items-start sm:items-center;
-  @apply absolute sm:relative inset-0 h-screen sm:h-16;
-  @apply backdrop-blur-sm bg-white/90;
+  @apply z-0 flex-1 flex items-start sm:items-center;
+  @apply absolute sm:relative inset-0 h-screen sm:h-12;
+  @apply backdrop-blur-sm bg-white/90 sm:bg-transparent;
   @apply transition duration-500 ease-out;
   @apply -translate-y-full sm:translate-y-0;
 }
