@@ -2,16 +2,7 @@
   <main>
 
     <section class="relative h-screen w-screen flex justify-center items-center">
-      <div class="absolute inset-0">
-        <img
-          :src="`${shop.profileImage.src}?w=1536&ar=16:9&fit=crop`"
-          class="object-cover h-full w-full" />
-          <p class="absolute right-1 bottom-1">
-            <NuxtLink :to="`/shops/detail/${shop._id}/`" class="block bg-white text-black p-4">
-              {{ shop.name }}
-            </NuxtLink>
-          </p>
-      </div>
+      <HomePanel :shop="randamShop()" class="absolute inset-0"></HomePanel>
       <p class="z-10 bg-amber-400/70 text-center text-3xl leading-relaxed p-8">
         太陽の恵みが<br />ぎゅっと詰まった<br />宮崎餃子
       </p>
@@ -31,17 +22,13 @@
       </section>
 
       <section class="flex flex-col justify-center items-center space-y-4 min-h-screen">
+        <p>
+          <img src="/img/logo-1200s.jpg" alt="" class="w-1/2 mx-auto" />
+        </p>
         <h1 class="text-xl">
-          <NuxtLink to="/shops/">店舗一覧</NuxtLink>
+          店舗一覧
         </h1>
-        <ul class="flex flex-col sm:flex-row gap-4">
-          <li
-            v-for="area in areas.items"
-            :key="area._id"
-            class="w-32 text-center border border-solid">
-            <NuxtLink :to="`shops/${area.slug}/`" class="block p-4">{{ area.name }}</NuxtLink>
-          </li>
-        </ul>
+        <Areas :select="'all'"></Areas>
       </section>
 
       <section class="flex flex-col justify-center items-center">
@@ -88,7 +75,6 @@ export default {
         'profileImage[exists]': true,
       }
     })
-    shops.items = shops.items.filter(shop => shop.profileImage !== null)
     const n = shops.items.length
     const r = Math.floor(Math.random() * n)
     const shop = n > 0 ? shops.items[r] : null
@@ -99,5 +85,22 @@ export default {
       shop,
     }
   },
+  methods: {
+    randamShop() {
+      const n = this.shops.items.length
+      if (n === 0) {
+        return null
+      }
+      const r = Math.floor(Math.random() * n)
+      return this.shops.items[r]
+    },
+  },
 }
 </script>
+
+<style scoped lang="postcss">
+.button {
+  @apply border border-solid inline-block;
+  @apply text-center;
+}
+</style>

@@ -10,7 +10,7 @@
     </footer>
 
     <header
-      class="fixed top-0 w-full flex flex-row backdrop-blur-sm bg-white/95 text-black"
+      class="z-50 fixed top-0 w-full flex flex-row backdrop-blur-sm bg-white/95 text-black"
     >
       <div
         class="
@@ -24,7 +24,7 @@
         "
         :class="{open}"
       >
-        <NuxtLink to="/" class="h-8 z-10 bg-white">
+        <NuxtLink to="/" class="h-8 z-10">
           <img src="~/assets/img/logo-h.svg" alt="" class="h-full" />
         </NuxtLink>
 
@@ -113,7 +113,7 @@ export default {
 .nav {
   @apply z-0 flex-1 flex items-start sm:items-center;
   @apply absolute sm:relative inset-0 h-screen sm:h-12;
-  @apply backdrop-blur-sm bg-white/90 sm:bg-transparent;
+  @apply bg-white/90 sm:bg-transparent;
   @apply transition duration-500 ease-out;
   @apply -translate-y-full sm:translate-y-0;
 }
