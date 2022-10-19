@@ -1,11 +1,26 @@
 <template>
-  <main>
+  <main class="pt-20">
 
-    <section class="relative h-screen w-screen flex justify-center items-center">
-      <HomePanel :shop="randamShop()" class="absolute inset-0"></HomePanel>
-      <p class="z-10 bg-amber-400/70 text-center text-3xl leading-relaxed p-8">
-        太陽の恵みが<br />ぎゅっと詰まった<br />宮崎餃子
-      </p>
+    <section class="relative h-screen w-screen">
+      <transition-group name="fade" tag="ul">
+        <li
+          v-for="(shop,i) in shops.items"
+          :key="shop._id"
+          class="block absolute w-screen inset-0"
+          v-show="i===n">
+          <img :src="shop.profileImage.src + '?w=1536&ar=16:9&fit=crop'" alt="" class="object-cover h-full w-full" />
+          <p class="absolute right-1 bottom-1 bg-white text-black p-4">
+            {{ shop.name }}
+          </p>
+          <NuxtLink :to="`/shops/detail/${shop._id}/`" class="absolute inset-0">
+            </NuxtLink>
+        </li>
+      </transition-group>
+      <div class="absolute z-20 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-9/12 sm:w-auto">
+        <p class="p-8 bg-amber-400/70 text-center text-xl sm:text-3xl leading-relaxed font-serif">
+          太陽の恵みが<br />ぎゅっと詰まった<br />宮崎餃子
+        </p>
+      </div>
     </section>
 
     <div class="mt-4 container mx-auto flex flex-col space-y-4">
@@ -22,11 +37,9 @@
       </section>
 
       <section class="flex flex-col justify-center items-center space-y-4 min-h-screen">
-        <p>
-          <img src="/img/logo-1200s.jpg" alt="" class="w-1/2 mx-auto" />
-        </p>
-        <h1 class="text-xl">
-          店舗一覧
+        <h1 class="text-center">
+          <p class="font-enTitle text-6xl">Search</p>
+          <p class="font-serif text-xl">店舗を検索する</p>
         </h1>
         <Areas :select="'all'"></Areas>
       </section>
@@ -63,38 +76,38 @@ export default {
   data: () => ({
     areas: [],
     shops: [],
-    shop: null,
+    n: 0,
   }),
   async asyncData({$axios, $config}){
     $axios.setToken($config.TOKEN, 'Bearer')
     const areas = await $axios.$get($config.API + '/members/areas')
-    let shops = await $axios.$get($config.API + '/members/shops', {
+    const shops = await $axios.$get($config.API + '/members/shops', {
       params: {
         depth: 2,
         select: ['_id', 'name', 'profileImage'].join(','),
         'profileImage[exists]': true,
       }
     })
-    const n = shops.items.length
-    const r = Math.floor(Math.random() * n)
-    const shop = n > 0 ? shops.items[r] : null
-
     return {
       areas,
       shops,
-      shop,
     }
   },
   methods: {
-    randamShop() {
-      const n = this.shops.items.length
-      if (n === 0) {
-        return null
-      }
-      const r = Math.floor(Math.random() * n)
-      return this.shops.items[r]
-    },
+    timer() {
+      setTimeout(()=>{
+        if (this.n < this.shops.items.length-1) {
+          this.n++
+        } else {
+          this.n = 0
+        }
+        this.timer()
+      }, 5000)
+    }
   },
+  mounted() {
+    this.timer()
+  }
 }
 </script>
 
@@ -102,5 +115,12 @@ export default {
 .button {
   @apply border border-solid inline-block;
   @apply text-center;
+}
+.fade-enter-active,.fade-leave-active{ 
+  transition: opacity 1s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>

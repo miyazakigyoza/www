@@ -19,6 +19,7 @@ export default {
 <style scoped lang="postcss">
 .tategaki {
   writing-mode: vertical-rl;
+  @apply font-serif font-black;
 }
 .card .image {
   @apply transition ease-out duration-1000;

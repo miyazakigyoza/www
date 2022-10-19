@@ -1,5 +1,9 @@
 module.exports = {
   theme: {
+    fontFamily: {
+      serif: ['Noto Serif Japanese', 'ui-serif', 'serif'],
+      enTitle: ['IM Fell English SC'],
+    },
     container: {
       padding: {
         DEFAULT: '1rem',

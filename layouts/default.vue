@@ -3,10 +3,33 @@
 
     <Nuxt></Nuxt>
 
-    <footer class="bg-amber-400">
-      <p class="container mx-auto mt-8 py-4 text-center">
-        Copyright &copy; 宮崎県ひなた餃子連合会 2022
+    <footer>
+      <p>
+        <img src="/img/logo-1200s.jpg" alt="" class="w-1/4 mx-auto" />
       </p>
+
+      <div class="bg-amber-400">
+        <ul class="pt-8 flex justify-center gap-4">
+          <li>
+            <NuxtLink to="/shops/">会員店舗一覧</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="">宮崎県ひなた餃子連合会とは</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="">お知らせ</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="">お問い合わせ</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="">プライバシーポリシー</NuxtLink>
+          </li>
+        </ul>
+        <p class="container mx-auto py-4 text-center">
+          &copy; 宮崎県ひなた餃子連合会 All Rights Reserved.
+        </p>
+      </div>
     </footer>
 
     <header
@@ -35,13 +58,13 @@
               pt-20 sm:pt-4
               w-full
               grid grid-cols-1 sm:grid-cols-4
-              place-items-center
+              gap-y-4
               sm:divide-x sm:divide-solid sm:divide-amber-400
-              text-sm
+              text-xl sm:text-sm
             "
           >
             <li class="w-full sm:text-center">
-              <NuxtLink to="/shops/" @click.native="close">店舗一覧</NuxtLink>
+              <NuxtLink to="/shops/" @click.native="close">会員店舗一覧</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
               <NuxtLink to="/" @click.native="close">お知らせ</NuxtLink>
