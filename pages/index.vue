@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-20">
+  <main>
 
     <section class="relative h-screen w-screen">
       <transition-group name="fade" tag="ul">
@@ -23,23 +23,62 @@
       </div>
     </section>
 
-    <div class="mt-4 container mx-auto flex flex-col space-y-4">
-      <section>
-        <p class="bg-slate-300 p-4 text-left text-sm">
-          お知らせ
-        </p>
+    <div class="mt-4 container mx-auto flex flex-col space-y-24">
+      <section class="mt-8 w-full sm:w-9/12 mx-auto">
+        <h1 class="text-center">
+          <p class="font-enTitle text-6xl">News</p>
+          <p class="font-serif text-xl">お知らせ</p>
+        </h1>
+
+        <div class="mt-8 h-24 border border-solid border-amber-400 rounded-xl overflow-y-scroll" ref="news">
+          <article
+            v-for="note in note.contents"
+            :key="note.id"
+            class="relative h-24 p-4 flex flex-col justify-between">
+              <p class="whitespace-nowrap text-xs">{{ note.publish_at }}</p>
+              <p class="whitespace-nowrap truncate text-amber-600">{{ note.name }}</p>
+              <p class="text-right text-xs">{{ note.user.name }}</p>
+            <a
+              :href="`https://note.com/${note.user.urlname}/n/${note.key}?magazine_key=${noteMagazineId}`"
+              target="_blank"
+              class="block absolute inset-0"></a>
+          </article>
+        </div>
+
+        <div class="mt-4 text-center">
+          <a
+            href="https://note.com/yaki_gyoza/m/m6c8cc8ac407b"
+            target="_blank"
+            class="button bg-orange-500 text-white py-2 px-4">
+            <font-awesome-icon icon="fa-info-circle" />
+            お知らせ一覧
+          </a>
+        </div>
       </section>
 
-      <section class="border border-solid">
-        <p class="h-screen flex justify-center items-center">
-          宮崎の餃子について
-        </p>
+      <section class="">
+        <h1 class="text-center">
+          <p class="font-enTitle text-6xl">About</p>
+          <p class="font-serif text-xl">宮崎県ひなた餃子連合会について</p>
+        </h1>
+
+        <div class="mt-4 text-center">
+          <NuxtLink
+            to=""
+            class="button bg-orange-500 text-white py-2 px-4">
+            <font-awesome-icon icon="fa-info-circle" />
+            宮崎県ひなた餃子連合会について
+          </NuxtLink>
+        </div>
+
       </section>
 
-      <section class="flex flex-col justify-center items-center space-y-4 min-h-screen">
+      <section class="flex flex-col justify-center items-center space-y-4">
         <h1 class="text-center">
           <p class="font-enTitle text-6xl">Search</p>
-          <p class="font-serif text-xl">店舗を検索する</p>
+          <p class="font-serif text-xl">
+            <font-awesome-icon icon="fa-map-marker-alt" />
+            店舗を検索する</p>
         </h1>
         <Areas :select="'all'"></Areas>
       </section>
@@ -50,33 +89,27 @@
         </p>
       </section>
 
-      <section class="border border-solid flex flex-col justify-center items-center">
-        <p class="h-screen flex justify-center items-center">
-          協賛バナー
-        </p>
+      <section class="flex flex-col justify-center items-center">
+        <h1 class="text-center">
+          <p class="font-enTitle text-6xl">Contact</p>
+          <p class="font-serif text-xl">宮崎餃子についてのお問い合わせ</p>
+        </h1>
       </section>
 
-      <section class="border border-solid flex flex-col justify-center items-center">
-        <p class="h-screen flex justify-center items-center">
-          お問い合わせ先
-        </p>
-      </section>
-
-      <section class="border border-solid flex flex-col justify-center items-center">
-        <p class="h-screen flex justify-center items-center">
-          サイトマップ
-        </p>
-      </section>
     </div>
   </main>
 </template>
 
 <script>
+
 export default {
   data: () => ({
-    areas: [],
-    shops: [],
+    areas: {},
+    shops: {},
+    note: [],
     n: 0,
+    newsIndex: 0,
+    noteMagazineId: null,
   }),
   async asyncData({$axios, $config}){
     $axios.setToken($config.TOKEN, 'Bearer')
@@ -84,16 +117,33 @@ export default {
     const shops = await $axios.$get($config.API + '/members/shops', {
       params: {
         depth: 2,
+        limit: 5,
         select: ['_id', 'name', 'profileImage'].join(','),
         'profileImage[exists]': true,
       }
     })
+
+    $axios.setToken(false)
+    const note = await $axios.$get($config.NOTE_API, {params:{page:1}})
+    const noteMagazineId = $config.NOTE_MAGAZINE_ID
+
     return {
       areas,
       shops,
+      note: note.data.section,
+      noteMagazineId,
     }
   },
   methods: {
+    newsScroll() {
+      if (this.newsIndex < this.$refs.news.children.length-1) {
+        this.newsIndex++
+      } else {
+        this.newsIndex = 0
+      }
+      const top = this.newsIndex * 96
+      this.$refs.news.scroll({top, behavior: 'smooth'})
+    },
     timer() {
       setTimeout(()=>{
         if (this.n < this.shops.items.length-1) {
@@ -101,23 +151,24 @@ export default {
         } else {
           this.n = 0
         }
+        this.newsScroll()
         this.timer()
       }, 5000)
     }
   },
   mounted() {
     this.timer()
-  }
+  },
 }
 </script>
 
 <style scoped lang="postcss">
 .button {
-  @apply border border-solid inline-block;
+  @apply border border-solid border-amber-400 inline-block;
   @apply text-center;
 }
 .fade-enter-active,.fade-leave-active{ 
-  transition: opacity 1s;
+  transition: opacity 1500ms ease-out;
 }
 
 .fade-enter, .fade-leave-to {

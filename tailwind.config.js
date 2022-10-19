@@ -1,6 +1,7 @@
 module.exports = {
   theme: {
     fontFamily: {
+      sans: ['Noto Sans JP', 'ui-sans-serif', 'system-ui'],
       serif: ['Noto Serif Japanese', 'ui-serif', 'serif'],
       enTitle: ['IM Fell English SC'],
     },
@@ -15,4 +16,12 @@ module.exports = {
       },
     },
   },
+  extend: {
+    fontFamily: {
+      'sans': ['Noto Sans JP', 'ui-sans-serif', 'system-ui'],
+    }
+  },
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }

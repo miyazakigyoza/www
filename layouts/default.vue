@@ -3,9 +3,9 @@
 
     <Nuxt></Nuxt>
 
-    <footer>
+    <footer class="mt-20">
       <p>
-        <img src="/img/logo-1200s.jpg" alt="" class="w-1/4 mx-auto" />
+        <img src="/img/logo-1200s.jpg" alt="" class="w-1/2 md:w-1/4 mx-auto" />
       </p>
 
       <div class="bg-amber-400">

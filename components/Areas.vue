@@ -34,6 +34,6 @@
   
 <style scoped lang="postcss">
 .select {
-  @apply bg-amber-400;
+  @apply bg-orange-500 text-white;
 }
 </style>

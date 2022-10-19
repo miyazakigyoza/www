@@ -2,6 +2,8 @@ export default {
   publicRuntimeConfig: {
     API: process.env.API_URL,
     TOKEN: process.env.API_TOKEN,
+    NOTE_API: process.env.NOTE_API,
+    NOTE_MAGAZINE_ID: process.env.NOTE_MAGAZINE_ID,
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -10,7 +12,8 @@ export default {
   head: {
     title: '宮崎県ひなた餃子連合会',
     htmlAttrs: {
-      lang: 'ja'
+      lang: 'ja',
+      class: ['scroll-smooth'],
     },
     meta: [
       { charset: 'utf-8' },
@@ -20,13 +23,12 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&family=Noto+Sans+JP&family=IM+Fell+English+SC&family=Noto+Serif+Japanese:wght@900' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=IM+Fell+English+SC&family=Noto+Serif+Japanese:wght@900' },
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/css/main.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -40,7 +42,17 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    ['@nuxtjs/fontawesome', { component: 'fontAwesome', suffix: true }],
   ],
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      solid: [
+        'faInfoCircle',
+        'faMapMarkerAlt',
+      ],
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
