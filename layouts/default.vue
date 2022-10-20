@@ -17,7 +17,7 @@
             <NuxtLink to="/news/">お知らせ</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="">お問い合わせ</NuxtLink>
+            <NuxtLink to="/contact/">お問い合わせ</NuxtLink>
           </li>
           <li>
             <NuxtLink to="">プライバシーポリシー</NuxtLink>
@@ -70,7 +70,7 @@
               <NuxtLink to="/about/" @click.native="close">宮崎餃子とは</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="/" @click.native="close">お問い合わせ</NuxtLink>
+              <NuxtLink to="/contact/" @click.native="close">お問い合わせ</NuxtLink>
             </li>
           </ul>
         </nav>
@@ -90,6 +90,18 @@
 
 <script>
 export default {
+  head() {
+    return {
+      script: [
+        {
+          id: 'hs-script-loader',
+          src: `//js-na1.hs-scripts.com/${this.$config.HUBSPOT_PORTALID}.js`,
+          defer: true,
+          async: true,
+        }
+      ],
+    }
+  },
   data: () => ({
     open: false,
     areas: [],

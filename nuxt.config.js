@@ -4,6 +4,8 @@ export default {
     TOKEN: process.env.API_TOKEN,
     NOTE_API: process.env.NOTE_API,
     NOTE_MAGAZINE_ID: process.env.NOTE_MAGAZINE_ID,
+    HUBSPOT_PORTALID: process.env.HUBSPOT_PORTALID,
+    HUBSPOT_FORMID: process.env.HUBSPOT_FORMID,
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
