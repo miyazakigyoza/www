@@ -15,7 +15,7 @@
         餃子には欠かせない「豚」の飼育頭数は全国トップクラス。エサや飼育方法にこだわった「宮崎ブランドポーク」も多様で、自然豊かな環境で育てられた豚は、やわらかで豊かな風味を持ち全国的にも人気。
       </p>
       <p>
-        ＜原材料イメージ＞
+        <img src="ingredients.jpg" alt="食材イメージ" class="w-96 mx-auto" />
       </p>
       <p>
         総務省が今年2月に発表した家計調査によると、2021年における宮崎市の餃子（ぎょうざ）1世帯（2人以上）当たりの支出金額が4,184円となり、浜松市、宇都宮市以外の都市として初めて全国1位となりました。<br />
@@ -130,7 +130,7 @@
 
 #history dl {
   @apply grid grid-cols-12;
-  @apply divide-x divide-y;
+  @apply divide-x;
   @apply text-sm;
 }
 #history dt {
@@ -145,7 +145,7 @@
   @apply p-1;
 }
 #history dd dl {
-  @apply divide-x-0 divide-y-0;
+  @apply divide-x-0;
 }
 #history dd dt {
   @apply col-span-2 sm:col-span-1;

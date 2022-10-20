@@ -46,13 +46,13 @@
         </div>
 
         <div class="mt-4 text-center">
-          <a
-            href="https://note.com/yaki_gyoza/m/m6c8cc8ac407b"
+          <NuxtLink
+            to="/news/"
             target="_blank"
             class="button bg-orange-500 text-white py-2 px-4">
             <font-awesome-icon icon="fa-info-circle" />
             お知らせ一覧
-          </a>
+          </NuxtLink>
         </div>
       </section>
 

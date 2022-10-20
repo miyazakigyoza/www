@@ -14,7 +14,7 @@
             <NuxtLink to="/about/">宮崎県ひなた餃子連合会とは</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="">お知らせ</NuxtLink>
+            <NuxtLink to="/news/">お知らせ</NuxtLink>
           </li>
           <li>
             <NuxtLink to="">お問い合わせ</NuxtLink>
@@ -64,7 +64,7 @@
               <NuxtLink to="/shops/" @click.native="close">会員店舗一覧</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="/" @click.native="close">お知らせ</NuxtLink>
+              <NuxtLink to="/news/" @click.native="close">お知らせ</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
               <NuxtLink to="/about/" @click.native="close">宮崎餃子とは</NuxtLink>
