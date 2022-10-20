@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="pt-12">
 
     <section class="relative h-screen w-screen">
       <transition-group name="fade" tag="ul">
@@ -9,7 +9,7 @@
           class="block absolute w-screen inset-0"
           v-show="i===n">
           <img :src="shop.profileImage.src + '?w=1536&ar=16:9&fit=crop'" alt="" class="object-cover h-full w-full" />
-          <p class="absolute right-1 bottom-1 bg-white text-black p-4">
+          <p class="absolute right-1 top-1 bg-white text-black p-4">
             {{ shop.name }}
           </p>
           <NuxtLink :to="`/shops/detail/${shop._id}/`" class="absolute inset-0">
@@ -17,9 +17,9 @@
         </li>
       </transition-group>
       <div class="absolute z-20 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-9/12 sm:w-auto">
-        <p class="p-8 bg-amber-400/70 text-center text-xl sm:text-3xl leading-relaxed font-serif">
-          太陽の恵みが<br />ぎゅっと詰まった<br />宮崎餃子
-        </p>
+        <h1 class="p-8 bg-amber-400/70 border-2 border-solid border-amber-400 text-center text-xl sm:text-3xl leading-relaxed font-serif">
+          太陽の恵みが<br />ぎゅっと詰まった<br />宮崎ぎょうざ
+        </h1>
       </div>
     </section>
 
@@ -94,6 +94,14 @@
           <p class="font-enTitle text-6xl">Contact</p>
           <p class="font-serif text-xl">宮崎餃子についてのお問い合わせ</p>
         </h1>
+        <div class="mt-4 text-center">
+          <NuxtLink
+            to="/contact/"
+            class="button bg-orange-500 text-white py-2 px-4">
+            <font-awesome-icon icon="fa-info-circle" />
+            お問い合わせフォーム
+          </NuxtLink>
+        </div>
       </section>
 
     </div>

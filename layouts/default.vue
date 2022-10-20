@@ -3,19 +3,20 @@
 
     <Nuxt></Nuxt>
 
-    <footer class="mt-20">
+    <footer class="mt-20 border-t border-solid">
+      <div class="container mx-auto grid grid-flow-col">
+        <section v-for="area in areas.items" :key="area._id">
+          <h1 class="text-lg py-2">{{ area.name }}</h1>
+          <ul class="text-sm list-disc list-inside">
+            <li v-for="shop in shops.items.filter(s=>s.area._id===area._id)" :key="shop._id">
+              <NuxtLink :to="`/shops/detail/${shop._id}`">{{ shop.name }}</NuxtLink>
+            </li>
+          </ul>
+        </section>
+      </div>
 
-      <div class="bg-amber-400">
-        <ul class="pt-8 flex justify-center gap-4">
-          <li>
-            <NuxtLink to="/shops/">会員店舗一覧</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/about/">宮崎県ひなた餃子連合会とは</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/news/">お知らせ</NuxtLink>
-          </li>
+      <div class="mt-8 bg-amber-400">
+        <ul class="pt-8 flex flex-row justify-center gap-4 text-sm">
           <li>
             <NuxtLink to="/contact/">お問い合わせ</NuxtLink>
           </li>
@@ -23,7 +24,7 @@
             <NuxtLink to="">プライバシーポリシー</NuxtLink>
           </li>
         </ul>
-        <p class="container mx-auto py-4 text-center">
+        <p class="container mx-auto py-4 text-center text-sm">
           &copy; 宮崎県ひなた餃子連合会 All Rights Reserved.
         </p>
       </div>
@@ -115,15 +116,17 @@ export default {
       this.open = false
     },
   },
-  async asyncData({$axios, $config}){
-    $axios.setToken($config.TOKEN, 'Bearer')
-    const areas = await $axios.$get($config.API + '/members/areas')
-    const shops = await $axios.$get($config.API + '/members/shops')
-    return {
-      areas,
-      shops,
-    }
-  },
+  async fetch() {
+    console.log('fetch')
+    this.$axios.setToken(this.$config.TOKEN, 'Bearer')
+    this.areas = await this.$axios.$get(this.$config.API + '/members/areas', {
+      params: {
+          select: '_id,slug,name',
+          order: 'order'
+        }
+    })
+    this.shops = await this.$axios.$get(this.$config.API + '/members/shops')
+  }
 }
 </script>
 
