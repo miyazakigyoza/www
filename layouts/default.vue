@@ -4,9 +4,6 @@
     <Nuxt></Nuxt>
 
     <footer class="mt-20">
-      <p>
-        <img src="/img/logo-1200s.jpg" alt="" class="w-1/2 md:w-1/4 mx-auto" />
-      </p>
 
       <div class="bg-amber-400">
         <ul class="pt-8 flex justify-center gap-4">
@@ -14,7 +11,7 @@
             <NuxtLink to="/shops/">会員店舗一覧</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="">宮崎県ひなた餃子連合会とは</NuxtLink>
+            <NuxtLink to="/about/">宮崎県ひなた餃子連合会とは</NuxtLink>
           </li>
           <li>
             <NuxtLink to="">お知らせ</NuxtLink>
@@ -70,7 +67,7 @@
               <NuxtLink to="/" @click.native="close">お知らせ</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="/" @click.native="close">宮崎餃子とは</NuxtLink>
+              <NuxtLink to="/about/" @click.native="close">宮崎餃子とは</NuxtLink>
             </li>
             <li class="w-full sm:text-center">
               <NuxtLink to="/" @click.native="close">お問い合わせ</NuxtLink>

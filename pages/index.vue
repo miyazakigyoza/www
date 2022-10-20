@@ -36,7 +36,7 @@
             :key="note.id"
             class="relative h-24 p-4 flex flex-col justify-between">
               <p class="whitespace-nowrap text-xs">{{ note.publish_at }}</p>
-              <p class="whitespace-nowrap truncate text-amber-600">{{ note.name }}</p>
+              <p class="whitespace-nowrap truncate text-orange-600">{{ note.name }}</p>
               <p class="text-right text-xs">{{ note.user.name }}</p>
             <a
               :href="`https://note.com/${note.user.urlname}/n/${note.key}?magazine_key=${noteMagazineId}`"
@@ -64,7 +64,7 @@
 
         <div class="mt-4 text-center">
           <NuxtLink
-            to=""
+            to="/about/"
             class="button bg-orange-500 text-white py-2 px-4">
             <font-awesome-icon icon="fa-info-circle" />
             宮崎県ひなた餃子連合会について
@@ -151,7 +151,9 @@ export default {
         } else {
           this.n = 0
         }
-        this.newsScroll()
+        if (this.$refs.news) {
+          this.newsScroll()
+        }
         this.timer()
       }, 5000)
     }
