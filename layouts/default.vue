@@ -4,7 +4,7 @@
     <Nuxt></Nuxt>
 
     <footer class="mt-20 border-t border-solid">
-      <div class="container mx-auto grid grid-flow-col">
+      <div class="container mx-auto grid sm:grid-cols-2">
         <section v-for="area in areas.items" :key="area._id">
           <h1 class="text-lg py-2">{{ area.name }}</h1>
           <ul class="text-sm list-disc list-inside">
