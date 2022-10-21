@@ -4,7 +4,7 @@
     <section class="relative h-screen w-screen">
       <transition-group name="fade" tag="ul">
         <li
-          v-for="(shop,i) in shops.items"
+          v-for="(shop,i) in shuffle(shops.items)"
           :key="shop._id"
           class="block absolute w-screen inset-0"
           v-show="i===n">
@@ -133,10 +133,8 @@ export default {
     const areas = await $axios.$get($config.API + '/members/areas')
     const shops = await $axios.$get($config.API + '/members/shops', {
       params: {
-        depth: 2,
-        limit: 5,
         select: ['_id', 'name', 'profileImage'].join(','),
-        'profileImage[exists]': true,
+        'feature': true,
       }
     })
 
@@ -173,7 +171,14 @@ export default {
         }
         this.timer()
       }, 5000)
-    }
+    },
+    shuffle(array) {
+      for (let i = array.length - 1; i >= 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    },
   },
   mounted() {
     this.timer()
