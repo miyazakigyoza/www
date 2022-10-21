@@ -140,7 +140,7 @@
 
 #organization dl {
   @apply flex flex-col sm:flex-row flex-wrap gap-y-1;
-  @apply border-b border-solid;
+  @apply border-t border-solid pt-2;
 }
 #organization dt,
 #organization dd {
