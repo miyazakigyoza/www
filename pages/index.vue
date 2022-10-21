@@ -4,7 +4,7 @@
     <section class="relative h-screen w-screen">
       <transition-group name="fade" tag="ul">
         <li
-          v-for="(shop,i) in shuffle(shops.items)"
+          v-for="(shop,i) in shops.items"
           :key="shop._id"
           class="block absolute w-screen inset-0"
           v-show="i===n">
