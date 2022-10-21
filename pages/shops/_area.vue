@@ -16,9 +16,16 @@
 
 <script>
 export default {
+  head() {
+    console.log(this.area)
+    return {
+      title: this.area.name + 'エリア | 会員店舗一覧',
+    }
+  },
   data: () => ({
     shops: [],
     slug: null,
+    area: null,
   }),
   async asyncData({$axios, $config, params}){
     const order = 'furigana'
@@ -27,7 +34,7 @@ export default {
     $axios.setToken($config.TOKEN, 'Bearer')
     const areas = await $axios.$get($config.API + '/members/areas', {
       params: {
-        select: ['_id', 'slug'].join(','),
+        select: ['_id', 'slug', 'name'].join(','),
       }
     })
     const area = areas.items.find(item => item.slug === slug)
@@ -41,6 +48,7 @@ export default {
     return {
       shops,
       slug,
+      area,
     }
   },
 }

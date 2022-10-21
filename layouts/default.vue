@@ -10,14 +10,14 @@
       <div class="container mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
         <section v-for="area in areas.items" :key="area._id" class="m-2 p-4 pt-2 border border-solid border-amber-500 rounded-xl">
           <h1 class="text-lg py-2">
-            <NuxtLink :to="`/shops/${area.slug}`">
+            <NuxtLink :to="`/shops/${area.slug}/`">
               <font-awesome-icon icon="fa-map-marker-alt" />
               {{ area.name }} エリア
             </NuxtLink>
           </h1>
           <ul class="text-sm flex flex-col gap-y-1">
             <li v-for="shop in shops.items.filter(s=>s.area._id===area._id)" :key="shop._id">
-              <NuxtLink :to="`/shops/detail/${shop._id}`" class="flex items-center gap-x-2">
+              <NuxtLink :to="`/shops/detail/${shop._id}/`" class="flex items-center gap-x-2">
                 <font-awesome-icon icon="fa-caret-right" />
                 {{ shop.name }}
               </NuxtLink>

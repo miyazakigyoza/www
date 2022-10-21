@@ -13,6 +13,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: '宮崎県ひなた餃子連合会',
+    titleTemplate: '%s | 宮崎県ひなた餃子連合会',
     htmlAttrs: {
       lang: 'ja',
       class: ['scroll-smooth'],

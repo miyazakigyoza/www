@@ -42,6 +42,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'お知らせ',
+    }
+  },
   data: () => ({
     note: [],
     noteMagazineId: null,

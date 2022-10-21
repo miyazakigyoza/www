@@ -16,6 +16,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: '会員店舗一覧',
+    }
+  },
   data: () => ({
     shops: [],
   }),

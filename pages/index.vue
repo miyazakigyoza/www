@@ -114,6 +114,12 @@
 <script>
 
 export default {
+  head() {
+    return {
+      title: '宮崎県ひなた餃子連合会',
+      titleTemplate: '',
+    }
+  },
   data: () => ({
     areas: {},
     shops: {},
