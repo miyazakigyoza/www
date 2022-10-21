@@ -50,21 +50,27 @@
 
       </div>
 
-      <div class="mt-8 flex flex-col gap-4">
+      <div v-show="shop.company" class="mt-8 flex flex-col gap-4">
 
-        <dl v-if="shop.company">
+        <dl v-show="shop.company.name">
           <dt>会社名</dt>
-          <dd class="relative">
-            <p>
-              {{ shop.company.name }}
-            </p>
-            <a :href="shop.company.url" class="inset-0"></a>
+          <dd>
+            <p>{{ shop.company.name }}</p>
           </dd>
         </dl>
 
-        <dl v-if="shop.company">
+        <dl v-show="shop.company.CEO">
           <dt>代表者</dt>
           <dd><p>{{ shop.company.CEO }}</p></dd>
+        </dl>
+
+        <dl v-show="shop.company.url">
+          <dt>会社情報</dt>
+          <dd>
+            <p>
+              <a :href="shop.company.url" target="_blank">{{ shop.company.url }}</a>
+            </p>
+          </dd>
         </dl>
 
       </div>
