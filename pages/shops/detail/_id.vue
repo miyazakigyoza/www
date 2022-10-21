@@ -10,21 +10,9 @@
       <div class="mt-8 flex flex-col gap-4">
 
         <dl>
-          <dt>営業時間</dt>
-          <dd v-html="shop.hours"></dd>
-        </dl>
-
-        <dl>
-          <dt>定休日</dt>
-          <dd>
-            <p v-for="(day,i) in shop.holiday" :key="i">{{day}}</p>
-          </dd>
-        </dl>
-
-        <dl>
           <dt>住所</dt>
           <dd>
-            <p>〒{{ shop.address.postcode }}</p>
+            <p v-show="shop.address.postcode">〒{{ shop.address.postcode }}</p>
             <p>
               {{ shop.address.prefecture }}
               {{ shop.address.city }}<br class="inline lg:hidden" />
@@ -37,6 +25,20 @@
         <dl v-show="shop.tel">
           <dt>TEL</dt>
           <dd><p>{{ shop.tel }}</p></dd>
+        </dl>
+
+        <dl>
+          <dt>営業時間</dt>
+          <dd>
+            <p v-for="hour in shop.hours" :key="hour._id">{{ hour.data }}</p>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt>定休日</dt>
+          <dd>
+            <p v-for="(day,i) in shop.holiday" :key="i">{{day}}</p>
+          </dd>
         </dl>
 
         <div v-if="shop.remarks" class="flex flex-col gap-4">
@@ -52,8 +54,11 @@
 
         <dl v-if="shop.company">
           <dt>会社名</dt>
-          <dd>
-            <p>{{ shop.company.name }}</p>
+          <dd class="relative">
+            <p>
+              {{ shop.company.name }}
+            </p>
+            <a :href="shop.company.url" class="inset-0"></a>
           </dd>
         </dl>
 
@@ -62,7 +67,11 @@
           <dd><p>{{ shop.company.CEO }}</p></dd>
         </dl>
 
-        <dl>
+      </div>
+
+      <div class="mt-8 flex flex-col gap-4">
+
+        <dl v-show="shop.links.length">
           <dt>リンク</dt>
           <dd class="flex flex-col gap-2">
             <p v-for="link in shop.links" :key="link._id">
@@ -108,7 +117,9 @@ export default {
     const relateds = shop.company
       ? await $axios.$get($config.API + '/members/shops', {
           params: {
-            'company._id': shop.company._id
+            depth: 1,
+            '_id[ne]': shop._id,
+            'company': shop.company._id
           }
         })
       : null
