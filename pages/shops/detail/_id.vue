@@ -5,9 +5,11 @@
         <img v-if="shop.profileImage" :src="`${shop.profileImage.src}?w=1200&ar=1200:630&fit=crop`" />
       </p>
 
-      <h1 class="text-3xl border-b border-solid border-amber-400 pb-2">{{ shop.name }}</h1>
+      <h1 class="mt-8 text-3xl border-b border-solid border-amber-400 pb-2">{{ shop.name }}</h1>
+      <div v-html="shop.description" class="mt-4"></div>
 
       <div class="mt-8 flex flex-col gap-4">
+        <h2 class="text-xl">店舗情報</h2>
 
         <dl>
           <dt>住所</dt>
@@ -51,6 +53,7 @@
       </div>
 
       <div v-show="shop.company" class="mt-8 flex flex-col gap-4">
+        <h2 class="text-xl">会社情報</h2>
 
         <dl v-show="shop.company.name">
           <dt>会社名</dt>
@@ -75,21 +78,8 @@
 
       </div>
 
-      <div class="mt-8 flex flex-col gap-4">
-
-        <dl v-show="shop.links.length">
-          <dt>リンク</dt>
-          <dd class="flex flex-col gap-2">
-            <p v-for="link in shop.links" :key="link._id">
-              <a :href="link.data.URL" target="_blank">{{ link.data.label }}</a>
-            </p>
-          </dd>
-        </dl>
-
-      </div>
-
-      <section v-if="relateds && relateds.items.length > 0">
-        <h2>関連店舗</h2>
+      <section v-if="relateds && relateds.items.length > 0" class="mt-8">
+        <h2 class="text-xl">関連店舗</h2>
         <ul class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <li
             v-for="related in relateds.items"
@@ -97,6 +87,18 @@
             <Card :shop="related"></Card>
           </li>
         </ul>
+      </section>
+
+      <section class="mt-8 flex flex-col gap-4" v-show="shop.links.length">
+        <h2 class="text-xl">リンク</h2>
+
+        <ul class="list-disc list-inside space-y-2">
+          <li v-for="link in shop.links" :key="link._id">
+            <a :href="link.data.URL" target="_blank">{{ link.data.label }}</a>
+          </li>
+        </ul>
+
+
       </section>
     </article>
   </main>
