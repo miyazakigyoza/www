@@ -5,7 +5,10 @@
       <img v-if="shop.profileImage" :src="shop.profileImage.src+'?w=640&ar=3:4&fit=crop'" alt="" class="image" />
     </p>
     <h1 class="tategaki text-2xl absolute top-2 left-2 bg-white/80 p-4">{{ shop.name }}</h1>
-    <p class="absolute right-2 bottom-2 bg-black/60 text-white p-4">{{ shop.address.prefecture }} {{ shop.address.city }}</p>
+    <p class="absolute right-2 bottom-2 bg-black/60 text-white p-4" v-if="shop.address">
+      <span v-if="shop.address.prefecture">{{ shop.address.prefecture }}</span>
+      <span v-if="shop.address.city">{{ shop.address.city }}</span>
+    </p>
     <NuxtLink :to="{path: `/shops/detail/${shop._id}/`}" class="absolute inset-0"></NuxtLink>
   </article>
 </template>

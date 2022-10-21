@@ -11,7 +11,7 @@
       <div class="mt-8 flex flex-col gap-4">
         <h2 class="text-xl">店舗情報</h2>
 
-        <dl>
+        <dl v-if="shop.address">
           <dt>住所</dt>
           <dd>
             <p v-show="shop.address.postcode">〒{{ shop.address.postcode }}</p>
@@ -29,14 +29,14 @@
           <dd><p>{{ shop.tel }}</p></dd>
         </dl>
 
-        <dl>
+        <dl v-if="shop.hours.length">
           <dt>営業時間</dt>
           <dd>
             <p v-for="hour in shop.hours" :key="hour._id">{{ hour.data }}</p>
           </dd>
         </dl>
 
-        <dl>
+        <dl v-if="shop.holiday.length">
           <dt>定休日</dt>
           <dd>
             <p v-for="(day,i) in shop.holiday" :key="i">{{day}}</p>
@@ -52,7 +52,7 @@
 
       </div>
 
-      <div v-show="shop.company" class="mt-8 flex flex-col gap-4">
+      <div v-if="shop.company" class="mt-8 flex flex-col gap-4">
         <h2 class="text-xl">会社情報</h2>
 
         <dl v-show="shop.company.name">
@@ -78,7 +78,7 @@
 
       </div>
 
-      <section v-if="relateds && relateds.items.length > 0" class="mt-8">
+      <section v-if="(relateds && (relateds.items.length > 0))" class="mt-8">
         <h2 class="text-xl">関連店舗</h2>
         <ul class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <li
