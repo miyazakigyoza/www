@@ -50,8 +50,15 @@ export default {
     component: 'fa',
     icons: {
       solid: [
-        'faInfoCircle',
+        'faCircleInfo',
         'faMapMarkerAlt',
+        'faCaretRight',
+        'faPaperPlane',
+        'faBullhorn',
+        'faSpinner',
+      ],
+      regular: [
+        'faPaperPlane',
       ],
     }
   },

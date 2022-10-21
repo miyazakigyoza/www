@@ -4,12 +4,23 @@
     <Nuxt></Nuxt>
 
     <footer class="mt-20 border-t border-solid">
-      <div class="container mx-auto grid sm:grid-cols-2">
-        <section v-for="area in areas.items" :key="area._id">
-          <h1 class="text-lg py-2">{{ area.name }}</h1>
-          <ul class="text-sm list-disc list-inside">
+      <p class="container mx-auto p-4 flex justify-center">
+        <img src="~/assets/img/logo-h.svg" alt="宮崎餃子" class="h-20" />
+      </p>
+      <div class="container mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
+        <section v-for="area in areas.items" :key="area._id" class="m-2 p-4 pt-2 border border-solid border-amber-500 rounded-xl">
+          <h1 class="text-lg py-2">
+            <NuxtLink :to="`/shops/${area.slug}`">
+              <font-awesome-icon icon="fa-map-marker-alt" />
+              {{ area.name }} エリア
+            </NuxtLink>
+          </h1>
+          <ul class="text-sm flex flex-col gap-y-1">
             <li v-for="shop in shops.items.filter(s=>s.area._id===area._id)" :key="shop._id">
-              <NuxtLink :to="`/shops/detail/${shop._id}`">{{ shop.name }}</NuxtLink>
+              <NuxtLink :to="`/shops/detail/${shop._id}`" class="flex items-center gap-x-2">
+                <font-awesome-icon icon="fa-caret-right" />
+                {{ shop.name }}
+              </NuxtLink>
             </li>
           </ul>
         </section>
@@ -25,7 +36,7 @@
           </li>
         </ul>
         <p class="container mx-auto py-4 text-center text-sm">
-          &copy; 宮崎県ひなた餃子連合会 All Rights Reserved.
+          &copy; <NuxtLink to="/">宮崎県ひなた餃子連合会</NuxtLink> All Rights Reserved.
         </p>
       </div>
     </footer>
@@ -46,7 +57,7 @@
         :class="{open}"
       >
         <NuxtLink to="/" class="h-8 z-10">
-          <img src="~/assets/img/logo-h.svg" alt="" class="h-full" />
+          <img src="~/assets/img/logo-h.svg" alt="宮崎餃子" class="h-full" />
         </NuxtLink>
 
         <nav class="nav">
@@ -62,16 +73,36 @@
             "
           >
             <li class="w-full sm:text-center">
-              <NuxtLink to="/shops/" @click.native="close">会員店舗一覧</NuxtLink>
+              <NuxtLink to="/shops/" @click.native="close" class="flex items-center sm:justify-center gap-2">
+                <span class="w-6 text-center">
+                  <font-awesome-icon icon="fa-map-marker-alt" />
+                </span>
+                <span>会員店舗一覧</span>
+              </NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="/news/" @click.native="close">お知らせ</NuxtLink>
+              <NuxtLink to="/news/" @click.native="close" class="flex items-center sm:justify-center gap-2">
+                <span class="w-6 text-center">
+                  <font-awesome-icon icon="fa-solid fa-bullhorn" />
+                </span>
+                <span>お知らせ</span>
+              </NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="/about/" @click.native="close">宮崎餃子とは</NuxtLink>
+              <NuxtLink to="/about/" @click.native="close" class="flex items-center sm:justify-center gap-2">
+                <span class="w-6 text-center">
+                  <font-awesome-icon icon="fa-info-circle" />
+                </span>
+                <span>宮崎餃子とは</span>
+              </NuxtLink>
             </li>
             <li class="w-full sm:text-center">
-              <NuxtLink to="/contact/" @click.native="close">お問い合わせ</NuxtLink>
+              <NuxtLink to="/contact/" @click.native="close" class="flex items-center sm:justify-center gap-2">
+                <span class="w-6 text-center">
+                  <font-awesome-icon icon="fa-regular fa-paper-plane" />
+                </span>
+                <span>お問い合わせ</span>
+              </NuxtLink>
             </li>
           </ul>
         </nav>
@@ -117,7 +148,6 @@ export default {
     },
   },
   async fetch() {
-    console.log('fetch')
     this.$axios.setToken(this.$config.TOKEN, 'Bearer')
     this.areas = await this.$axios.$get(this.$config.API + '/members/areas', {
       params: {
@@ -125,7 +155,12 @@ export default {
           order: 'order'
         }
     })
-    this.shops = await this.$axios.$get(this.$config.API + '/members/shops')
+    this.shops = await this.$axios.$get(this.$config.API + '/members/shops', {
+      params: {
+          select: '_id,name,area',
+          order: 'furigana'
+        }
+    })
   }
 }
 </script>

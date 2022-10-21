@@ -27,17 +27,14 @@
       </li>
     </ul>
 
-    <div class="fixed top-1/2 right-0 -translate-y-1/2">
-      <div class="">
+    <div class="mt-8">
         <a
-        href="https://note.com/yaki_gyoza/m/m6c8cc8ac407b"
-        target="_blank"
-        class="tategaki block w-10 py-8 px-2 bg-orange-500 text-white text-center shadow-sm">
-        <font-awesome-icon icon="fa-info-circle" />
-        お知らせ一覧
-      </a>
-
-      </div>
+          href="https://note.com/yaki_gyoza/m/m6c8cc8ac407b"
+          target="_blank"
+          class="w-40 p-4 mx-auto text-lg flex flex-col justify-center items-center gap-2">
+          <span>お知らせ一覧</span>
+          <img src="/img/note.png" class="" />
+        </a>
     </div>
 
 </main>
@@ -75,10 +72,6 @@ export default {
 }
 .card:hover .image {
   @apply scale-125;
-}
-
-.tategaki {
-  writing-mode: vertical-rl;
 }
 
 </style>

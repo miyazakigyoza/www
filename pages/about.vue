@@ -7,95 +7,118 @@
       </h1>
     </header>
 
-    <section id="feature" class="container mx-auto mt-20 flex flex-col items-start sm:items-center gap-y-4">
-      <h2 class="text-2xl border-b border-solid border-amber-400 pb-2">宮崎餃子の特色</h2>
+    <section id="feature" class="container mx-auto mt-20">
+      <h2 class="text-2xl border-b border-solid border-amber-400 pb-2 text-center">宮崎餃子の特色</h2>
       <p>
-        宮崎県は、日照時間、快晴日数・平均気温が全国トップクラスで、燦々と降り注ぐ太陽の恵みにより、食料自給率や土地生産性が全国１位と、農畜産業が盛んです。
-        そんな宮崎県では、餃子の原料もとても高品質。
-        餃子には欠かせない「豚」の飼育頭数は全国トップクラス。エサや飼育方法にこだわった「宮崎ブランドポーク」も多様で、自然豊かな環境で育てられた豚は、やわらかで豊かな風味を持ち全国的にも人気。
+        宮崎県の日照時間や快晴日数・平均気温は全国トップクラスで、食料自給率や土地生産性が全国１位と、農畜産業が盛んです。
+      </p>
+      <img src="ingredients.jpg" alt="食材イメージ" class="w-full sm:w-96 float-none sm:float-right sm:ml-4 sm:mb-4" />
+      <p>
+        そんな宮崎で育った「肉」や「野菜」は、燦々と降り注ぐ太陽の恵みによって、とても高品質で旨味がしっかり。
+        また、海や山など自然豊かで南北に広がる多様な環境で、さまざまな品種が育てられています。
       </p>
       <p>
-        <img src="ingredients.jpg" alt="食材イメージ" class="w-96 mx-auto" />
+        例えば「豚」の飼育頭数は全国トップクラス。
+        エサや飼育方法にこだわった「宮崎ブランドポーク」も多様で、自然豊かな環境で育てられた豚は、やわらかで豊かな風味を持ち全国的にも人気。
       </p>
       <p>
-        総務省が今年2月に発表した家計調査によると、2021年における宮崎市の餃子（ぎょうざ）1世帯（2人以上）当たりの支出金額が4,184円となり、浜松市、宇都宮市以外の都市として初めて全国1位となりました。<br />
-        餃子専門店や持ち帰り専門店があり、スーパーでもさまざまな餃子が気軽に購入でき、餃子のお持ち帰り文化が宮崎に根付いていることがその理由だと考えられます。
+        豚だけでなく、「牛」や「鶏」も全国トップクラスの品種で、「宮崎牛」や「地鶏の炭火焼き」「チキン南蛮」などは全国にも知られる宮崎名物になっています。
       </p>
       <p>
-        <img src="miya1.jpg" alt="＜祝　日本一！＞" class="w-96 mx-auto" />
+        このような多様で高品質な食材を餃子に包み込まれて、タレなしでも美味しい多種多様な餃子が多く作られています。
+      </p>
+
+      <p class="clear-both">
+        そんな美味しい餃子は、宮崎市民の食卓でも大人気。
+      </p>
+
+      <img src="miya1.jpg" alt="＜祝　日本一！＞" class="w-full sm:w-80 sm:float-left sm:mr-4 sm:mb-4" />
+
+      <p>
+        2021年の家計調査（総務省統計局発表）における宮崎市の餃子（ぎょうざ）1世帯（2人以上）当たりの支出金額が4,184円となり、浜松市、宇都宮市以外の都市として初めて全国1位となりました。
       </p>
       <p>
-        宮崎県内ではキャベツの名産地としても知られる「餃子のまち高鍋」という一大拠点があり、宮崎市だけでなく県全域に餃子をよく食べるという文化が広がっています。
+        宮崎では、餃子のお持ち帰り文化が根付いています。<br />
+        たくさんの新鮮な餃子をスーパーやお持ち帰り餃子専門店で購入し、家族で餃子を囲んで食べることが日常です。
+        この宮崎の餃子文化が、日本一のぎょうざ支出金額・購入頻度につながっています。
       </p>
+      <p class="clear-both">
+        宮崎県内ではキャベツの名産地としても知られ、全国でも「マツコの知らない世界 お取り寄せ餃子の世界」で紹介されて話題となった「餃子のまち高鍋」をはじめ、宮崎市だけでなく宮崎県各地でさまざまな餃子文化が広がっています。
+      </p>
+
+      <img src="/img/gyozaday-monthly.png" alt="" class="w-full sm:w-96 mx-auto" />
 
       <p>
         宮崎県ひなた餃子連合会では、毎月3日を「ぎょうざの日」としてPR活動に取り組むほか、宮崎県産原料を使った「宮崎餃子」の認定基準を策定し、将来的なブランド化を目指しています。
       </p>
-      <p>
-        <img src="/img/gyozaday-monthly.png" alt="" class="w-96 mx-auto" />
-      </p>
-    </section>
-
-    <section id="organization" class="container mx-auto mt-20 flex flex-col items-start sm:items-center gap-y-2">
-      <h2 class="text-2xl border-b border-solid border-amber-400 pb-2">宮崎県ひなた餃子連合会</h2>
-      <p>
-        <img src="/img/logo-1200s.jpg" alt="" class="w-48" />
-      </p>
-      <h3 class="mt-8 text-xl">組織概要</h3>
-      <dl class="mt-4">
-        <dt>名称</dt>
-        <dd>宮崎県ひなた餃子連合会</dd>
-      </dl>
-      <dl>
-        <dt>設立</dt>
-        <dd>2022年1月</dd>
-      </dl>
-      <dl>
-        <dt>代表者</dt>
-        <dd>武末哲治</dd>
-      </dl>
-      <dl>
-        <dt>事務局</dt>
-        <dd>武末哲治</dd>
-      </dl>
-
-      <h3 class="mt-8 text-xl">支部</h3>
-
-      <dl class="mt-4">
-        <dt>県央支部</dt>
-        <dd>
-          <p>支部長： 馬渡陽一郎</p>
-          <p>広報部長：</p>
-        </dd>
-      </dl>
-      <dl>
-        <dt>宮崎市支部</dt>
-        <dd>
-          <p>支部長：渡辺愛香</p>
-          <p>広報部長：</p>
-        </dd>
-      </dl>
-      <dl>
-        <dt>県北支部</dt>
-        <dd>
-          <p>支部長：</p>
-          <p>広報部長：</p>
-        </dd>
-      </dl>
-      <dl>
-        <dt>県西・県南支部</dt>
-        <dd>
-          <p>支部長：</p>
-          <p>広報部長：</p>
-        </dd>
-      </dl>
 
     </section>
 
-    <section id="history" class="container mx-auto flex flex-col items-start sm:items-center">
+    <section id="organization" class="container mx-auto mt-20">
+      <h2 class="text-2xl border-b border-solid border-amber-400 pb-2 text-center">宮崎県ひなた餃子連合会</h2>
+      <p>
+        <img src="/img/logo-1200s.jpg" alt="" class="w-48 mx-auto" />
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <section>
+          <h3 class="mt-8 text-xl">組織概要</h3>
+          <dl class="mt-4">
+            <dt>名称</dt>
+            <dd>宮崎県ひなた餃子連合会</dd>
+          </dl>
+          <dl>
+            <dt>設立</dt>
+            <dd>2022年1月</dd>
+          </dl>
+          <dl>
+            <dt>代表者</dt>
+            <dd>武末哲治</dd>
+          </dl>
+          <dl>
+            <dt>事務局</dt>
+            <dd>高鍋商工会議所</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h3 class="mt-8 text-xl">支部</h3>
+
+          <dl class="mt-4">
+            <dt>県央支部</dt>
+            <dd>
+              <p>支部長： 馬渡陽一郎</p>
+              <p>広報部長：</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>宮崎市支部</dt>
+            <dd>
+              <p>支部長：渡辺愛香</p>
+              <p>広報部長：</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>県北支部</dt>
+            <dd>
+              <p>支部長：</p>
+              <p>広報部長：</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>県西・県南支部</dt>
+            <dd>
+              <p>支部長：</p>
+              <p>広報部長：</p>
+            </dd>
+          </dl>
+        </section>
+      </div>
+    </section>
+
+    <section id="history" class="container mx-auto">
       <h3 class="mt-8 text-xl">沿革</h3>
       <dl class="mt-4">
-        <dt>2022年<br />（令和4年）</dt>
+        <dt>2022年<br /><span class="text-xs">（令和4年）</span></dt>
         <dd>
           <dl>
             <dt>1月</dt>
@@ -110,9 +133,11 @@
 </template>
 
 <style scoped lang="postcss">
-#feature p {
-  @apply w-full sm:w-5/6;
+#feature p,
+#feature img {
+  @apply mt-4;
 }
+
 #organization dl {
   @apply flex flex-col sm:flex-row flex-wrap gap-y-1;
   @apply border-b border-solid;
@@ -125,7 +150,7 @@
   @apply sm:w-32 pb-1 sm:pb-2 text-sm;
 }
 #organization dd {
-  @apply sm:w-48 pb-2;
+  @apply w-auto pb-2;
 }
 
 #history dl {
@@ -135,10 +160,7 @@
 }
 #history dt {
   @apply col-span-3 lg:col-span-2;
-  @apply p-1 text-right;
-}
-#history dt br {
-  @apply inline sm:hidden;
+  @apply p-1;
 }
 #history dd {
   @apply col-span-9 lg:col-span-10;

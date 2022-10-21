@@ -30,11 +30,11 @@
           <p class="font-serif text-xl">お知らせ</p>
         </h1>
 
-        <div class="mt-8 h-24 border border-solid border-amber-400 rounded-xl overflow-y-scroll" ref="news">
+        <div class="mt-8 h-24 border border-solid border-amber-400 rounded-xl overflow-y-scroll snap-y snap-mandatory" ref="news">
           <article
             v-for="note in note.contents"
             :key="note.id"
-            class="relative h-24 p-4 flex flex-col justify-between">
+            class="snap-center relative h-24 p-4 flex flex-col justify-between">
               <p class="whitespace-nowrap text-xs">{{ note.publish_at }}</p>
               <p class="whitespace-nowrap truncate text-orange-600">{{ note.name }}</p>
               <p class="text-right text-xs">{{ note.user.name }}</p>
@@ -49,8 +49,8 @@
           <NuxtLink
             to="/news/"
             target="_blank"
-            class="button bg-orange-500 text-white py-2 px-4">
-            <font-awesome-icon icon="fa-info-circle" />
+            class="button bg-orange-500 text-white py-2 px-8">
+            <font-awesome-icon icon="fa-solid fa-bullhorn" />
             お知らせ一覧
           </NuxtLink>
         </div>
@@ -62,11 +62,14 @@
           <p class="font-serif text-xl">宮崎県ひなた餃子連合会について</p>
         </h1>
 
+        <p>
+          宮崎餃子の特色
+        </p>
         <div class="mt-4 text-center">
           <NuxtLink
             to="/about/"
-            class="button bg-orange-500 text-white py-2 px-4">
-            <font-awesome-icon icon="fa-info-circle" />
+            class="button bg-orange-500 text-white py-2 px-8">
+            <font-awesome-icon icon="fa-solid fa-circle-info" />
             宮崎県ひなた餃子連合会について
           </NuxtLink>
         </div>
@@ -97,8 +100,8 @@
         <div class="mt-4 text-center">
           <NuxtLink
             to="/contact/"
-            class="button bg-orange-500 text-white py-2 px-4">
-            <font-awesome-icon icon="fa-info-circle" />
+            class="button bg-orange-500 text-white py-2 px-8">
+            <font-awesome-icon icon="fa-solid fa-paper-plane" />
             お問い合わせフォーム
           </NuxtLink>
         </div>
