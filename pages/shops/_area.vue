@@ -17,7 +17,6 @@
 <script>
 export default {
   head() {
-    console.log(this.area)
     return {
       title: this.area.name + 'エリア | 会員店舗一覧',
     }

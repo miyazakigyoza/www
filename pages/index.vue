@@ -9,7 +9,7 @@
           class="block absolute w-screen inset-0"
           v-show="i===n">
           <img :src="shop.profileImage.src + '?w=1536&ar=16:9&fit=crop'" alt="" class="object-cover h-full w-full" />
-          <p class="absolute right-1 top-1 bg-white text-black p-4">
+          <p class="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 bg-white text-black p-4">
             {{ shop.name }}
           </p>
           <NuxtLink :to="`/shops/detail/${shop._id}/`" class="absolute inset-0">

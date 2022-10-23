@@ -51,7 +51,6 @@ export default {
   },
   methods: {
     onLoadHubspot() {
-      console.log(this.$config)
       hbspt.forms.create({
         region: 'na1',
         portalId: this.$config.HUBSPOT_PORTALID,

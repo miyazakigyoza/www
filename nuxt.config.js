@@ -6,6 +6,7 @@ export default {
     NOTE_MAGAZINE_ID: process.env.NOTE_MAGAZINE_ID,
     HUBSPOT_PORTALID: process.env.HUBSPOT_PORTALID,
     HUBSPOT_FORMID: process.env.HUBSPOT_FORMID,
+    GOOGLE_MAP: process.env.GOOGLE_MAP,
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
