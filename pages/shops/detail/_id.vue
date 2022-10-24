@@ -11,7 +11,7 @@
 
 
       <div v-if="products.items.length > 0" class="mt-8">
-        <div class="grid sm:grid-cols-4 gap-4">
+        <div class="grid sm:grid-cols-3 gap-4">
           <section  v-for="product in products.items" :key="product._id" class="product relative w-full h-full">
             <p v-if="product.image" class="overflow-hidden rounded-full">
               <img :src="product.image.src+'?w=600&ar=1:1&fit=crop'" :alt="product.name" class="image" />
@@ -25,13 +25,13 @@
             <div class="mt-2 flex flex-col gap-2">
               <Range v-if="product.thickness" :n="product.thickness" :min="'薄'" :max="'厚'" :title="'皮の厚さ'"></Range>
               <Range v-if="product.size" :n="product.size" :min="'小'" :max="'大'" :title="'大きさ'"></Range>
-              <Range v-if="product.garlic" :n="product.garlic" :min="'無'" :max="'多'" :title="'ニンニク量'"></Range>
+              <Range v-if="product.garlic" :n="product.garlic" :min="'少'" :max="'多'" :title="'ニンニク量'"></Range>
             </div>
             <a v-if="product.url" :href="product.url" target="_blank" class="absolute inset-0"></a>
           </section>
         </div>
       </div>
-      <div class="mt-8 grid sm:grid-cols-2 gap-8">
+      <div class="mt-20 grid sm:grid-cols-2 gap-x-8 gap-y-8">
         <section class="flex flex-col gap-2">
           <h2 class="text-xl">店舗情報</h2>
           <dl v-if="shop.address">
@@ -62,6 +62,12 @@
               <p v-for="(day,i) in shop.closed" :key="i">{{day.data}}</p>
             </dd>
           </dl>
+          <dl v-if="shop.menu.length">
+            <dt>メニュー</dt>
+            <dd>
+              <p v-for="menu in shop.menu" :key="menu._id">{{ menu.data }}</p>
+            </dd>
+          </dl>
           <div v-if="shop.remarks" class="flex flex-col gap-4">
             <dl v-for="remark in shop.remarks" :key="remark._id">
               <dt>{{ remark.name }}</dt>
@@ -86,7 +92,7 @@
           </iframe>
         </section>
         <section v-if="shop.company" class="flex flex-col gap-2">
-          <h2 class="text-xl">会社情報</h2>
+          <h2 class="text-xl">運営会社情報</h2>
           <dl v-show="shop.company.name">
             <dt>会社名</dt>
             <dd>
@@ -194,10 +200,13 @@ export default {
 
 <style scoped lang="postcss">
 dl {
-  @apply flex flex-col sm:flex-row gap-4;
+  @apply flex flex-col justify-start sm:flex-row gap-y-1 gap-x-4;
 }
 dt {
   @apply w-24;
+}
+dd {
+  @apply flex-1;
 }
 a {
   @apply underline decoration-dotted underline-offset-4;
