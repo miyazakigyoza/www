@@ -58,7 +58,7 @@
           </dl>
           <dl v-if="shop.closed.length > 0">
             <dt>定休日</dt>
-            <dd class="flex flex-row gap-2">
+            <dd>
               <p v-for="(day,i) in shop.closed" :key="i">{{day.data}}</p>
             </dd>
           </dl>
@@ -103,7 +103,7 @@
             <dt>代表者</dt>
             <dd><p>{{ shop.company.CEO }}</p></dd>
           </dl>
-          <div v-show="shop.company.links.length > 0" class="mt-8">
+          <div v-show="shop.company.links && shop.company.links.length > 0" class="mt-8">
             <h3 class="text-xl">リンク</h3>
             <ul class="mt-2 list-disc list-inside space-y-2">
               <li v-for="link in shop.company.links" :key="link._id">
@@ -180,14 +180,14 @@ export default {
         })
       : {items: []};
 
-      const products = shop.company
-      ? await $axios.$get($config.API + '/members/products', {
-          params: {
-            depth: 1,
-            'company': shop.company._id
-          }
-        })
-      : {items:[]};
+    const products = shop.company
+    ? await $axios.$get($config.API + '/members/products', {
+        params: {
+          depth: 1,
+          'company': shop.company._id
+        }
+      })
+    : {items:[]};
 
     return {
       shop,
