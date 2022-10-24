@@ -8,7 +8,7 @@
       :key="area._id"
       class="text-center border border-solid flex justify-center items-center"
       :class="{select:area.slug===select}">
-      <NuxtLink :to="{path: `/shops/${area.slug}/`}" class="block p-4">{{ area.name }}</NuxtLink>
+      <NuxtLink :to="{path: `/shops/${area.slug}/`}" class="block p-4 w-full inset-0">{{ area.name }}</NuxtLink>
     </li>
   </ul>
   </template>

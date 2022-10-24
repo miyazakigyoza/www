@@ -6,29 +6,33 @@
 
     <article class="container mx-auto">
 
-      <h1 class="mt-8 text-3xl border-b border-solid border-amber-400 pb-2">{{ shop.name }}</h1>
+      <h1 class="mt-8 border-b border-solid border-amber-400 pb-2 font-serif text-2xl sm:text-4xl">{{ shop.name }}</h1>
       <div v-html="shop.description" class="mt-4 description"></div>
 
 
-      <div v-if="products.items.length > 0">
-        <h2>商品</h2>
-        <div class="mt-8 grid sm:grid-cols-2 gap-8">
-          <section  v-for="product in products.items" :key="product._id">
-            <h3>
-              <a :href="product.url" target="_blank">
-                {{ product.name }}
-              </a>
+      <div v-if="products.items.length > 0" class="mt-8">
+        <div class="grid sm:grid-cols-4 gap-4">
+          <section  v-for="product in products.items" :key="product._id" class="product relative w-full h-full">
+            <p v-if="product.image" class="overflow-hidden rounded-full">
+              <img :src="product.image.src+'?w=600&ar=1:1&fit=crop'" :alt="product.name" class="image" />
+            </p>
+            <h3 class="text-center text-lg border-b border-dashed border-amber-400 mb-2 pb-2">
+              {{ product.name }}
             </h3>
-            <p>{{ product.price }}円</p>
-            <p>{{ product.quantity }}</p>
-            <div>
-              <Range :n="product.thickness"></Range>
+            <p v-if="product.quantity" class="text-center text-sm">{{ product.quantity }}</p>
+            <p v-if="product.price" class="text-center text-sm">{{ product.price.toLocaleString() }}円（税込）</p>
+            <p v-if="product.remark" class="text-center text-sm text-gray-500">{{ product.remark }}</p>
+            <div class="mt-2 flex flex-col gap-2">
+              <Range v-if="product.thickness" :n="product.thickness" :min="'薄'" :max="'厚'" :title="'皮の厚さ'"></Range>
+              <Range v-if="product.size" :n="product.size" :min="'小'" :max="'大'" :title="'大きさ'"></Range>
+              <Range v-if="product.garlic" :n="product.garlic" :min="'無'" :max="'多'" :title="'ニンニク量'"></Range>
             </div>
+            <a v-if="product.url" :href="product.url" target="_blank" class="absolute inset-0"></a>
           </section>
         </div>
       </div>
       <div class="mt-8 grid sm:grid-cols-2 gap-8">
-        <section class="flex flex-col gap-4">
+        <section class="flex flex-col gap-2">
           <h2 class="text-xl">店舗情報</h2>
           <dl v-if="shop.address">
             <dt>住所</dt>
@@ -44,7 +48,7 @@
           </dl>
           <dl v-show="shop.tel">
             <dt>TEL</dt>
-            <dd><p>{{ shop.tel }}</p></dd>
+            <dd><p><a :href="`tel:${shop.tel}`">{{ shop.tel }}</a></p></dd>
           </dl>
           <dl v-if="shop.hours.length">
             <dt>営業時間</dt>
@@ -52,10 +56,10 @@
               <p v-for="hour in shop.hours" :key="hour._id">{{ hour.data }}</p>
             </dd>
           </dl>
-          <dl v-if="shop.holiday.length">
+          <dl v-if="shop.closed.length > 0">
             <dt>定休日</dt>
-            <dd>
-              <p v-for="(day,i) in shop.holiday" :key="i">{{day}}</p>
+            <dd class="flex flex-row gap-2">
+              <p v-for="(day,i) in shop.closed" :key="i">{{day.data}}</p>
             </dd>
           </dl>
           <div v-if="shop.remarks" class="flex flex-col gap-4">
@@ -64,8 +68,16 @@
               <dd v-html="remark.text"></dd>
             </dl>
           </div>
+          <div v-if="shop.links.length > 0" class="mt-8">
+            <h3 class="text-xl">リンク</h3>
+            <ul class="mt-2 list-disc list-inside space-y-2">
+              <li v-for="link in shop.links" :key="link._id">
+                <a :href="link.data.URL" target="_blank">{{ link.data.label }}</a>
+              </li>
+            </ul>
+          </div>
         </section>
-        <section v-if="map">
+        <section v-if="map" class="sm:row-span-full">
           <iframe
             class="w-full h-full aspect-square"
             referrerpolicy="no-referrer-when-downgrade"
@@ -73,7 +85,7 @@
             allowfullscreen>
           </iframe>
         </section>
-        <section v-if="shop.company" class="flex flex-col gap-4">
+        <section v-if="shop.company" class="flex flex-col gap-2">
           <h2 class="text-xl">会社情報</h2>
           <dl v-show="shop.company.name">
             <dt>会社名</dt>
@@ -85,34 +97,28 @@
             <dt>代表者</dt>
             <dd><p>{{ shop.company.CEO }}</p></dd>
           </dl>
-          <dl v-show="shop.company.url">
-            <dt>会社情報</dt>
-            <dd>
-              <p>
-                <a :href="shop.company.url" target="_blank">{{ shop.company.url }}</a>
-              </p>
-            </dd>
-          </dl>
-        </section>
-        <section v-if="(relateds.items.length > 0)">
-          <h2 class="text-xl">関連店舗</h2>
-          <ul class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <li
-              v-for="related in relateds.items"
-              :key="related._id">
-              <Card :shop="related"></Card>
-            </li>
-          </ul>
-        </section>
-        <section class="flex flex-col gap-4" v-show="shop.links.length">
-          <h2 class="text-xl">リンク</h2>
-          <ul class="list-disc list-inside space-y-2">
-            <li v-for="link in shop.links" :key="link._id">
-              <a :href="link.data.URL" target="_blank">{{ link.data.label }}</a>
-            </li>
-          </ul>
+          <div v-show="shop.company.links.length > 0" class="mt-8">
+            <h3 class="text-xl">リンク</h3>
+            <ul class="mt-2 list-disc list-inside space-y-2">
+              <li v-for="link in shop.company.links" :key="link._id">
+                <a :href="link.url" target="_blank">{{ link.label }}</a>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
+
+      <section v-if="(relateds.items.length > 0)" class="mt-8">
+        <h2 class="text-xl">関連店舗</h2>
+        <ul class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <li
+            v-for="related in relateds.items"
+            :key="related._id">
+            <Card :shop="related"></Card>
+          </li>
+        </ul>
+      </section>
+
     </article>
   </main>
 </template>
@@ -177,8 +183,6 @@ export default {
         })
       : {items:[]};
 
-      console.log(products)
-
     return {
       shop,
       relateds,
@@ -199,6 +203,12 @@ a {
   @apply underline decoration-dotted underline-offset-4;
 }
 
+.product .image {
+  @apply transition-transform duration-300;
+}
+.product:hover .image {
+  @apply scale-125;
+}
 .description >>> p {
   @apply mt-4;
 }
