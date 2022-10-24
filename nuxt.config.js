@@ -62,6 +62,11 @@ export default {
       regular: [
         'faPaperPlane',
       ],
+      brands: [
+        'faTwitter',
+        'faFacebook',
+        'faLine',
+      ],
     }
   },
 

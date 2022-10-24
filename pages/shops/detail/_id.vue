@@ -9,7 +9,6 @@
       <h1 class="mt-8 border-b border-solid border-amber-400 pb-2 font-serif text-2xl sm:text-4xl">{{ shop.name }}</h1>
       <div v-html="shop.description" class="mt-4 description"></div>
 
-
       <div v-if="products.items.length > 0" class="mt-8">
         <div class="grid sm:grid-cols-3 gap-4">
           <section  v-for="product in products.items" :key="product._id" class="product relative w-full h-full">
@@ -125,6 +124,19 @@
         </ul>
       </section>
 
+      <div class="mt-8 flex flex-row justify-end items-center gap-3">
+        <p>シェア: </p>
+        <a :href="`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(shop.name)}&hashtags=${encodeURIComponent('宮崎県ひなた餃子連合会')}`" target="_blank" class="text-4xl">
+          <font-awesome-icon icon="fa-brands fa-twitter" />
+        </a>
+        <a :href="`https://www.facebook.com/share.php?u=${encodeURIComponent(url)}`" target="_blank" class="text-4xl">
+          <font-awesome-icon icon="fa-brands fa-facebook" />
+        </a>
+        <a :href="`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`" target="_blank" class="text-4xl">
+          <font-awesome-icon icon="fa-brands fa-line" />
+        </a>
+      </div>
+
     </article>
   </main>
 </template>
@@ -140,6 +152,7 @@ export default {
     shops: null,
     relateds: [],
     products: [],
+    url: null,
   }),
   computed: {
     map() {
@@ -157,7 +170,6 @@ export default {
       } else {
         return null
       }
-
     },
   },
   async asyncData({$axios, $config, params}){
@@ -195,6 +207,9 @@ export default {
       products,
     }
   },
+  mounted() {
+    this.url = window.location.href
+  }
 }
 </script>
 
