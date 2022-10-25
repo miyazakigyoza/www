@@ -148,8 +148,8 @@ export default {
       title: this.shop.name,
       meta: [
         { hid: 'og:title', property: 'og:title', content: this.shop.name + ' | 宮崎県ひなた餃子連合会' },
-        { hid: 'description', name: 'description', content: this.shop.description },
-        { hid: 'og:description', property: 'og:description', content: this.shop.description },
+        { hid: 'description', name: 'description', content: this.shop.description.replace(/(\r?\n)|(<([^>]+)>)/gi,'') },
+        { hid: 'og:description', property: 'og:description', content: this.shop.description.replace(/(\r?\n)|(<([^>]+)>)/gi,'') },
         { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:url', property: 'og:url', content: this.url },
         { hid: 'og:image', property: 'og:image', content: this.shop.profileImage ? this.shop.profileImage.src + '?w=1200&ar=1200:630&fit=crop' : 'https://www.miyazakigyoza.jp/img/ogp.png' },
