@@ -3,8 +3,8 @@
 
     <section class="relative h-screen w-screen">
       <transition name="fade">
-        <div class="block absolute w-screen inset-0 p-4 bg-white" v-show="n===null">
-          <img src="~/assets/img/logo-h.svg" alt="" class="h-full w-full" />
+        <div class="inset-0 relative w-screen h-screen" v-show="n===null">
+          <img src="~/assets/img/logo-h.svg" alt="" class="w-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
         </div>
       </transition>
       <transition-group name="fade" tag="ul">

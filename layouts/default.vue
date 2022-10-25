@@ -32,7 +32,7 @@
             <NuxtLink to="/contact/">お問い合わせ</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="">プライバシーポリシー</NuxtLink>
+            <NuxtLink to="/policy/">個人情報保護方針・ご利用規約</NuxtLink>
           </li>
         </ul>
         <p class="container mx-auto py-4 text-center text-sm">
