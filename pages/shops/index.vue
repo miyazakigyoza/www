@@ -11,6 +11,12 @@
       </li>
     </ul>
 
+    <section class="h-screen flex flex-col justify-center items-center">
+      <p class="">
+        <img src="/img/gyozaday-monthly.png" alt="毎月3日は餃子の日" />
+      </p>
+    </section>
+
 </main>
 </template>
 

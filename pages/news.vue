@@ -29,7 +29,7 @@
 
     <div class="mt-8">
         <a
-          href="https://note.com/yaki_gyoza/m/m6c8cc8ac407b"
+          href="https://note.com/miyazakigyoza/m/mb1f3f7f5c14d"
           target="_blank"
           class="w-40 p-4 mx-auto text-lg flex flex-col justify-center items-center gap-2">
           <span>お知らせ一覧</span>

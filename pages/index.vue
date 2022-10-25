@@ -3,15 +3,19 @@
 
     <section class="relative h-screen w-screen">
       <transition name="fade">
-        <div class="inset-0 relative w-screen h-screen" v-show="n===null">
-          <img src="~/assets/img/logo-h.svg" alt="" class="w-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <div class="inset-0 relative w-screen h-screen overflow-hidden" v-show="n===null">
+          <img
+            src="~/assets/img/logo-h.svg"
+            alt="宮崎餃子"
+            class="w-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          />
         </div>
       </transition>
       <transition-group name="fade" tag="ul">
         <li
           v-for="(shop,i) in shops.items"
           :key="shop._id"
-          class="block absolute w-screen inset-0"
+          class="block absolute w-screen inset-0 overflow-hidden"
           v-show="i===n">
           <img :src="shop.profileImage.src + '?w=1536&ar=16:9&fit=crop'" alt="" class="object-cover h-full w-full" />
           <p class="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 bg-white text-black p-4">
@@ -69,9 +73,14 @@
           <p class="font-serif text-xl">宮崎県ひなた餃子連合会について</p>
         </h1>
 
-        <p>
+        <div class="mt-8 text-center">
+          <p>
           宮崎餃子の特色
-        </p>
+          </p>
+          <p>
+            宮崎県ひなた餃子連合会 概要
+          </p>
+        </div>
         <div class="mt-4 text-center">
           <NuxtLink
             to="/about/"
@@ -202,10 +211,11 @@ export default {
   @apply text-center;
 }
 .fade-enter-active,.fade-leave-active{ 
-  transition: opacity 1500ms ease-out;
+  transition: opacity 1500ms ease-in;
+  @apply transition ease-out duration-[4000ms];
 }
 
 .fade-enter, .fade-leave-to {
-  opacity: 0;
+  @apply opacity-0;
 }
 </style>
