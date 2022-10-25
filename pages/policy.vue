@@ -1,6 +1,6 @@
 <template>
   <main class="pt-20">
-    <section id="privacy" class="mt-8 container mx-auto">
+    <section id="privacy" class="mt-8 container mx-auto xl:w-3/4">
       <header>
         <h1 class="text-center">
           <p class="font-enTitle text-6xl">Privacy Policy</p>
@@ -80,7 +80,7 @@
 
     </section>
 
-    <section id="tou" class="mt-20 container mx-auto">
+    <section id="tou" class="mt-20 container mx-auto xl:w-3/4">
       <header>
         <h1 class="text-center">
           <p class="font-enTitle text-6xl">Term of Use</p>

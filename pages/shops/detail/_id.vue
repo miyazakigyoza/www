@@ -10,8 +10,8 @@
       <div v-html="shop.description" class="mt-4 description"></div>
 
       <div v-if="products.items.length > 0" class="mt-8">
-        <div class="grid sm:grid-cols-3 gap-4">
-          <section  v-for="product in products.items" :key="product._id" class="product relative w-full h-full">
+        <div class="flex flex-cols justify-center">
+          <section  v-for="product in products.items" :key="product._id" class="product relative w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 h-full">
             <p v-if="product.image" class="overflow-hidden rounded-full">
               <img :src="product.image.src+'?w=600&ar=1:1&fit=crop'" :alt="product.name" class="image" />
             </p>
