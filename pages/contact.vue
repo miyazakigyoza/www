@@ -7,7 +7,7 @@
       </h1>
     </header>
 
-    <section class="mt-8 container mx-auto max-w-3xl">
+    <section class="mt-8 container mx-auto max-w-5xl">
       <p>
         当サイトについてのお問い合わせ、取材お申し込み、当連合会への加入お申し込み、賛助会員お申し込みなどご用件もご記入ください。<br />
         ご要望、ご質問事項の内容に応じて担当の者より ご連絡させていただきます。
@@ -16,7 +16,7 @@
         ※このページをご利用の際は当サイトのプライバシーポリシーが適用されます。
       </p>
 
-      <div id="form" v-once class="mt-8">
+      <div id="form" v-once class="mt-8 border borde-solid border-amber-400 p-4">
         <div class="p-4 flex flex-col justify-center items-center gap-4">
           <p class="text-6xl">
             <font-awesome-icon icon="fa-solid fa-spinner" class="loading" />
@@ -33,6 +33,15 @@ export default {
   head() {
     return {
       title: 'お問い合わせ',
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: '宮崎県ひなた餃子連合会へのお問い合わせ' },
+        { hid: 'description', name: 'description', content: '宮崎県ひなた餃子連合会へのお問い合わせはフォームからお送りください。' },
+        { hid: 'og:description', property: 'og:description', content: '宮崎県ひなた餃子連合会へのお問い合わせフォームからお送りください。' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: 'https://www.miyazakigyoza.jp/contact/' },
+        { hid: 'og:image', property: 'og:image', content: 'https://www.miyazakigyoza.jp/img/ogp.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
       script: [
         {
           hid: 'hubspot',

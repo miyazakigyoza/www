@@ -45,6 +45,15 @@ export default {
   head() {
     return {
       title: 'お知らせ',
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: '宮崎県ひなた餃子連合会' },
+        { hid: 'description', name: 'description', content: '宮崎県ひなた餃子連合会のお知らせ、イベント情報等' },
+        { hid: 'og:description', property: 'og:description', content: '宮崎県ひなた餃子連合会のお知らせ、イベント情報等' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: 'https://www.miyazakigyoza.jp/news/' },
+        { hid: 'og:image', property: 'og:image', content: 'https://www.miyazakigyoza.jp/img/ogp.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
     }
   },
   data: () => ({

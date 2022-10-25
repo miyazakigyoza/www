@@ -7,7 +7,7 @@
       </h1>
     </header>
 
-    <section id="feature" class="container mx-auto mt-20 max-w-3xl">
+    <section id="feature" class="container mx-auto mt-20 max-w-5xl">
       <h2 class="text-2xl border-b border-solid border-amber-400 pb-2 text-center">宮崎餃子の特色</h2>
       <p>
         宮崎県の日照時間や快晴日数・平均気温は全国トップクラスで、食料自給率や土地生産性が全国１位と、農畜産業が盛んです。
@@ -54,9 +54,10 @@
 
     </section>
 
-    <section id="organization" class="container mx-auto mt-20 max-w-3xl">
+    <section id="organization" class="container mx-auto mt-20 max-w-5xl">
       <h2 class="text-2xl border-b border-solid border-amber-400 pb-2 text-center">宮崎県ひなた餃子連合会</h2>
-      <p>
+      <h3 class="mt-4">宮崎県ひなた餃子連合会は、宮崎県産の多種多様で高品質な食材が包まれた宮崎餃子のブランド化を目指しています。</h3>
+      <p class="mt-4">
         <img src="/img/logo-1200s.jpg" alt="" class="w-48 mx-auto" />
       </p>
       <div class="grid sm:grid-cols-2 gap-4">
@@ -115,7 +116,7 @@
       </div>
     </section>
 
-    <section id="history" class="container mx-auto max-w-3xl">
+    <section id="history" class="container mx-auto max-w-5xl">
       <h3 class="mt-8 text-xl">沿革</h3>
       <dl class="mt-4">
         <dt>2022年<br /><span class="text-xs">（令和4年）</span></dt>
@@ -131,6 +132,25 @@
     </section>
 </main>
 </template>
+
+<script>
+export default {
+  head() {
+    return {
+      title: '宮崎餃子の特色と宮崎県ひなた餃子連合会について',
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: '宮崎餃子の特色と宮崎県ひなた餃子連合会について' },
+        { hid: 'description', name: 'description', content: '宮崎県ひなた餃子連合会は、宮崎県産の多種多様で高品質な食材が包まれた宮崎餃子のブランド化を目指しています。' },
+        { hid: 'og:description', property: 'og:description', content: '宮崎県ひなた餃子連合会は、宮崎県産の多種多様で高品質な食材が包まれた宮崎餃子のブランド化を目指しています。' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: 'https://www.miyazakigyoza.jp/about/' },
+        { hid: 'og:image', property: 'og:image', content: 'https://www.miyazakigyoza.jp/img/ogp.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+    }
+  },
+}
+</script>
 
 <style scoped lang="postcss">
 #feature p,

@@ -32,6 +32,15 @@ export default {
   head() {
     return {
       title: this.area.name + 'エリア | 会員店舗一覧',
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: this.area.name + 'エリア | 宮崎県ひなた餃子連合会 会員店舗一覧' },
+        { hid: 'description', name: 'description', content: '' },
+        { hid: 'og:description', property: 'og:description', content: '' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: `https://www.miyazakigyoza.jp/shops/${this.slug}/` },
+        { hid: 'og:image', property: 'og:image', content: 'https://www.miyazakigyoza.jp/img/ogp.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
     }
   },
   data: () => ({

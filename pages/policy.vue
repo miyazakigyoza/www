@@ -1,6 +1,6 @@
 <template>
   <main class="pt-20">
-    <section id="privacy" class="mt-8 container mx-auto max-w-3xl">
+    <section id="privacy" class="mt-8 container mx-auto max-w-5xl">
       <header>
         <h1 class="text-center">
           <p class="font-enTitle text-6xl">Privacy Policy</p>
@@ -80,7 +80,7 @@
 
     </section>
 
-    <section id="tou" class="mt-20 container mx-auto max-w-3xl">
+    <section id="tou" class="mt-20 container mx-auto max-w-5xl">
       <header>
         <h1 class="text-center">
           <p class="font-enTitle text-6xl">Term of Use</p>
@@ -145,7 +145,7 @@
       </dl>
     </section>
 
-    <section class="mt-20 container mx-auto max-w-3xl">
+    <section class="mt-20 container mx-auto max-w-5xl">
       <dl>
         <dt>お問い合わせ</dt>
         <dd>
@@ -162,6 +162,25 @@
     
   </main>
 </template>
+
+<script>
+export default {
+  head() {
+    return {
+      title: '個人情報保護規約・ご利用規約',
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: '個人情報保護規約・ご利用規約 | 宮崎県ひなた餃子連合会' },
+        { hid: 'description', name: 'description', content: '' },
+        { hid: 'og:description', property: 'og:description', content: '' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: 'https://www.miyazakigyoza.jp/policy/' },
+        { hid: 'og:image', property: 'og:image', content: 'https://www.miyazakigyoza.jp/img/ogp.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+    }
+  },
+}
+</script>
 
 <style scoped lang="postcss">
 dt {
