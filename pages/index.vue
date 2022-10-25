@@ -2,6 +2,11 @@
   <main class="pt-12">
 
     <section class="relative h-screen w-screen">
+      <transition name="fade">
+        <div class="block absolute w-screen inset-0 p-4 bg-white" v-show="n===null">
+          <img src="~/assets/img/logo-h.svg" alt="" class="h-full w-full" />
+        </div>
+      </transition>
       <transition-group name="fade" tag="ul">
         <li
           v-for="(shop,i) in shops.items"
@@ -16,11 +21,13 @@
             </NuxtLink>
         </li>
       </transition-group>
-      <div class="absolute z-20 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-9/12 sm:w-auto">
-        <h1 class="p-8 bg-amber-400/70 border-2 border-solid border-amber-400 text-center text-xl sm:text-3xl leading-relaxed font-serif">
-          太陽の恵みが<br />ぎゅっと詰まった<br />宮崎ぎょうざ
-        </h1>
-      </div>
+      <transition name="fade">
+        <div class="absolute z-20 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-9/12 sm:w-auto" v-show="n!==null">
+          <h1 class="p-8 bg-amber-400/70 border-2 border-solid border-amber-400 text-center text-xl sm:text-3xl leading-relaxed font-serif">
+            太陽の恵みが<br />ぎゅっと詰まった<br />宮崎ぎょうざ
+          </h1>
+        </div>
+      </transition>
     </section>
 
     <div class="mt-4 container mx-auto flex flex-col space-y-24">
@@ -124,7 +131,7 @@ export default {
     areas: {},
     shops: {},
     note: [],
-    n: 0,
+    n: null,
     newsIndex: 0,
     noteMagazineId: null,
   }),
@@ -161,11 +168,14 @@ export default {
     },
     timer() {
       setTimeout(()=>{
+        this.n = Math.floor(Math.random() * this.shops.items.length)
+        /*
         if (this.n < this.shops.items.length-1) {
           this.n++
         } else {
           this.n = 0
         }
+        */
         if (this.$refs.news) {
           this.newsScroll()
         }
