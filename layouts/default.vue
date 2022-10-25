@@ -4,9 +4,10 @@
     <Nuxt></Nuxt>
 
     <footer class="mt-20 border-t border-solid">
-      <p class="container mx-auto p-4 flex justify-center">
-        <img src="~/assets/img/logo-h.svg" alt="宮崎餃子" class="h-20" />
-      </p>
+      <div class="container mx-auto p-4 flex flex-col items-center justify-center gap-3">
+        <img src="~/assets/img/logo-h.svg" alt="宮崎県ひなた餃子連合会" class="h-20" />
+        <p class="font-serif text-xl">会員店舗一覧</p>
+      </div>
       <div class="container mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
         <section v-for="area in areas.items" :key="area._id" class="m-2 p-4 pt-2 border border-solid border-amber-500 rounded-xl">
           <h1 class="text-base py-2">

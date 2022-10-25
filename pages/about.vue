@@ -7,7 +7,7 @@
       </h1>
     </header>
 
-    <section id="feature" class="container mx-auto mt-20">
+    <section id="feature" class="container mx-auto mt-20 max-w-3xl">
       <h2 class="text-2xl border-b border-solid border-amber-400 pb-2 text-center">宮崎餃子の特色</h2>
       <p>
         宮崎県の日照時間や快晴日数・平均気温は全国トップクラスで、食料自給率や土地生産性が全国１位と、農畜産業が盛んです。
@@ -54,7 +54,7 @@
 
     </section>
 
-    <section id="organization" class="container mx-auto mt-20">
+    <section id="organization" class="container mx-auto mt-20 max-w-3xl">
       <h2 class="text-2xl border-b border-solid border-amber-400 pb-2 text-center">宮崎県ひなた餃子連合会</h2>
       <p>
         <img src="/img/logo-1200s.jpg" alt="" class="w-48 mx-auto" />
@@ -115,7 +115,7 @@
       </div>
     </section>
 
-    <section id="history" class="container mx-auto">
+    <section id="history" class="container mx-auto max-w-3xl">
       <h3 class="mt-8 text-xl">沿革</h3>
       <dl class="mt-4">
         <dt>2022年<br /><span class="text-xs">（令和4年）</span></dt>

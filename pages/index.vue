@@ -94,18 +94,16 @@
 
       <section class="flex flex-col justify-center items-center space-y-4">
         <h1 class="text-center">
-          <p class="font-enTitle text-6xl">Search</p>
+          <p class="font-enTitle text-6xl">Shop List</p>
           <p class="font-serif text-xl">
             <font-awesome-icon icon="fa-map-marker-alt" />
-            店舗を検索する</p>
+            会員店舗一覧</p>
         </h1>
         <Areas :select="'all'"></Areas>
       </section>
 
-      <section class="flex flex-col justify-center items-center">
-        <p class="">
-          <img src="/img/gyozaday-monthly.png" alt="毎月3日は餃子の日" />
-        </p>
+      <section class="my-12">
+        <img src="/img/gyozaday-monthly.png" alt="毎月3日は餃子の日" class="mx-auto w-full sm:w-1/2" />
       </section>
 
       <section class="flex flex-col justify-center items-center">

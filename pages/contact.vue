@@ -7,7 +7,7 @@
       </h1>
     </header>
 
-    <section class="mt-8 container mx-auto xl:w-3/4">
+    <section class="mt-8 container mx-auto max-w-3xl">
       <p>
         当サイトについてのお問い合わせ、取材お申し込み、当連合会への加入お申し込み、賛助会員お申し込みなどご用件もご記入ください。<br />
         ご要望、ご質問事項の内容に応じて担当の者より ご連絡させていただきます。

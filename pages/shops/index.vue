@@ -1,7 +1,16 @@
 <template>
   <main class="pt-20 container mx-auto">
 
-    <Areas :select="'all'"></Areas>
+    <header>
+      <h1 class="text-center">
+        <p class="font-enTitle text-6xl">Shop List</p>
+        <p class="font-serif text-xl">会員店舗一覧</p>
+      </h1>
+    </header>
+
+    <div class="mt-8">
+      <Areas :select="'all'"></Areas>
+    </div>
 
     <ul class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <li
@@ -11,10 +20,8 @@
       </li>
     </ul>
 
-    <section class="h-screen flex flex-col justify-center items-center">
-      <p class="">
-        <img src="/img/gyozaday-monthly.png" alt="毎月3日は餃子の日" />
-      </p>
+    <section class="my-12">
+      <img src="/img/gyozaday-monthly.png" alt="毎月3日は餃子の日" class="mx-auto" />
     </section>
 
 </main>
