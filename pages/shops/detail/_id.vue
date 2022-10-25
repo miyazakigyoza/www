@@ -12,7 +12,7 @@
       <div v-if="products.items.length > 0" class="mt-8">
         <div class="flex flex-cols justify-center">
           <section  v-for="product in products.items" :key="product._id" class="product relative w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 h-full">
-            <p v-if="product.image" class="overflow-hidden rounded-full">
+            <p v-if="product.image" class="overflow-hidden rounded-full my-4">
               <img :src="product.image.src+'?w=600&ar=1:1&fit=crop'" :alt="product.name" class="image" />
             </p>
             <h3 class="text-center text-lg border-b border-dashed border-amber-400 mb-2 pb-2">
