@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-12">
+  <main>
 
     <section class="relative h-screen w-screen">
       <transition name="fade">
