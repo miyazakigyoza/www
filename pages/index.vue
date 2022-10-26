@@ -41,16 +41,16 @@
           <p class="font-serif text-xl">お知らせ</p>
         </h1>
 
-        <div class="mt-8 h-24 border border-solid border-amber-400 rounded-xl overflow-y-scroll snap-y snap-mandatory" ref="news">
+        <div v-if="note.length" class="mt-8 h-24 border border-solid border-amber-400 rounded-xl overflow-y-scroll snap-y snap-mandatory" ref="news">
           <article
-            v-for="note in note.contents"
-            :key="note.id"
+            v-for="entry in note"
+            :key="entry.id"
             class="snap-center relative h-24 p-4 flex flex-col justify-between">
-              <p class="whitespace-nowrap text-xs">{{ note.publish_at }}</p>
-              <p class="whitespace-nowrap truncate text-orange-600">{{ note.name }}</p>
-              <p class="text-right text-xs">{{ note.user.name }}</p>
+              <p class="whitespace-nowrap text-xs">{{ entry.publish_at }}</p>
+              <p class="whitespace-nowrap truncate text-orange-600">{{ entry.name }}</p>
+              <p class="text-right text-xs">{{ entry.user.name }}</p>
             <a
-              :href="`https://note.com/${note.user.urlname}/n/${note.key}?magazine_key=${noteMagazineId}`"
+              :href="`https://note.com/${entry.user.urlname}/n/${entry.key}?magazine_key=${$config.NOTE_MAGAZINE_ID}`"
               target="_blank"
               class="block absolute inset-0"></a>
           </article>
@@ -127,6 +127,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 
 export default {
   head() {
@@ -138,11 +139,14 @@ export default {
   data: () => ({
     areas: {},
     shops: {},
-    note: [],
     n: null,
     newsIndex: 0,
-    noteMagazineId: null,
   }),
+  computed: {
+    ...mapGetters({
+      note: 'note/contents',
+    })
+  },
   async asyncData({$axios, $config}){
     $axios.setToken($config.TOKEN, 'Bearer')
     const areas = await $axios.$get($config.API + '/members/areas')
@@ -153,15 +157,9 @@ export default {
       }
     })
 
-    $axios.setToken(false)
-    const note = await $axios.$get($config.NOTE_API, {params:{page:1}})
-    const noteMagazineId = $config.NOTE_MAGAZINE_ID
-
     return {
       areas,
       shops,
-      note: note.data.section,
-      noteMagazineId,
     }
   },
   methods: {
@@ -199,6 +197,7 @@ export default {
     },
   },
   mounted() {
+    this.$store.dispatch('note/fetchContents')
     this.timer()
   },
 }

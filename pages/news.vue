@@ -9,19 +9,19 @@
 
     <ul class="mt-8 container mx-auto grid lg:grid-cols-2 gap-4">
       <li
-        v-for="note in note.contents"
-        :key="note.id"
+        v-for="entry in note"
+        :key="entry.id"
         class="card">
           <p class="col-span-1 overflow-hidden flex flex-col justify-center">
-            <img :src="note.eyecatch" alt="" class="image object-cover h-full" />
+            <img :src="entry.eyecatch" alt="" class="image object-cover h-full" />
           </p>
           <div class="col-span-2 flex flex-col justify-between gap-2">
-            <p class="text-xs">{{ note.publish_at }}</p>
-            <p class="">{{ note.name }}</p>
-            <p class="text-right text-xs">{{ note.user.name }}</p>
+            <p class="text-xs">{{ entry.publish_at }}</p>
+            <p class="">{{ entry.name }}</p>
+            <p class="text-right text-xs">{{ entry.user.name }}</p>
           </div>
         <a
-          :href="`https://note.com/${note.user.urlname}/n/${note.key}?magazine_key=${noteMagazineId}`"
+          :href="`https://note.com/${entry.user.urlname}/n/${entry.key}?magazine_key=${$config.NOTE_MAGAZINE_ID}`"
           target="_blank"
           class="block absolute inset-0"></a>
       </li>
@@ -41,6 +41,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   head() {
     return {
@@ -56,18 +58,13 @@ export default {
       ],
     }
   },
-  data: () => ({
-    note: [],
-    noteMagazineId: null,
-  }),
-  async asyncData({$axios, $config}){
-    const note = await $axios.$get($config.NOTE_API, {params:{page:1}})
-    const noteMagazineId = $config.NOTE_MAGAZINE_ID
-
-    return {
-      note: note.data.section,
-      noteMagazineId,
-    }
+  computed: {
+    ...mapGetters({
+      note: 'note/contents',
+    })
+  },
+  mounted() {
+    this.$store.dispatch('note/fetchContents')
   },
 }
 </script>
