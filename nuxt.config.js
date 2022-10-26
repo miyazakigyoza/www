@@ -7,6 +7,7 @@ export default {
     HUBSPOT_PORTALID: process.env.HUBSPOT_PORTALID,
     HUBSPOT_FORMID: process.env.HUBSPOT_FORMID,
     GOOGLE_MAP: process.env.GOOGLE_MAP,
+    GTAG_ID: process.env.GTAG_ID,
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -83,6 +84,10 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
+    ['@nuxtjs/google-gtag', {
+      id: process.env.GTAG_ID,
+      debug: false,
+    }]
   ],
 
   router: {
