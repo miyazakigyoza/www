@@ -173,8 +173,8 @@ export default {
         { hid: 'description', name: 'description', content: '' },
         { hid: 'og:description', property: 'og:description', content: '' },
         { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:url', property: 'og:url', content: 'https://www.miyazakigyoza.jp/policy/' },
-        { hid: 'og:image', property: 'og:image', content: 'https://www.miyazakigyoza.jp/img/ogp.png' },
+        { hid: 'og:url', property: 'og:url', content: 'https://miyazakigyoza.jp/policy/' },
+        { hid: 'og:image', property: 'og:image', content: 'https://miyazakigyoza.jp/img/ogp.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
       ],
     }

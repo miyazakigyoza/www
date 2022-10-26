@@ -152,7 +152,7 @@ export default {
         { hid: 'og:description', property: 'og:description', content: this.shop.description.replace(/(\r?\n)|(<([^>]+)>)/gi,'') },
         { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:url', property: 'og:url', content: this.url },
-        { hid: 'og:image', property: 'og:image', content: this.shop.profileImage ? this.shop.profileImage.src + '?w=1200&ar=1200:630&fit=crop' : 'https://www.miyazakigyoza.jp/img/ogp.png' },
+        { hid: 'og:image', property: 'og:image', content: this.shop.profileImage ? this.shop.profileImage.src + '?w=1200&ar=1200:630&fit=crop' : 'https://miyazakigyoza.jp/img/ogp.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
       ],
     }

@@ -38,8 +38,8 @@ export default {
         { hid: 'description', name: 'description', content: '宮崎県ひなた餃子連合会へのお問い合わせはフォームからお送りください。' },
         { hid: 'og:description', property: 'og:description', content: '宮崎県ひなた餃子連合会へのお問い合わせフォームからお送りください。' },
         { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:url', property: 'og:url', content: 'https://www.miyazakigyoza.jp/contact/' },
-        { hid: 'og:image', property: 'og:image', content: 'https://www.miyazakigyoza.jp/img/ogp.png' },
+        { hid: 'og:url', property: 'og:url', content: 'https://miyazakigyoza.jp/contact/' },
+        { hid: 'og:image', property: 'og:image', content: 'https://miyazakigyoza.jp/img/ogp.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
       ],
       script: [
