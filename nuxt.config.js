@@ -66,6 +66,8 @@ export default {
         'faPaperPlane',
         'faBullhorn',
         'faSpinner',
+        'faAngleRight',
+        'faAngleLeft',
       ],
       regular: [
         'faPaperPlane',

@@ -60,9 +60,10 @@
           <NuxtLink
             to="/news/"
             target="_blank"
-            class="button bg-orange-500 text-white py-2 px-8">
+            class="button">
             <font-awesome-icon icon="fa-solid fa-bullhorn" />
             お知らせ一覧
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
           </NuxtLink>
         </div>
       </section>
@@ -84,9 +85,10 @@
         <div class="mt-4 text-center">
           <NuxtLink
             to="/about/"
-            class="button bg-orange-500 text-white py-2 px-8">
+            class="button">
             <font-awesome-icon icon="fa-solid fa-circle-info" />
             宮崎県ひなた餃子連合会について
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
           </NuxtLink>
         </div>
 
@@ -99,24 +101,23 @@
             <font-awesome-icon icon="fa-map-marker-alt" />
             会員店舗一覧</p>
         </h1>
-        <Areas :select="'all'"></Areas>
+        <Areas :select="null"></Areas>
       </section>
 
       <section class="my-12">
         <img src="/img/gyozaday-monthly.png" alt="毎月3日は餃子の日" class="mx-auto w-full sm:w-1/2" />
       </section>
 
-      <section class="flex flex-col justify-center items-center">
+      <section class="">
         <h1 class="text-center">
           <p class="font-enTitle text-6xl">Contact</p>
           <p class="font-serif text-xl">宮崎餃子についてのお問い合わせ</p>
         </h1>
         <div class="mt-4 text-center">
-          <NuxtLink
-            to="/contact/"
-            class="button bg-orange-500 text-white py-2 px-8">
+          <NuxtLink to="/contact/" class="button">
             <font-awesome-icon icon="fa-solid fa-paper-plane" />
             お問い合わせフォーム
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
           </NuxtLink>
         </div>
       </section>
@@ -205,8 +206,7 @@ export default {
 
 <style scoped lang="postcss">
 .button {
-  @apply border border-solid border-amber-400 inline-block;
-  @apply text-center;
+  @apply relative inline-block w-full max-w-xs py-2 bg-orange-500 text-white text-center no-underline;
 }
 .fade-enter-active,.fade-leave-active{ 
   transition: opacity 1500ms ease-in;

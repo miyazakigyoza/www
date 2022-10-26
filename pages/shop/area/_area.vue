@@ -21,7 +21,7 @@
     </ul>
 
     <section class="my-12">
-      <img src="/img/gyozaday-monthly.png" alt="毎月3日は餃子の日" />
+      <img src="/img/gyozaday-monthly.png" alt="毎月3日は餃子の日" class="mx-auto" />
     </section>
 
 </main>

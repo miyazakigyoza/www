@@ -8,17 +8,17 @@
         <img src="~/assets/img/logo-h.svg" alt="宮崎県ひなた餃子連合会" class="h-20" />
         <p class="font-serif text-xl">会員店舗一覧</p>
       </div>
-      <div class="container mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
+      <div class="shopIndex container mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
         <section v-for="area in areas.items" :key="area._id" class="m-2 p-4 pt-2 border border-solid border-amber-500 rounded-xl">
           <h1 class="text-base py-2">
-            <NuxtLink :to="`/shop/area/${area.slug}/`">
+            <NuxtLink :to="`/shop/area/${area.slug}/`" :title="`${area.name} エリア`">
               <font-awesome-icon icon="fa-map-marker-alt" />
               {{ area.name }} エリア
             </NuxtLink>
           </h1>
           <ul class="text-xs flex flex-col gap-y-2">
             <li v-for="shop in shops.items.filter(s=>s.area._id===area._id)" :key="shop._id">
-              <NuxtLink :to="`/shop/${shop.slug}/`" class="flex items-center gap-x-2">
+              <NuxtLink :to="`/shop/${shop.slug}/`" class="flex items-center gap-x-2" :title="shop.name">
                 <font-awesome-icon icon="fa-caret-right" />
                 {{ shop.name }}
               </NuxtLink>
@@ -190,5 +190,8 @@ export default {
 }
 .open .nav {
   @apply translate-y-0;
+}
+.shopIndex a:hover {
+  @apply underline decoration-solid underline-offset-4 decoration-orange-500;
 }
 </style>

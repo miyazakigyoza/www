@@ -81,8 +81,9 @@
           </div>
           <div v-if="shop.links.length > 0" class="mt-8">
             <h3 class="text-xl">リンク</h3>
-            <ul class="mt-2 list-disc list-inside space-y-2">
+            <ul class="mt-2 list-inside space-y-2">
               <li v-for="link in shop.links" :key="link._id">
+                <font-awesome-icon icon="fa-caret-right" class="mr-2" />
                 <a :href="link.data.URL" target="_blank">{{ link.data.label }}</a>
               </li>
             </ul>
@@ -110,8 +111,9 @@
           </dl>
           <div v-show="shop.company.links && shop.company.links.length > 0" class="mt-8">
             <h3 class="text-xl">リンク</h3>
-            <ul class="mt-2 list-disc list-inside space-y-2">
+            <ul class="mt-2 list-inside space-y-2">
               <li v-for="link in shop.company.links" :key="link._id">
+                <font-awesome-icon icon="fa-caret-right" class="mr-2" />
                 <a :href="link.url" target="_blank">{{ link.label }}</a>
               </li>
             </ul>
@@ -131,18 +133,39 @@
       </section>
 
       <div class="mt-8 flex flex-row justify-end items-center gap-3">
-        <p>シェア: </p>
-        <a :href="`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(shop.name)}&hashtags=${encodeURIComponent('宮崎県ひなた餃子連合会')}`" target="_blank" class="text-4xl">
+        <a
+          :href="`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(shop.name)}&hashtags=${encodeURIComponent('宮崎県ひなた餃子連合会')}`"
+          target="_blank"
+          class="share"
+          title="twitterでシェア">
           <font-awesome-icon icon="fa-brands fa-twitter" />
         </a>
-        <a :href="`https://www.facebook.com/share.php?u=${encodeURIComponent(url)}`" target="_blank" class="text-4xl">
+        <a
+          :href="`https://www.facebook.com/share.php?u=${encodeURIComponent(url)}`"
+          target="_blank"
+          class="share"
+          title="facebookでシェア">
           <font-awesome-icon icon="fa-brands fa-facebook" />
         </a>
-        <a :href="`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`" target="_blank" class="text-4xl">
+        <a
+          :href="`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`"
+          target="_blank"
+          class="share"
+          title="LINEでシェア">
           <font-awesome-icon icon="fa-brands fa-line" />
         </a>
       </div>
 
+      <div class="my-20 flex flex-col justify-center items-center gap-4">
+        <NuxtLink :to="`/shop/area/${shop.area.slug}/`" class="button relative">
+          <font-awesome-icon icon="fa-solid fa-angle-left" class="absolute left-4 top-1/2 -translate-y-1/2" />
+          {{ shop.area.name }} 店舗一覧に戻る
+        </NuxtLink>
+        <NuxtLink to="/shop/area/" class="button relative">
+          <font-awesome-icon icon="fa-solid fa-angle-left" class="absolute left-4 top-1/2 -translate-y-1/2" />
+          会員店舗一覧に戻る
+        </NuxtLink>
+      </div>
     </article>
   </main>
 </template>
@@ -167,7 +190,6 @@ export default {
     shops: null,
     relateds: [],
     products: [],
-    url: null,
   }),
   computed: {
     map() {
@@ -186,6 +208,13 @@ export default {
         return null
       }
     },
+    url() {
+      if (process.browser) {
+        return `${location.protocol}//${location.host}${location.pathname}`
+      } else {
+        return 'https://miyazakigyoza.jp/shop/' + this.shop.slug + '/'
+      }
+    }
   },
   async asyncData({$axios, $config, params, error}){
     const id = params.id
@@ -233,9 +262,6 @@ export default {
       products,
     }
   },
-  mounted() {
-    this.url = window.location.href
-  }
 }
 </script>
 
@@ -252,6 +278,9 @@ dd {
 a {
   @apply underline decoration-dotted underline-offset-4;
 }
+a:hover {
+  @apply decoration-solid decoration-amber-400;
+}
 
 .product .image {
   @apply transition-transform duration-300;
@@ -261,5 +290,15 @@ a {
 }
 .description >>> p {
   @apply mt-4;
+}
+
+.button {
+  @apply inline-block w-full max-w-xs py-2 bg-orange-500 text-white text-center no-underline;
+}
+.share {
+  @apply text-4xl opacity-50;
+}
+.share:hover {
+  @apply opacity-100;
 }
 </style>
