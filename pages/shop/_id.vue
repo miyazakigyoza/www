@@ -7,10 +7,13 @@
     <article class="container mx-auto">
 
       <h1 class="mt-8 border-b border-solid border-amber-400 pb-2 font-serif text-2xl sm:text-4xl">{{ shop.name }}</h1>
+      <h2 class="mt-2 flex flex-col lg:flex-row gap-1 text-xl sm:text-2xl">
+        <span v-for="line in shop.tagline" :key="line._id">{{ line.data }}</span>
+      </h2>
       <div v-html="shop.description" class="mt-4 description"></div>
 
       <div v-if="products.items.length > 0" class="mt-8">
-        <div class="flex flex-cols justify-center">
+        <div class="flex flex-cols justify-around">
           <section  v-for="product in products.items" :key="product._id" class="product relative w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 h-full">
             <p v-if="product.image" class="overflow-hidden rounded-full my-4">
               <img :src="product.image.src+'?w=600&ar=1:1&fit=crop'" :alt="product.name" class="image" />
@@ -32,6 +35,9 @@
       </div>
       <div class="mt-20 grid sm:grid-cols-2 gap-x-8 gap-y-8">
         <section class="flex flex-col gap-2">
+          <div v-if="shop.exterior">
+            <img :src="shop.exterior.src + '?w=960&ar=3:2&fit=crop'" />
+          </div>
           <h2 class="text-xl">店舗情報</h2>
           <dl v-if="shop.address">
             <dt>住所</dt>
@@ -181,15 +187,26 @@ export default {
       }
     },
   },
-  async asyncData({$axios, $config, params}){
+  async asyncData({$axios, $config, params, error}){
     const id = params.id
 
     $axios.setToken($config.TOKEN, 'Bearer')
-    const shop = await $axios.$get($config.API + '/members/shops/' + id, {
+    const shops = await $axios.$get($config.API + '/members/shops/', {
       params: {
         depth: 2,
+        slug: id,
       }
     })
+
+    if( shops.items.length === 0 ) {
+      error({
+        statusCode: 404,
+        message: 'Not Found',
+      })
+      throw error
+    }
+    
+    const shop = shops.items[0]
 
     const relateds = shop.company
       ? await $axios.$get($config.API + '/members/shops', {

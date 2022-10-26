@@ -31,13 +31,13 @@
 export default {
   head() {
     return {
-      title: this.area.name + 'エリア | 会員店舗一覧',
+      title: (this.area ? this.area.name + 'エリア | ' : '') + '会員店舗一覧',
       meta: [
-        { hid: 'og:title', property: 'og:title', content: this.area.name + 'エリア | 宮崎県ひなた餃子連合会 会員店舗一覧' },
+        { hid: 'og:title', property: 'og:title', content: (this.area ? this.area.name + 'エリア | ' : '') + '会員店舗一覧 | 宮崎県ひなた餃子連合会' },
         { hid: 'description', name: 'description', content: '' },
         { hid: 'og:description', property: 'og:description', content: '' },
         { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:url', property: 'og:url', content: `https://miyazakigyoza.jp/shops/${this.slug}/` },
+        { hid: 'og:url', property: 'og:url', content: 'https://miyazakigyoza.jp/shop/area/' + (this.slug ? this.slug + '/' : '') },
         { hid: 'og:image', property: 'og:image', content: 'https://miyazakigyoza.jp/img/ogp.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
       ],
@@ -50,7 +50,7 @@ export default {
   }),
   async asyncData({$axios, $config, params}){
     const order = 'furigana'
-    const slug = params.area
+    const slug = params.area || null
 
     $axios.setToken($config.TOKEN, 'Bearer')
     const areas = await $axios.$get($config.API + '/members/areas', {
@@ -58,12 +58,13 @@ export default {
         select: ['_id', 'slug', 'name'].join(','),
       }
     })
-    const area = areas.items.find(item => item.slug === slug)
+    const area = slug ? areas.items.find(item => item.slug === slug) : null
+
     const shops = await $axios.$get($config.API + '/members/shops', {
       params: {
-        select: ['_id', 'name', 'area', 'address', 'profileImage'].join(','),
+        select: ['_id','slug', 'name', 'area', 'address', 'profileImage'].join(','),
         order,
-        area: area._id,
+        area: area ? area._id : null,
       }
     })
     return {

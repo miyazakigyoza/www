@@ -9,7 +9,7 @@
       <span v-if="shop.address.prefecture">{{ shop.address.prefecture }}</span>
       <span v-if="shop.address.city">{{ shop.address.city }}</span>
     </p>
-    <NuxtLink :to="{path: `/shops/detail/${shop._id}/`}" class="absolute inset-0"></NuxtLink>
+    <NuxtLink :to="{path: `/shop/${shop.slug}/`}" class="absolute inset-0"></NuxtLink>
   </article>
 </template>
 

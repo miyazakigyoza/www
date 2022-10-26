@@ -21,7 +21,7 @@
           <p class="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 bg-white text-black p-4">
             {{ shop.name }}
           </p>
-          <NuxtLink :to="`/shops/detail/${shop._id}/`" class="absolute inset-0">
+          <NuxtLink :to="`/shop/${shop.slug}/`" class="absolute inset-0">
             </NuxtLink>
         </li>
       </transition-group>
@@ -147,7 +147,7 @@ export default {
     const areas = await $axios.$get($config.API + '/members/areas')
     const shops = await $axios.$get($config.API + '/members/shops', {
       params: {
-        select: ['_id', 'name', 'profileImage'].join(','),
+        select: ['_id', 'slug', 'name', 'profileImage', 'slug'].join(','),
         'feature': true,
       }
     })
