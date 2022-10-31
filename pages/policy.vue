@@ -149,12 +149,10 @@
       <dl>
         <dt>お問い合わせ</dt>
         <dd>
-          <p>
-            高鍋商工会議所<br />
-            〒884-0002　宮崎県児湯郡高鍋町大字北高鍋5138<br />
-            TEL: 0983-22-1333 / FAX: 0983-23-3159<br />
-            Mail: tcci@miyazaki-cci.or.jp
-          </p>
+          <p>高鍋商工会議所</p>
+          <p class="text-sm">〒884-0006<br />宮崎県児湯郡高鍋町大字上江8335番地2</p>
+          <p class="text-sm">TEL: 0983-22-1333 / FAX: 0983-23-3159</p>
+          <p class="text-sm">Mail: {{ mail('tcci', 'miyazaki-cci.or.jp') }}</p>
         </dd>
       </dl>
 
@@ -178,6 +176,11 @@ export default {
         { name: 'twitter:card', content: 'summary_large_image' },
       ],
     }
+  },
+  methods: {
+    mail(name, domain) {
+      return name + '@' + domain
+    },
   },
 }
 </script>
