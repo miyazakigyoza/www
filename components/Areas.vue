@@ -1,7 +1,7 @@
 <template>
   <ul class="grid grid-cols-3 sm:grid-cols-5 gap-4 text-xs">
     <li class="border border-solid row-span-2 sm:row-span-1 flex justify-center items-center" :class="{select:select===null}">
-      <NuxtLink to="/shop/area/" class="block p-4 w-full inset-0">All</NuxtLink>
+      <NuxtLink to="/shop/area/" class="block p-4 w-full inset-0 text-center">All</NuxtLink>
     </li>
     <li
       v-for="area in areas.items"
