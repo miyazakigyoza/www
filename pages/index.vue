@@ -41,7 +41,7 @@
           <p class="font-serif text-xl">お知らせ</p>
         </h1>
 
-        <div v-if="note.length" class="mt-8 h-24 border border-solid border-amber-400 rounded-xl overflow-y-scroll snap-y snap-mandatory" ref="news">
+        <div v-if="note.length" class="mt-8 h-72 border border-solid border-amber-400 rounded-xl overflow-y-scroll snap-y snap-mandatory" ref="news">
           <article
             v-for="entry in note"
             :key="entry.id"

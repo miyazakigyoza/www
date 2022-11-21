@@ -326,7 +326,7 @@ export default {
     mail(name) {
       return name + '@miyazakigyoza.jp'
     },
-  }
+  },
 }
 </script>
 
