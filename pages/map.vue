@@ -14,6 +14,10 @@
       ></iframe>
     </section>
 
+    <section class="mt-4 container mx-auto max-w-3xl text-center">
+      <a href="https://www.google.com/maps/d/viewer?mid=1upVtF9JC5eGLh8YuKEDVRAzMmjr7CJc&hl=ja&usp=sharing">Google Map</a>
+    </section>
+
 </main>
 </template>
 
