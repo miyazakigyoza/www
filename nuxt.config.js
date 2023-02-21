@@ -63,6 +63,7 @@ export default {
       solid: [
         'faCircleInfo',
         'faMapMarkerAlt',
+        'faMap',
         'faCaretRight',
         'faPaperPlane',
         'faBullhorn',

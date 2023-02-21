@@ -94,6 +94,29 @@
 
       </section>
 
+      <section class="">
+        <h1 class="text-center">
+          <p class="font-enTitle text-6xl">Gyoza Tour</p>
+          <p class="font-serif text-xl">宮崎餃子を巡る</p>
+        </h1>
+
+        <div class="mt-8 text-center">
+          <p>
+            地図で宮崎餃子と観光地を調べる
+          </p>
+        </div>
+        <div class="mt-4 text-center">
+          <NuxtLink
+            to="/map/"
+            class="button">
+            <font-awesome-icon icon="fa-solid fa-map" />
+            宮崎餃子マップ
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
+          </NuxtLink>
+        </div>
+
+      </section>
+
       <section class="flex flex-col justify-center items-center space-y-4">
         <h1 class="text-center">
           <p class="font-enTitle text-6xl">Shop List</p>

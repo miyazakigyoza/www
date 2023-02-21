@@ -27,6 +27,11 @@
         </section>
       </div>
 
+      <div class="container mx-auto">
+        <p class="text-center mt-4">
+          <NuxtLink to="/map/" class="button xl:text-xl">宮崎県ひなた餃子連合会 店舗マップ</NuxtLink></p>
+      </div>
+
       <div class="mt-8 bg-amber-400">
         <ul class="pt-8 flex flex-row justify-center gap-4 text-sm">
           <li>
@@ -67,7 +72,7 @@
               p-4
               pt-20 sm:pt-4
               w-full
-              grid grid-cols-1 sm:grid-cols-4
+              grid grid-cols-1 sm:grid-cols-5
               gap-y-4
               sm:divide-x sm:divide-solid sm:divide-amber-400
               text-xl sm:text-sm
@@ -79,6 +84,14 @@
                   <font-awesome-icon icon="fa-map-marker-alt" />
                 </span>
                 <span>会員店舗一覧</span>
+              </NuxtLink>
+            </li>
+            <li class="w-full sm:text-center">
+              <NuxtLink to="/map/" @click.native="close" class="flex items-center sm:justify-center gap-2">
+                <span class="w-6 text-center">
+                  <font-awesome-icon icon="fa-map" />
+                </span>
+                <span>宮崎餃子マップ</span>
               </NuxtLink>
             </li>
             <li class="w-full sm:text-center">
@@ -193,5 +206,9 @@ export default {
 }
 .shopIndex a:hover {
   @apply underline decoration-solid underline-offset-4 decoration-orange-500;
+}
+
+.button {
+  @apply relative inline-block w-full max-w-sm py-2 bg-orange-500 text-white text-center no-underline;
 }
 </style>
