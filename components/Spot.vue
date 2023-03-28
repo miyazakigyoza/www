@@ -5,7 +5,7 @@
       <a v-else-if="spot.url" :href="spot.url" target="_blank">{{ spot.name }}</a>
       <span v-else>{{ spot.name }}</span>
     </h1>
-    <div class="mt-4 sm:grid sm:grid-rows-1 sm:grid-flow-col sm:grid-cols-3 gap-4">
+    <div class="mt-4 flex flex-col sm:grid sm:grid-rows-1 sm:grid-flow-col sm:grid-cols-3 gap-4">
       <div class="col-span-2">
         <img :src="`${spot.profileImage.src}?w=960&ar=16:9&fit=crop`" class="w-full" />
         <p class="mt-4" v-html="spot.description"></p>
