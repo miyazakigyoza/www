@@ -46,6 +46,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/v-scroll',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -70,6 +71,8 @@ export default {
         'faSpinner',
         'faAngleRight',
         'faAngleLeft',
+        'faCarSide',
+        'faPersonWalking',
       ],
       regular: [
         'faPaperPlane',
