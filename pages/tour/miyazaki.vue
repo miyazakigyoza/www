@@ -40,7 +40,7 @@
 
     <h1 class="mt-32 container mx-auto text-2xl sm:text-4xl pb-2 border-b border-solid border-amber-400 text-center font-serif font-black">その他のおすすめスポット</h1>
 
-    <section class="mt-8 container mx-auto">
+    <section class="mt-8 container mx-auto flex flex-col gap-12">
       <Spot :spot="spots[1]" :zoom="13"></Spot>
       <Spot :spot="spots[2]" :zoom="13"></Spot>
     </section>
