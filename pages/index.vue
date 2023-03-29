@@ -115,6 +115,38 @@
           </NuxtLink>
         </div>
 
+        <div class="mt-8 text-center">
+          <p>
+            宮崎県内ぐるっと餃子 食べつくしマップ
+          </p>
+        </div>
+        <div class="mt-4 text-center flex flex-col sm:flex-row gap-4">
+          <NuxtLink
+            to="/tour/miyazaki/"
+            class="button">
+            宮崎市食べ歩きマップ
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
+          </NuxtLink>
+          <NuxtLink
+            to="/tour/takanabe/"
+            class="button">
+            餃子のまち高鍋コース
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
+          </NuxtLink>
+          <NuxtLink
+            to="/tour/west/"
+            class="button">
+            県西ドライブコース
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
+          </NuxtLink>
+          <NuxtLink
+            to="/tour/north/"
+            class="button">
+            県北ドライブコース
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
+          </NuxtLink>
+        </div>
+
       </section>
 
       <section class="flex flex-col justify-center items-center space-y-4">

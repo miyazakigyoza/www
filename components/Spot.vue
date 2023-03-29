@@ -1,6 +1,6 @@
 <template>
   <article>
-    <h1 class="col-span-full text-xl sm:text-3xl pb-2 border-b border-solid border-amber-400">
+    <h1 class="col-span-full text-xl sm:text-3xl pb-2 border-b border-solid border-orange-500">
       <NuxtLink v-if="spot.slug" :to="`/shop/${spot.slug}/`">{{ spot.name }}</NuxtLink>
       <a v-else-if="spot.url" :href="spot.url" target="_blank">{{ spot.name }}</a>
       <span v-else>{{ spot.name }}</span>
@@ -10,7 +10,7 @@
         <img :src="`${spot.profileImage.src}?w=960&ar=16:9&fit=crop`" class="w-full" />
         <p class="mt-4" v-html="spot.description"></p>
         <div v-if="spot.exterior" class="mt-4">
-          <img :src="`${spot.exterior.src}?w=960&ar=1:1&fit=crop`" class="w-1/2" />
+          <img :src="`${spot.exterior.src}?w=960&ar=16:9&fit=crop`" class="w-1/2" />
         </div>
       </div>
 
