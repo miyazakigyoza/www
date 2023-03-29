@@ -163,7 +163,7 @@ export default {
 }
 
 .button {
-  @apply relative inline-block w-full max-w-xs py-2 bg-orange-500 text-white text-center no-underline;
+  @apply relative inline-block w-full max-w-xs py-2 bg-amber-400 text-black text-center no-underline;
 }
 
 </style>

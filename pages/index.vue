@@ -120,28 +120,28 @@
             宮崎県内ぐるっと餃子 食べつくしマップ
           </p>
         </div>
-        <div class="mt-4 text-center flex flex-col sm:flex-row gap-4">
+        <div class="mt-4 text-center flex flex-col sm:flex-row justify-center items-center gap-4">
           <NuxtLink
             to="/tour/miyazaki/"
-            class="button">
+            class="button amber">
             宮崎市食べ歩きマップ
             <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
           </NuxtLink>
           <NuxtLink
             to="/tour/takanabe/"
-            class="button">
+            class="button amber">
             餃子のまち高鍋コース
             <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
           </NuxtLink>
           <NuxtLink
             to="/tour/west/"
-            class="button">
+            class="button amber">
             県西ドライブコース
             <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
           </NuxtLink>
           <NuxtLink
             to="/tour/north/"
-            class="button">
+            class="button amber">
             県北ドライブコース
             <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
           </NuxtLink>
@@ -261,6 +261,9 @@ export default {
 <style scoped lang="postcss">
 .button {
   @apply relative inline-block w-full max-w-xs py-2 bg-orange-500 text-white text-center no-underline;
+}
+.button.amber {
+  @apply bg-amber-400 text-black;
 }
 .fade-enter-active,.fade-leave-active{ 
   transition: opacity 1500ms ease-in;
