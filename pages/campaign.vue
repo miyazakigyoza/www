@@ -36,7 +36,7 @@
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         2023年 宮崎ぎょうざの日<br />首都圏 参加店舗
       </h2>
-      <h3 class="text-sm text-center mt-2">宮崎ぎょうざを首都圏でお気軽にお楽しみください<br />（宮崎ぎょうざの日 期間限定）</h3>
+      <h3 class="text-sm text-center mt-2">宮崎ぎょうざの日 期間限定で、宮崎ぎょうざが提供される店舗をご紹介します<br />（2023/06/23更新）</h3>
       <dl>
         <dt class="flex flex-col sm:flex-row justify-between">
           <a href="https://www.instagram.com/himukaterrace0709/" target="_blank">ヒムカテラス 宮崎ダイニング</a>
@@ -51,7 +51,7 @@
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         2023年 宮崎ぎょうざの日<br />新宿みやざき館KONNEで販売
       </h2>
-      <h3 class="text-sm text-center mt-2">以下店舗の冷凍餃子を販売いたします</h3>
+      <h3 class="text-sm text-center mt-2">以下店舗の冷凍餃子を販売いたします<br />（2023/06/23更新）</h3>
       <div class="flex flex-col sm:flex-row justify-between">
         <div class="flex flex-col justify-between">
           <p class="flex flex-wrap gap-x-4 gap-y-2">
@@ -86,7 +86,7 @@
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         2023年 宮崎ぎょうざの日<br />参加会員
       </h2>
-      <h3 class="text-sm text-center mt-2">宮崎ぎょうざの日限定のお得なイベントを開催します</h3>
+      <h3 class="text-sm text-center mt-2">宮崎ぎょうざの日限定のお得なイベントを開催します<br />（2023/06/23更新）</h3>
       <dl>
         <dt><NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink></dt>
         <dd>
