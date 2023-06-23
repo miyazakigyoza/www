@@ -41,6 +41,18 @@
           <p class="font-serif text-xl">お知らせ</p>
         </h1>
 
+        <div class="text-center flex flex-col gap-4 justify-between items-center mt-4 p-4 border border-red-400 bg-red-200">
+          <p class="text-xl">
+            <NuxtLink to="/campaign/">８月２９日・３０日・３１日に「宮崎ぎょうざの日」を開催！</NuxtLink>
+          </p>
+          <NuxtLink
+            to="/campaign/"
+            class="button">
+            詳しくはこちら
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
+          </NuxtLink>
+        </div>
+
         <div v-if="note.length" class="mt-8 h-72 border border-solid border-amber-400 rounded-xl overflow-y-scroll snap-y snap-mandatory" ref="news">
           <article
             v-for="entry in note"

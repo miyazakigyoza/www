@@ -29,53 +29,103 @@
       <p class="clear-both">
         毎年この３日間は、世帯あたりのぎょうざ支出金額・購入頻度が2021年・2022年で連続日本一<span class="text-xs">※</span>である「宮崎ぎょうざ」を、全国でより多くの方に認知いただくための特別なキャンペーンを開催していきます。<br />
       </p>
-      <p class="text-xs">
+      <p class="text-xs text-right">
         ※総務省統計局が発表する家計調査（二人以上の世帯）による
       </p>
 
-
-      <h2 class="mt-12 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
-        宮崎ぎょうざの日<br />2023年参加店舗
+      <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
+        2023年 宮崎ぎょうざの日<br />首都圏 参加店舗
       </h2>
+      <h3 class="text-sm text-center mt-2">宮崎ぎょうざを首都圏でお気軽にお楽しみください<br />（宮崎ぎょうざの日 期間限定）</h3>
       <dl>
-        <dt>餃子の馬渡</dt>
+        <dt class="flex flex-col sm:flex-row justify-between">
+          <a href="https://www.instagram.com/himukaterrace0709/" target="_blank">ヒムカテラス 宮崎ダイニング</a>
+          <p class="text-sm text-right"><a href="https://goo.gl/maps/6bUDzYuqVgiBL7DC6" target="_blank">〒150-0021 東京都渋谷区恵比寿西１丁目２０−８</a></p>
+        </dt>
         <dd>
-          <p>(1)オンラインショップ　期間中 全商品1割引</p>
-          <p>(2)店舗　全商品5%OFF（高鍋本店のみ）</p>
+          <p>宮崎直送食材を使用した本格料理が楽しめるお店が恵比寿にOPEN♪ 自慢の料理に合わせるお酒も日本酒、焼酎など宮崎の銘酒が揃い踏み！ 本場の味をご堪能ください！</p>
+        </dd>
+      </dl>
+
+
+      <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
+        2023年 宮崎ぎょうざの日<br />新宿みやざき館KONNEで販売
+      </h2>
+      <h3 class="text-sm text-center mt-2">以下店舗の冷凍餃子を販売いたします</h3>
+      <div class="flex flex-col sm:flex-row justify-between">
+        <div class="flex flex-col justify-between">
+          <p class="flex flex-wrap gap-x-4 gap-y-2">
+            <NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink>
+            <NuxtLink to="/shop/takanabegyoza/">たかなべギョーザ</NuxtLink>
+            <NuxtLink to="/shop/kiki/">餃子の樹樹</NuxtLink>
+            <NuxtLink to="/shop/ippongi/">鶏専家 一本気</NuxtLink>
+            <NuxtLink to="/shop/yataibone/">屋台骨</NuxtLink>
+            <NuxtLink to="/shop/hibiki/">響</NuxtLink>
+            <NuxtLink to="/shop/miyachiku/">ミヤチク</NuxtLink>
+            <NuxtLink to="/shop/kuroshio/">黒潮工房</NuxtLink>
+            <NuxtLink to="/shop/fujiwarafarm/">藤原牧場</NuxtLink>
+            <NuxtLink to="/shop/knfarm/">地鶏屋工房 KN’農心</NuxtLink>
+            <span>永野</span>
+            <span>クシマフーズ</span>
+          </p>
+
+          <div class="mt-4"> 
+            <p>販売場所：<br />
+              <a href="https://www.konne.jp/" target="_blank">新宿みやざき館KONNE</a></p>
+            <p>
+              東京都渋谷区代々木２-２-１<br />
+              新宿サザンテラス内
+            </p>
+          </div>
+        </div>
+        <a href="https://www.konne.jp/" target="_blank">
+          <img class="max-w-xs" src="https://www.konne.jp/wp-content/themes/konne/images/top/konne_img.jpg" alt="外観" />
+        </a>
+      </div>
+
+      <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
+        2023年 宮崎ぎょうざの日<br />参加会員
+      </h2>
+      <h3 class="text-sm text-center mt-2">宮崎ぎょうざの日限定のお得なイベントを開催します</h3>
+      <dl>
+        <dt><NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink></dt>
+        <dd>
+          <p>【オンラインショップ】期間中 全商品1割引</p>
+          <p>【店舗（高鍋本店のみ）】全商品５％OFF</p>
         </dd>
 
-        <dt>たかなべギョーザ</dt>
+        <dt><NuxtLink to="/shop/takanabegyoza/">たかなべギョーザ</NuxtLink></dt>
         <dd>
-          <p>オンラインショップ…冷凍ギョーザ3000円以上のお買い上げで全国一律送料無料</p>
-          <p>店舗でのご購入…冷凍ギョーザ3000円以上のお買い上げで全国一律送料無料または オリジナルエコバッグプレゼント</p>
+          <p>【オンラインショップ】冷凍ギョーザ3000円以上のお買い上げで全国一律送料無料</p>
+          <p>【店舗】冷凍ギョーザ3000円以上のお買い上げで全国一律送料無料または オリジナルエコバッグプレゼント</p>
         </dd>
 
-        <dt>屋台骨</dt>
+        <dt><NuxtLink to="/shop/yataibone/">屋台骨</NuxtLink></dt>
         <dd>
-          <p>オンライン全て送料無料</p>
-          <p>屋台骨本店、市場販売所、生餃子ショップアピール　全品10%OFF</p>
+          <p>【オンラインショップ】全て送料無料</p>
+          <p>【店舗（屋台骨本店、市場販売所、生餃子ショップアピール）】全品10%OFF</p>
         </dd>
 
-        <dt>鶏専家　一本気</dt>
+        <dt><NuxtLink to="/shop/ippongi/">鶏専家　一本気</NuxtLink></dt>
         <dd>
-          <p>オンラインストアで商品をお買い上げのお客様へ　一本気鶏餃子を１パックプレゼント</p>
-          <p>ご来店のお客様へもれなく焼き餃子を提供いたします。</p>
+          <p>【オンラインショップ】商品をお買い上げのお客様へ　一本気鶏餃子を１パックプレゼント</p>
+          <p>【店舗】ご来店のお客様へもれなく焼き餃子を提供</p>
         </dd>
 
-        <dt>中国料理樹樹（ぎょうざの樹樹）</dt>
+        <dt><NuxtLink to="/shop/kiki/">中国料理樹樹（ぎょうざの樹樹）</NuxtLink></dt>
         <dd>
-          <p>ウェブサイト：期間中、樹樹のぎょうざ30個送料無料</p>
-          <p>店舗：期間中、餃子各種2個増量</p>
+          <p>【オンラインショップ】期間中、樹樹のぎょうざ30個送料無料</p>
+          <p>【店舗】期間中、餃子各種2個増量</p>
         </dd>
 
-        <dt>有限会社 青島食肉食鳥</dt>
+        <dt><NuxtLink to="/shop/aoshoku/">有限会社 青島食肉食鳥</NuxtLink></dt>
         <dd>
-          <p>期間中、ご来店ならびにウェブサイトで金豚餃子をお買い上げのお客様に、新商品 エビ餃子3ｹ プレゼント。</p>
+          <p>【オンランショップ / 店舗】金豚餃子をお買い上げのお客様に、新商品 エビ餃子3個プレゼント。</p>
         </dd>
 
-        <dt>餃子の里</dt>
+        <dt><NuxtLink to="/shop/gyozanosato/">餃子の里</NuxtLink></dt>
         <dd>
-          <p>期間中、ウェブサイトでご購入いただいたお客様に、へべす餃子6個入りをプレゼント。</p>
+          <p>【オンラインショップ】ご購入いただいたお客様に、へべす餃子6個入りをプレゼント。</p>
         </dd>
       </dl>
     </section>
@@ -148,6 +198,12 @@ export default {
 }
 #feature dt {
   @apply mt-4 pb-1 text-xl;
+}
+#feature a {
+  @apply underline underline-offset-4 decoration-1 decoration-dashed decoration-orange-500;
+}
+#feature a:hover {
+  @apply underline-offset-2 decoration-2 decoration-solid decoration-orange-300;
 }
 #feature dd {
   @apply pb-1 pl-4;
