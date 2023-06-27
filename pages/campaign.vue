@@ -47,6 +47,25 @@
         </dd>
       </dl>
 
+      <div class="mt-12 text-center flex flex-col gap-4 justify-between items-center p-4 border border-amber-500 bg-amber-50">
+          <p class="text-md">
+            「宮崎ぎょうざの日」参加を検討される<strong class="bg-amber-200 p-1">首都圏の宮崎料理店</strong>に、宮崎餃子サンプルをお送りしております
+          </p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScAYMkLrHY3whxDKMjfoLR8u_gAChl2NJANaO-iP7tgsizeMQ/viewform?usp=sf_link"
+            target="_blank"
+            to="/campaign/"
+            class="button">
+            詳しくはこちら
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
+          </a>
+          <div class="text-sm">
+            ※審査がございます。<br />
+            ※ご不明な点は<NuxtLink to="/contact/">お問い合わせフォーム</NuxtLink>よりお問い合わせください。
+          </div>
+        </div>
+
+      
+
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         2023年 宮崎ぎょうざの日<br />新宿みやざき館KONNEで販売
