@@ -181,13 +181,13 @@
 export default {
   head() {
     return {
-      title: '宮崎餃子の特色と宮崎県ひなた餃子連合会について',
+      title: '宮崎餃子のキャンペーン予定',
       meta: [
-        { hid: 'og:title', property: 'og:title', content: '宮崎餃子の特色と宮崎県ひなた餃子連合会について' },
-        { hid: 'description', name: 'description', content: '宮崎県ひなた餃子連合会は、宮崎県産の多種多様で高品質な食材が包まれた宮崎餃子のブランド化を目指しています。' },
-        { hid: 'og:description', property: 'og:description', content: '宮崎県ひなた餃子連合会は、宮崎県産の多種多様で高品質な食材が包まれた宮崎餃子のブランド化を目指しています。' },
+        { hid: 'og:title', property: 'og:title', content: '宮崎餃子のキャンペーン予定' },
+        { hid: 'description', name: 'description', content: '多種多様で高品質な宮崎県産食材が包まれた宮崎餃子のブランド化を目指して、宮崎県ひなた餃子連合会が行う活動をご紹介します。' },
+        { hid: 'og:description', property: 'og:description', content: '多種多様で高品質な宮崎県産食材が包まれた宮崎餃子のブランド化を目指して、宮崎県ひなた餃子連合会が行う活動をご紹介します。' },
         { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:url', property: 'og:url', content: 'https://miyazakigyoza.jp/about/' },
+        { hid: 'og:url', property: 'og:url', content: 'https://miyazakigyoza.jp/campaign/' },
         { hid: 'og:image', property: 'og:image', content: 'https://miyazakigyoza.jp/img/ogp.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
       ],
