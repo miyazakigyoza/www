@@ -36,7 +36,10 @@
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         2023年 宮崎ぎょうざの日<br />首都圏 参加店舗
       </h2>
-      <h3 class="text-sm text-center mt-2">宮崎ぎょうざの日 期間限定で、宮崎ぎょうざが提供される店舗をご紹介します<br />（2023/06/27更新）</h3>
+      <h3 class="text-sm text-center mt-2">
+        宮崎ぎょうざの日 期間限定で、宮崎ぎょうざが提供される店舗をご紹介します<br />
+        （2023/07/24更新）
+      </h3>
       <dl>
         <dt class="flex flex-col sm:flex-row justify-between">
           <a href="https://www.instagram.com/himukaterrace0709/" target="_blank">ヒムカテラス 宮崎ダイニング</a>
@@ -44,6 +47,20 @@
         </dt>
         <dd>
           <p>宮崎直送食材を使用した本格料理が楽しめるお店が恵比寿にOPEN♪ 自慢の料理に合わせるお酒も日本酒、焼酎など宮崎の銘酒が揃い踏み！ 本場の味をご堪能ください！</p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="flex flex-col sm:flex-row justify-between">
+          <a href="https://akasakatoron2.foodre.jp/" target="_blank">話食酒歌 トロントロン</a>
+          <p class="text-sm text-right"><a href="https://goo.gl/maps/6bUDzYuqVgiBL7DC6" target="_blank">〒107-0052 東京都港区赤坂３-１９-１２ 赤坂東昇ビル４F</a></p>
+        </dt>
+        <dd>
+          <p>
+            宮崎に縁を持ち、「トロントロン」は実際に宮崎県川南町の地名からお取りしています。
+            素材は宮崎の地産のものをふんだんに使用し、肉料理から野菜、麺までも地元の味を生かす料理を提供しています。
+            あなたの居場所になれますようにと願いを込めて。ぜひフラッと、お一人様からでも遊びにいらしてください。
+          </p>
         </dd>
       </dl>
 
@@ -105,7 +122,10 @@
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         2023年 宮崎ぎょうざの日<br />参加会員
       </h2>
-      <h3 class="text-sm text-center mt-2">宮崎ぎょうざの日限定のお得なイベントを開催します<br />（2023/06/27更新）</h3>
+      <h3 class="text-sm text-center mt-2">
+        宮崎ぎょうざの日限定のお得なイベントを開催します<br />
+        （2023/07/24更新）
+      </h3>
       <dl>
         <dt><NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink></dt>
         <dd>
@@ -144,7 +164,17 @@
 
         <dt><NuxtLink to="/shop/gyozanosato/">餃子の里</NuxtLink></dt>
         <dd>
-          <p>【オンラインショップ】ご購入いただいたお客様に、へべす餃子6個入りをプレゼント。</p>
+          <p>【オンラインショップ】ご購入いただいたお客様に、へべす餃子6個入りをプレゼント</p>
+        </dd>
+
+        <dt><NuxtLink to="/shop/daimyojin/">一口餃子の大明神</NuxtLink></dt>
+        <dd>
+          <p>【店舗】餃子タワー、ツインタワーを10%オフ</p>
+        </dd>
+
+        <dt><NuxtLink to="/shop/fufufu/">ベーカリーCafe風々々</NuxtLink></dt>
+        <dd>
+          <p>【店舗】焼き餃子パン10%引き</p>
         </dd>
       </dl>
     </section>
