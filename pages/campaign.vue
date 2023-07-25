@@ -159,7 +159,7 @@
 
         <dt><NuxtLink to="/shop/aoshoku/">有限会社 青島食肉食鳥</NuxtLink></dt>
         <dd>
-          <p>【オンランショップ / 店舗】金豚餃子をお買い上げのお客様に、餃子3ヶ増量</p>
+          <p>【オンランショップ / 店舗】金豚餃子3種類10％OFF</p>
         </dd>
 
         <dt><NuxtLink to="/shop/gyozanosato/">餃子の里</NuxtLink></dt>
