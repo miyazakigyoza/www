@@ -38,7 +38,7 @@
       </h2>
       <h3 class="text-sm text-center mt-2">
         宮崎ぎょうざの日 期間限定で、宮崎ぎょうざが提供される店舗をご紹介します<br />
-        （2023/07/24更新）
+        （2023/08/22更新）
       </h3>
       <dl>
         <dt class="flex flex-col sm:flex-row justify-between">
@@ -55,6 +55,13 @@
           <a href="https://akasakatoron2.foodre.jp/" target="_blank">話食酒歌 トロントロン</a>
           <p class="text-sm text-right"><a href="https://goo.gl/maps/6bUDzYuqVgiBL7DC6" target="_blank">〒107-0052 東京都港区赤坂３-１９-１２ 赤坂東昇ビル４F</a></p>
         </dt>
+        <dd class="p-2 border border-amber-500  bg-amber-200">
+          <div>【期間限定提供】</div>
+          <ul>
+            <li>餃子の馬渡 もっちり餃子（焼・水） 一皿700円（税込）</li>
+            <li>たかなべギョーザ（焼・水） 一皿700円（税込）</li>
+          </ul>
+        </dd>
         <dd>
           <p>
             宮崎に縁を持ち、「トロントロン」は実際に宮崎県川南町の地名からお取りしています。
@@ -64,6 +71,7 @@
         </dd>
       </dl>
 
+      <!--
       <div class="mt-12 text-center flex flex-col gap-4 justify-between items-center p-4 border border-amber-500 bg-amber-50">
           <p class="text-md">
             「宮崎ぎょうざの日」参加を検討される<strong class="bg-amber-200 p-1">首都圏の宮崎料理店</strong>に、宮崎餃子サンプルをお送りしております
@@ -80,6 +88,7 @@
             ※ご不明な点は<NuxtLink to="/contact/">お問い合わせフォーム</NuxtLink>よりお問い合わせください。
           </div>
         </div>
+      -->
 
       
 
