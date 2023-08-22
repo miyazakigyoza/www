@@ -129,6 +129,36 @@
       </div>
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
+        宮崎自動車道 霧島サービスエリア<br />
+        飲食コーナーで販売中の辛麺餃子2個増量キャンペーン
+      </h2>
+      <h3 class="text-sm text-center mt-2">宮崎ぎょうざの日に合わせたキャンペーンを開催<br />（2023/08/22更新）</h3>
+      <div class="flex flex-col sm:flex-row justify-between">
+        <div class="flex flex-col justify-between">
+          <p>
+            宮崎自動車道 霧島サービスエリア 飲食コーナーで大人気「辛麺」のタレで味付けしたオリジナル餃子。
+            唐辛子の効いたパンチのある味わいがクセになります。<br />
+          </p>
+
+          <div class="mt-4"> 
+            <p>販売場所：</p>
+            <p>
+              <a href="https://www.w-holdings.co.jp/sapa/2696.html">霧島サービスエリア(上り線)</a>
+              宮崎県小林市細野東宮の原4263-232
+            </p>
+            <p>
+              <a href="https://www.w-holdings.co.jp/sapa/2699.html">霧島サービスエリア(下り線)</a>
+              宮崎県小林市細野東宮の原4263-132
+            </p>
+            <p>
+              【提供時間】10:00~20:00
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         2023年 宮崎ぎょうざの日<br />参加会員
       </h2>
       <h3 class="text-sm text-center mt-2">
