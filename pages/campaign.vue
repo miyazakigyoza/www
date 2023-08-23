@@ -155,6 +155,51 @@
             </p>
           </div>
         </div>
+        <img class="max-w-xs" src="/campaign/karamengyoza.jpg" alt="辛麺餃子" />
+      </div>
+
+      <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
+        宮崎県内のイオン・マックスバリュ<br />
+        ３日間限定 WAON 50ポイント
+      </h2>
+      <h3 class="text-sm text-center mt-2">2023/08/29（火）〜31（木） ３日間限定<br />（2023/08/23更新）</h3>
+      <div class="flex flex-col sm:flex-row justify-between">
+        <div class="flex flex-col justify-between">
+          <p>
+            「屋台骨 宮崎餃子 12個入」「餃子の馬渡 馬渡のもっちり餃子 10個入」「たかなべギョーザ たかなべギョーザ 10個入」をご購入の方にWAON 50ポイントプレゼント。
+          </p>
+
+          <div class="mt-4"> 
+            <p>実施店舗：</p>
+              <div class="flex flex-wrap gap-x-4 gap-y-2">
+                <span class="w-full block">【イオン】</span>
+                <a href="https://miyazaki.aeonkyushu.com/" target="_blank">宮崎店</a>
+                <a href="https://minamimiyazaki.aeonkyushu.com/" target="_blank">南宮崎店</a>
+                <a href="https://nobeoka.aeonkyushu.com/" target="_blank">延岡店</a>
+                <a href="https://tatara.aeonkyushu.com/" target="_blank">多々良店</a>
+                <a href="https://hyuga.aeonkyushu.com/" target="_blank">日向店</a>
+                <a href="https://miyakonojo.aeonkyushu.com/" target="_blank">都城店</a>
+                <a href="https://miyakonojoekimae-aeonmall.com/" target="_blank">都城駅前店</a>
+              </div>
+              <p class="flex flex-wrap gap-x-4 gap-y-2">
+                <span class="w-full block">【マックスバリュ】</span>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/126" target="_blank">宮崎駅東店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/132" target="_blank">都北店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/131" target="_blank">高鍋店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/123" target="_blank">霧島店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/127" target="_blank">綾店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/135" target="_blank">田野店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/130" target="_blank">南延岡店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/125" target="_blank">うきのじょう店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/129" target="_blank">岡富店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/134" target="_blank">清武店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/128" target="_blank">西都店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/124" target="_blank">都城店島之内店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/136" target="_blank">木花台店</a>
+                <a href="https://aeonkyushu-maxvalu.info/shop/detail/122" target="_blank">橘通西店</a>
+              </p>
+          </div>
+        </div>
       </div>
 
 
