@@ -46,7 +46,7 @@
           <p class="text-sm text-right"><a href="https://goo.gl/maps/6bUDzYuqVgiBL7DC6" target="_blank">〒150-0021 東京都渋谷区恵比寿西１丁目２０−８</a></p>
         </dt>
         <dd class="p-2 border border-amber-500  bg-amber-200">
-          <div>【期間限定提供】</div>
+          <div>【期間限定提供（8/29-9/3）】</div>
           <ul>
             <li>焼き餃子 750円（税込）</li>
             <li>出汁餃子 750円（税込）</li>
@@ -65,7 +65,7 @@
           <p class="text-sm text-right"><a href="https://goo.gl/maps/6bUDzYuqVgiBL7DC6" target="_blank">〒107-0052 東京都港区赤坂３-１９-１２ 赤坂東昇ビル４F</a></p>
         </dt>
         <dd class="p-2 border border-amber-500  bg-amber-200">
-          <div>【期間限定提供】</div>
+          <div>【期間限定提供（8/29-9/1）】</div>
           <ul>
             <li>餃子の馬渡 もっちり餃子（焼・水） 一皿700円（税込）</li>
             <li>たかなべギョーザ（焼・水） 一皿700円（税込）</li>
