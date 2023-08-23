@@ -38,13 +38,22 @@
       </h2>
       <h3 class="text-sm text-center mt-2">
         宮崎ぎょうざの日 期間限定で、宮崎ぎょうざが提供される店舗をご紹介します<br />
-        （2023/08/22更新）
+        （2023/08/23更新）
       </h3>
       <dl>
         <dt class="flex flex-col sm:flex-row justify-between">
           <a href="https://www.instagram.com/himukaterrace0709/" target="_blank">ヒムカテラス 宮崎ダイニング</a>
           <p class="text-sm text-right"><a href="https://goo.gl/maps/6bUDzYuqVgiBL7DC6" target="_blank">〒150-0021 東京都渋谷区恵比寿西１丁目２０−８</a></p>
         </dt>
+        <dd class="p-2 border border-amber-500  bg-amber-200">
+          <div>【期間限定提供】</div>
+          <ul>
+            <li>焼き餃子 750円（税込）</li>
+            <li>出汁餃子 750円（税込）</li>
+            <li>棒々鶏餃子 750円（税込）</li>
+          </ul>
+          <p class="text-sm">※提供される餃子のブランドは日によって変わりますので、店頭でご確認ください</p>
+        </dd>
         <dd>
           <p>宮崎直送食材を使用した本格料理が楽しめるお店が恵比寿にOPEN♪ 自慢の料理に合わせるお酒も日本酒、焼酎など宮崎の銘酒が揃い踏み！ 本場の味をご堪能ください！</p>
         </dd>
