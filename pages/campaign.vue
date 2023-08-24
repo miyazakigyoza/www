@@ -33,8 +33,11 @@
         ※総務省統計局が発表する家計調査（二人以上の世帯）による
       </p>
 
+      <h1 class="mt-32 text-3xl font-serif font-black text-center bg-amber-400 p-4">２０２３年<br />宮崎ぎょうざの日<br />実施内容</h1>
+      <p class="text-center">主催：宮崎県ひなた餃子連合会 / 後援：宮崎県</p>
+
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
-        2023年 宮崎ぎょうざの日<br />首都圏 参加店舗
+        首都圏 参加店舗
       </h2>
       <h3 class="text-sm text-center mt-2">
         宮崎ぎょうざの日 期間限定で、宮崎ぎょうざが提供される店舗をご紹介します<br />
@@ -103,7 +106,7 @@
 
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
-        2023年 宮崎ぎょうざの日<br />新宿みやざき館KONNEで販売
+        新宿みやざき館KONNEで販売
       </h2>
       <h3 class="text-sm text-center mt-2">以下店舗の冷凍餃子を販売いたします<br />（2023/06/27更新）</h3>
       <div class="flex flex-col sm:flex-row justify-between">
@@ -138,7 +141,7 @@
       </div>
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
-        宮崎自動車道 霧島サービスエリア<br />
+        宮崎自動車道<br />霧島サービスエリア<br />
         飲食コーナーで販売中の辛麺餃子2個増量キャンペーン
       </h2>
       <h3 class="text-sm text-center mt-2">宮崎ぎょうざの日に合わせたキャンペーンを開催<br />（2023/08/22更新）</h3>
@@ -168,7 +171,7 @@
       </div>
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
-        宮崎県内のイオン・マックスバリュ<br />
+        宮崎県内<br />イオン・マックスバリュ<br />
         ３日間限定 WAON 50ポイント
       </h2>
       <h3 class="text-sm text-center mt-2">2023/08/29（火）〜31（木） ３日間限定<br />（2023/08/23更新）</h3>
@@ -213,7 +216,7 @@
 
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
-        2023年 宮崎ぎょうざの日<br />参加会員
+        宮崎県ひなた餃子連合会<br />参加会員店舗
       </h2>
       <h3 class="text-sm text-center mt-2">
         宮崎ぎょうざの日限定のお得なイベントを開催します<br />
