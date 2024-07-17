@@ -1,9 +1,9 @@
 <template>
   <main>
 
-    <section class="relative h-screen w-screen">
+    <section class="relative h-[70vh] w-screen">
       <transition name="fade">
-        <div class="inset-0 relative w-screen h-screen overflow-hidden" v-show="n===null">
+        <div class="inset-0 relative w-screen h-full overflow-hidden" v-show="n===null">
           <img
             src="~/assets/img/logo-h.svg"
             alt="宮崎餃子"
