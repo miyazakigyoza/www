@@ -51,7 +51,7 @@
             詳しくはこちら
             <font-awesome-icon icon="fa-solid fa-angle-right" class="absolute right-4 top-1/2 -translate-y-1/2" />
           </NuxtLink>
-          <p class="text-sm">2023/08/23更新</p>
+          <p class="text-sm">2024/07/17更新</p>
         </div>
 
         <div v-if="note.length" class="mt-8 h-72 border border-solid border-amber-400 rounded-xl overflow-y-scroll snap-y snap-mandatory" ref="news">
@@ -107,6 +107,7 @@
 
       </section>
 
+      <!--
       <section class="">
         <h1 class="text-center">
           <p class="font-enTitle text-6xl">Gyoza Tour</p>
@@ -161,6 +162,7 @@
         </div>
 
       </section>
+      -->
 
       <section class="flex flex-col justify-center items-center space-y-4">
         <h1 class="text-center">

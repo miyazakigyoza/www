@@ -33,7 +33,7 @@
         ※総務省統計局が発表する家計調査（二人以上の世帯）による
       </p>
 
-      <h1 class="mt-32 text-3xl font-serif font-black text-center bg-amber-400 p-4">２０２３年<br />宮崎ぎょうざの日<br />実施内容</h1>
+      <h1 class="mt-32 text-3xl font-serif font-black text-center bg-amber-400 p-4">２０２４年<br />宮崎ぎょうざの日<br />実施内容</h1>
       <p class="text-center">主催：宮崎県ひなた餃子連合会 / 後援：宮崎県</p>
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
@@ -41,7 +41,7 @@
       </h2>
       <h3 class="text-sm text-center mt-2">
         宮崎ぎょうざの日 期間限定で、宮崎ぎょうざが提供される店舗をご紹介します<br />
-        （2023/08/23更新）
+        （2024/07/17更新）
       </h3>
       <dl>
         <dt class="flex flex-col sm:flex-row justify-between">
@@ -49,11 +49,11 @@
           <p class="text-sm text-right"><a href="https://goo.gl/maps/6bUDzYuqVgiBL7DC6" target="_blank">〒150-0021 東京都渋谷区恵比寿西１丁目２０−８</a></p>
         </dt>
         <dd class="p-2 border border-amber-500  bg-amber-200">
-          <div>【期間限定提供（8/29-9/3）】</div>
           <ul>
-            <li>焼き餃子 750円（税込）</li>
-            <li>出汁餃子 750円（税込）</li>
-            <li>棒々鶏餃子 750円（税込）</li>
+            <li>焼き餃子 5個 850円 / 10個 1,500円</li>
+            <li>揚げ餃子 5個 750円 / 10個 1,400円</li>
+            <li>出汁餃子 850円</li>
+            <li>餃子の馬渡 手羽餃子 1本 550円</li>
           </ul>
           <p class="text-sm">※提供される餃子のブランドは日によって変わりますので、店頭でご確認ください</p>
         </dd>
@@ -62,6 +62,7 @@
         </dd>
       </dl>
 
+      <!--
       <dl>
         <dt class="flex flex-col sm:flex-row justify-between">
           <a href="https://akasakatoron2.foodre.jp/" target="_blank">話食酒歌 トロントロン</a>
@@ -82,6 +83,7 @@
           </p>
         </dd>
       </dl>
+      -->
 
       <!--
       <div class="mt-12 text-center flex flex-col gap-4 justify-between items-center p-4 border border-amber-500 bg-amber-50">
@@ -108,7 +110,7 @@
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         新宿みやざき館KONNEで販売
       </h2>
-      <h3 class="text-sm text-center mt-2">以下店舗の冷凍餃子を販売いたします<br />（2023/06/27更新）</h3>
+      <h3 class="text-sm text-center mt-2">以下店舗の冷凍餃子を販売いたします<br />（2024/07/17更新）</h3>
       <div class="flex flex-col sm:flex-row justify-between">
         <div class="flex flex-col justify-between">
           <p class="flex flex-wrap gap-x-4 gap-y-2">
@@ -118,12 +120,8 @@
             <NuxtLink to="/shop/ippongi/">鶏専家 一本気</NuxtLink>
             <NuxtLink to="/shop/yataibone/">屋台骨</NuxtLink>
             <NuxtLink to="/shop/hibiki/">響</NuxtLink>
-            <NuxtLink to="/shop/miyachiku/">ミヤチク</NuxtLink>
-            <NuxtLink to="/shop/kuroshio/">黒潮工房</NuxtLink>
             <NuxtLink to="/shop/fujiwarafarm/">藤原牧場</NuxtLink>
             <NuxtLink to="/shop/knfarm/">地鶏屋工房 KN’農心</NuxtLink>
-            <span>永野</span>
-            <span>クシマフーズ</span>
           </p>
 
           <div class="mt-4"> 
@@ -140,6 +138,7 @@
         </a>
       </div>
 
+      <!--
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         宮崎自動車道<br />霧島サービスエリア<br />
         飲食コーナーで販売中の辛麺餃子2個増量キャンペーン
@@ -213,6 +212,7 @@
           </div>
         </div>
       </div>
+      -->
 
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
@@ -220,7 +220,7 @@
       </h2>
       <h3 class="text-sm text-center mt-2">
         宮崎ぎょうざの日限定のお得なイベントを開催します<br />
-        （2023/07/24更新）
+        （2024/07/17更新）
       </h3>
       <dl>
         <dt><NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink></dt>
@@ -261,11 +261,6 @@
         <dt><NuxtLink to="/shop/gyozanosato/">餃子の里</NuxtLink></dt>
         <dd>
           <p>【オンラインショップ】ご購入いただいたお客様に、へべす餃子6個入りをプレゼント</p>
-        </dd>
-
-        <dt><NuxtLink to="/shop/daimyojin/">一口餃子の大明神</NuxtLink></dt>
-        <dd>
-          <p>【店舗】餃子タワー、ツインタワーを10%オフ</p>
         </dd>
 
         <dt><NuxtLink to="/shop/fufufu/">ベーカリーCafe風々々</NuxtLink></dt>

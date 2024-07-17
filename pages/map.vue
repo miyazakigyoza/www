@@ -18,6 +18,7 @@
       ></iframe>
     </section>
 
+    <!--
     <section class="mt-4 container mx-auto">
       <div class="mt-8 text-center">
         <p>
@@ -51,6 +52,7 @@
         </NuxtLink>
       </div>
     </section>
+    -->
 
 </main>
 </template>
