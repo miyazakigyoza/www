@@ -34,7 +34,7 @@
       </p>
 
       <h1 class="mt-32 text-3xl font-serif font-black text-center bg-amber-400 p-4">２０２４年<br />宮崎ぎょうざの日<br />実施内容</h1>
-      <p class="text-center">主催：宮崎県ひなた餃子連合会 / 後援：宮崎県</p>
+      <p class="text-center">主催：宮崎県ひなた餃子連合会 / 後援：宮崎県 東京事務所・宮崎市 東京事務所</p>
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         首都圏 参加店舗
