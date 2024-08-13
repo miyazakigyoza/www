@@ -201,7 +201,7 @@
             <li><NuxtLink to="/shop/hibiki/">響</NuxtLink>：宮崎牛餃子</li>
             <li><NuxtLink to="/shop/suisen/">地鶏炭火焼 粋仙</NuxtLink>：みやざき地頭鶏餃子</li>
             <li><NuxtLink to="/shop/knfarm/">KN’農心</NuxtLink>：みやざき地頭鶏餃子</li>
-            <li>黒潮工房 ：まさとの黒豚餃子</li>
+            <li><NuxtLink to="/shop/kuroshio/">黒潮工房</NuxtLink>：まさとの黒豚餃子</li>
             <li><NuxtLink to="/shop/gyozanosato/">餃子の里</NuxtLink>：へべすの餃子</li>
             <li><NuxtLink to="/shop/furaiken/">風来軒</NuxtLink>：風来軒餃子</li>
           </ul>
@@ -236,7 +236,7 @@
             <NuxtLink to="/shop/kiki/">餃子の樹樹</NuxtLink>
             <NuxtLink to="/shop/ippongi/">鶏専家 一本気</NuxtLink>
             <NuxtLink to="/shop/yataibone/">屋台骨</NuxtLink>
-            <NuxtLink to="/shop/hibiki/">響</NuxtLink>
+            <NuxtLink to="/shop/kuroshio/">黒潮工房</NuxtLink>
             <NuxtLink to="/shop/fujiwarafarm/">藤原牧場</NuxtLink>
             <NuxtLink to="/shop/knfarm/">地鶏屋工房 KN’農心</NuxtLink>
           </p>
