@@ -156,7 +156,7 @@
           </div>
 
           <p class="font-bold text-lg">【出店店舗・特別販売商品】</p>
-          <ul class="ml-4 list-disc">
+          <ul class="ml-4 list-disc flex flex-col gap-y-2">
             <li>
               <NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink>
               <ul class="ml-4 list-[circle]">
@@ -187,18 +187,27 @@
             </li>
             <li>
               <NuxtLink to="/shop/fujiwarafarm/">藤原牧場</NuxtLink>
+              <ul class="ml-4 list-[circle]">
+                <li>牛餃子めし(300g) [各日30点限り] 税込1,080円</li>
+              </ul>
+            </li>
+            <li>
+              <NuxtLink to="/shop/fufufu/">ベーカリーcafe風々々</NuxtLink>
+              <ul class="ml-4 list-[circle]">
+                <li>焼き餃子ぱん [各日100点限り]税込350円</li>
+              </ul>
             </li>
           </ul>
 
           <p class="font-bold text-lg">【みやざき餃子 冷凍餃子コーナーでの販売】</p>
-          <ul class="ml-4 list-disc">
-            <li>屋台骨 ：宮崎餃子</li>
-            <li>響 ：宮崎牛餃子</li>
-            <li>地鶏炭火焼 粋仙：みやざき地頭鶏餃子</li>
-            <li>KN’農心 ：みやざき地頭鶏餃子</li>
+          <ul class="ml-4 list-disc flex flex-col gap-y-1">
+            <li><NuxtLink to="/shop/yataibone/">屋台骨</NuxtLink>：宮崎餃子</li>
+            <li><NuxtLink to="/shop/hibiki/">響</NuxtLink>：宮崎牛餃子</li>
+            <li><NuxtLink to="/shop/suisen/">地鶏炭火焼 粋仙</NuxtLink>：みやざき地頭鶏餃子</li>
+            <li><NuxtLink to="/shop/knfarm/">KN’農心</NuxtLink>：みやざき地頭鶏餃子</li>
             <li>黒潮工房 ：まさとの黒豚餃子</li>
-            <li>餃子の里 ：へべすの餃子</li>
-            <li>風来軒 ：風来軒餃子</li>
+            <li><NuxtLink to="/shop/gyozanosato/">餃子の里</NuxtLink>：へべすの餃子</li>
+            <li><NuxtLink to="/shop/furaiken/">風来軒</NuxtLink>：風来軒餃子</li>
           </ul>
 
         </div>
