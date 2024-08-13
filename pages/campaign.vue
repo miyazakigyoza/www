@@ -166,10 +166,6 @@
             </li>
             <li>
               <NuxtLink to="/shop/takanabegyoza/">たかなべギョーザ</NuxtLink>
-              <ul class="ml-4 list-[circle]">
-                <li>樹樹のおうちで中華三昧セット [8月28日限定 7点限り] 税込6,372円</li>
-                <li>ぎょうざ10個入り3パックセット  [各日10点限り] 税込2,430円</li>
-              </ul>
             </li>
             <li>
               <NuxtLink to="/shop/kiki/">中国料理樹樹</NuxtLink>
@@ -336,48 +332,30 @@
       -->
 
 
-      <!--
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         宮崎県ひなた餃子連合会<br />参加会員店舗
       </h2>
       <h3 class="text-sm text-center mt-2">
         宮崎ぎょうざの日限定のお得なイベントを開催します<br />
-        （2024/07/17更新）
+        （2024/08/13更新）
       </h3>
       <dl>
-        <dt><NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink></dt>
-        <dd>
-          <p>【オンラインショップ】期間中 全商品1割引</p>
-          <p>【店舗（高鍋本店のみ）】全商品５％OFF</p>
-        </dd>
-
         <dt><NuxtLink to="/shop/takanabegyoza/">たかなべギョーザ</NuxtLink></dt>
         <dd>
-          <p>【オンラインショップ】冷凍ギョーザ3000円以上のお買い上げで全国一律送料無料</p>
-          <p>【店舗】冷凍ギョーザ3000円以上のお買い上げで全国一律送料無料または オリジナルエコバッグプレゼント</p>
+          <p>【オンラインショップ】期間中 全商品 10% OFF</p>
+          <p>【店舗】全商品5% OFF（ディナーのみ）</p>
         </dd>
+
+        <dt><NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink></dt>
+        <dd>
+          <p>【オンラインショップ】期間中 全商品 10% OFF</p>
+          <p>【店舗（高鍋本店のみ）】全商品5% OFF</p>
+        </dd>
+
 
         <dt><NuxtLink to="/shop/yataibone/">屋台骨</NuxtLink></dt>
         <dd>
-          <p>【オンラインショップ】全て送料無料</p>
-          <p>【店舗（屋台骨本店、市場販売所、生餃子ショップアピール）】全品10%OFF</p>
-        </dd>
-
-        <dt><NuxtLink to="/shop/ippongi/">鶏専家　一本気</NuxtLink></dt>
-        <dd>
-          <p>【オンラインショップ】商品をお買い上げのお客様へ　一本気鶏餃子を１パックプレゼント</p>
-          <p>【店舗】ご来店のお客様へもれなく焼き餃子を提供</p>
-        </dd>
-
-        <dt><NuxtLink to="/shop/kiki/">中国料理樹樹（ぎょうざの樹樹）</NuxtLink></dt>
-        <dd>
-          <p>【オンラインショップ】期間中、樹樹のぎょうざ30個送料無料</p>
-          <p>【店舗】期間中、餃子各種2個増量</p>
-        </dd>
-
-        <dt><NuxtLink to="/shop/aoshoku/">有限会社 青島食肉食鳥</NuxtLink></dt>
-        <dd>
-          <p>【オンランショップ / 店舗】金豚餃子3種類10％OFF</p>
+          <p>【屋台骨直営店 餃子バカ一代（芳士店）無人販売所】50個入 通常1,350円を1,000円（税込）販売</p>
         </dd>
 
         <dt><NuxtLink to="/shop/gyozanosato/">餃子の里</NuxtLink></dt>
@@ -385,12 +363,13 @@
           <p>【オンラインショップ】ご購入いただいたお客様に、へべす餃子6個入りをプレゼント</p>
         </dd>
 
-        <dt><NuxtLink to="/shop/fufufu/">ベーカリーCafe風々々</NuxtLink></dt>
+        <dt><NuxtLink to="/shop/kiki/">中国料理樹樹（ぎょうざの樹樹）</NuxtLink></dt>
         <dd>
-          <p>【店舗】焼き餃子パン10%引き</p>
+          <p>【オンラインショップ】期間中、樹樹のぎょうざ30個 送料無料</p>
+          <p>【店舗】期間中、餃子各種2個増量</p>
         </dd>
+
       </dl>
-      -->
     </section>
 
     <section id="feature" class="container mx-auto mt-20 max-w-5xl">
