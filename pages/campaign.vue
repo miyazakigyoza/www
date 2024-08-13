@@ -124,33 +124,38 @@
 
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
-        大丸福岡天神店「第4回 熱いぜ宮崎展」出店
+        大丸福岡天神店 <a href="https://www.daimaru-fukuoka.jp/contents/miyazakiten/" target="_blank">「第4回 熱いぜ宮崎展」</a>出店
       </h2>
       <h3 class="text-sm text-center mt-2">8月28日（水）〜9月2日（月）<br />宮崎餃子名店5種食べ比べセットのほか、先着限定のお得なセールを開催します<br />（2024/08/13更新）</h3>
-      <div class="flex flex-col sm:flex-row justify-between">
-        <div class="flex flex-col justify-between">
-          <section>
-            <p class="font-bold">■宮崎餃子名店5種食べ比べ [各日30点限り] 税込900円</p>
-            <figure>
-              <img src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/common/items/c05_item01.png" alt="宮崎餃子５種食べ比べ画像" class="w-48 sm:w-64" />
-              <figcaption class="text-sm">
-                Ⓐ餃子の馬渡2個、Ⓑたかなべギョーザ2個、Ⓒ中国料理樹樹2個、Ⓓ藤原牧場 やまんうえのお肉屋さん2個、Ⓔ一本気2個
-              </figcaption>
-            </figure>
-          </section>
+      <a href="https://www.daimaru-fukuoka.jp/contents/miyazakiten/" target="_blank">
+        <img class="w-full" src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/ogp.jpg" alt="概要" />
+      </a>
+        <div class="mt-8 flex flex-col justify-between">
+          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+            <section>
+              <p class="font-bold">■宮崎餃子名店5種食べ比べ [各日30点限り] 税込900円</p>
+              <p class="text-sm">宮崎餃子を代表する、餃子の馬渡・たかなべギョーザ・中国料理樹樹・藤原牧場 やまんうえのお肉屋さん・一本気の焼き餃子食べ比べ。</p>
+              <figure>
+                <img src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/common/items/c05_item01.png" alt="宮崎餃子５種食べ比べ画像" class="w-48 sm:w-64 mx-auto" />
+                <figcaption class="text-sm">
+                  Ⓐ餃子の馬渡2個、Ⓑたかなべギョーザ2個、Ⓒ中国料理樹樹2個、Ⓓ藤原牧場 やまんうえのお肉屋さん2個、Ⓔ一本気2個
+                </figcaption>
+              </figure>
+            </section>
 
-          <section class="mt-4">
-            <p class="font-bold">■宮崎餃子食べ比べセット [8月28日 20点限り] 税込3,980円</p>
-            <p class="text-sm">宮崎餃子のなかでも、人気店の餃子を集めた「宮崎餃子食べ比べセット」。1日だけの限定セットです。</p>
-            <figure>
-              <img src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/common/items/c05_item13.png" alt="宮崎餃子食べ比べセット画像" class="w-48 sm:w-64" />
-              <figcaption class="text-sm">
-                (冷凍) 餃子の馬渡10個、たかなべギョーザ10個、中国料理樹樹10個、藤原牧場 やまんうえのお肉屋さん10個、一本気12個、風々々1個
-              </figcaption>
-            </figure>
-          </section>
+            <section>
+              <p class="font-bold">■宮崎餃子食べ比べセット [8月28日 20点限り] 税込3,980円</p>
+              <p class="text-sm">宮崎餃子のなかでも、人気店の餃子を集めた「宮崎餃子食べ比べセット」。1日だけの限定セットです。</p>
+              <figure>
+                <img src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/common/items/c05_item13.png" alt="宮崎餃子食べ比べセット画像" class="w-48 sm:w-64 mx-auto" />
+                <figcaption class="text-sm">
+                  (冷凍) 餃子の馬渡10個、たかなべギョーザ10個、中国料理樹樹10個、藤原牧場 やまんうえのお肉屋さん10個、一本気12個、風々々1個
+                </figcaption>
+              </figure>
+            </section>
+          </div>
 
-          <p>出店店舗：</p>
+          <p class="font-bold text-lg">【出店店舗・特別販売商品】</p>
           <ul class="ml-4 list-disc">
             <li>
               <NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink>
@@ -185,18 +190,32 @@
             </li>
           </ul>
 
+          <p class="font-bold text-lg">【みやざき餃子 冷凍餃子コーナーでの販売】</p>
+          <ul class="ml-4 list-disc">
+            <li>屋台骨 ：宮崎餃子</li>
+            <li>響 ：宮崎牛餃子</li>
+            <li>地鶏炭火焼 粋仙：みやざき地頭鶏餃子</li>
+            <li>KN’農心 ：みやざき地頭鶏餃子</li>
+            <li>黒潮工房 ：まさとの黒豚餃子</li>
+            <li>餃子の里 ：へべすの餃子</li>
+            <li>風来軒 ：風来軒餃子</li>
+          </ul>
+
+        </div>
+
+        <div class="text-center">
           <div class="mt-4"> 
-            <p>開催場所：<br />
-              <a href="https://www.daimaru-fukuoka.jp/access/" target="_blank">大丸福岡天神店</a></p>
-            <p>
+            <p>【開催場所】<br />
+              <a href="https://www.daimaru-fukuoka.jp/access/" target="_blank">大丸福岡天神店</a><br />
               福岡市中央区天神1-4-1
             </p>
           </div>
+
+          <a
+            href="https://www.daimaru-fukuoka.jp/contents/miyazakiten/"
+            target="_blank"
+            class="button text-lg mt-8">「第4回 熱いぜ宮崎展」 特設サイト</a>
         </div>
-        <a href="https://www.daimaru-fukuoka.jp/contents/miyazakiten/" target="_blank">
-          <img class="max-w-xs" src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/ogp.jpg" alt="概要" />
-        </a>
-      </div>
 
 
 
