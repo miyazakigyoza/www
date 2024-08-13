@@ -36,6 +36,7 @@
       <h1 class="mt-32 text-3xl font-serif font-black text-center bg-amber-400 p-4">２０２４年<br />宮崎ぎょうざの日<br />実施内容</h1>
       <p class="text-center">主催：宮崎県ひなた餃子連合会 / 後援：宮崎県 東京事務所・宮崎市 東京事務所</p>
 
+
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         首都圏 参加店舗
       </h2>
@@ -59,6 +60,23 @@
         </dd>
         <dd>
           <p>宮崎直送食材を使用した本格料理が楽しめるお店が恵比寿にOPEN♪ 自慢の料理に合わせるお酒も日本酒、焼酎など宮崎の銘酒が揃い踏み！ 本場の味をご堪能ください！</p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="flex flex-col sm:flex-row justify-between">
+          <a href="https://jingu-stadium-gourmet.com/shop/outfield/shop-551/" target="_blank">宮崎餃子専門店おざわ</a>
+          <p class="text-sm text-right"><a href="https://jingu-stadium-gourmet.com/shop/outfield/shop-551/" target="_blank">神宮球場 GATE
+            16</a></p>
+        </dt>
+        <dd class="p-2 border border-amber-500  bg-amber-200">
+          <p>【8月29日のみ】</p>
+          <ul>
+            <li>屋台骨　焼き餃子 5個 700円 / 10個 1,300円 / 20個 2,000円 （税込）</li>
+          </ul>
+        </dd>
+        <dd>
+          <p>今、勢いのある餃子が神宮球場に出店です！餃子とビールでお楽しみ下さい！</p>
         </dd>
       </dl>
 
@@ -104,7 +122,82 @@
         </div>
       -->
 
-      
+
+      <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
+        大丸福岡天神店「第4回 熱いぜ宮崎展」出店
+      </h2>
+      <h3 class="text-sm text-center mt-2">8月28日（水）〜9月2日（月）<br />宮崎餃子名店5種食べ比べセットのほか、先着限定のお得なセールを開催します<br />（2024/08/13更新）</h3>
+      <div class="flex flex-col sm:flex-row justify-between">
+        <div class="flex flex-col justify-between">
+          <section>
+            <p class="font-bold">■宮崎餃子名店5種食べ比べ [各日30点限り] 税込900円</p>
+            <figure>
+              <img src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/common/items/c05_item01.png" alt="宮崎餃子５種食べ比べ画像" class="w-48 sm:w-64" />
+              <figcaption class="text-sm">
+                Ⓐ餃子の馬渡2個、Ⓑたかなべギョーザ2個、Ⓒ中国料理樹樹2個、Ⓓ藤原牧場 やまんうえのお肉屋さん2個、Ⓔ一本気2個
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="mt-4">
+            <p class="font-bold">■宮崎餃子食べ比べセット [8月28日 20点限り] 税込3,980円</p>
+            <p class="text-sm">宮崎餃子のなかでも、人気店の餃子を集めた「宮崎餃子食べ比べセット」。1日だけの限定セットです。</p>
+            <figure>
+              <img src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/common/items/c05_item13.png" alt="宮崎餃子食べ比べセット画像" class="w-48 sm:w-64" />
+              <figcaption class="text-sm">
+                (冷凍) 餃子の馬渡10個、たかなべギョーザ10個、中国料理樹樹10個、藤原牧場 やまんうえのお肉屋さん10個、一本気12個、風々々1個
+              </figcaption>
+            </figure>
+          </section>
+
+          <p>出店店舗：</p>
+          <ul class="ml-4 list-disc">
+            <li>
+              <NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink>
+              <ul class="ml-4 list-[circle]">
+                <li>馬渡の手羽餃子三昧 [各日10点限り] 税込1,890円</li>
+                <li>馬渡のもっちり餃子 (冷凍) 20個入 [20点限り] 税込1,080円</li>
+              </ul>
+            </li>
+            <li>
+              <NuxtLink to="/shop/takanabegyoza/">たかなべギョーザ</NuxtLink>
+              <ul class="ml-4 list-[circle]">
+                <li>樹樹のおうちで中華三昧セット [8月28日限定 7点限り] 税込6,372円</li>
+                <li>ぎょうざ10個入り3パックセット  [各日10点限り] 税込2,430円</li>
+              </ul>
+            </li>
+            <li>
+              <NuxtLink to="/shop/kiki/">中国料理樹樹</NuxtLink>
+              <ul class="ml-4 list-[circle]">
+                <li>樹樹のおうちで中華三昧セット [7点限り] 税込6,372円</li>
+                <li>ぎょうざ10個入り3パックセット  [各日10点限り] 税込2,430円</li>
+              </ul>
+            </li>
+            <li>
+              <NuxtLink to="/shop/ippongi/">鶏専家 一本気</NuxtLink>
+              <ul class="ml-4 list-[circle]">
+                <li>一本気の鶏餃子と鶏炭火焼き食べ比べセット [各日10点限り] 税込1,296円</li>
+                <li>一本気食べ尽くしセット  [10点限り] 税込2,700円</li>
+              </ul>
+            </li>
+            <li>
+              <NuxtLink to="/shop/fujiwarafarm/">藤原牧場</NuxtLink>
+            </li>
+          </ul>
+
+          <div class="mt-4"> 
+            <p>開催場所：<br />
+              <a href="https://www.daimaru-fukuoka.jp/access/" target="_blank">大丸福岡天神店</a></p>
+            <p>
+              福岡市中央区天神1-4-1
+            </p>
+          </div>
+        </div>
+        <a href="https://www.daimaru-fukuoka.jp/contents/miyazakiten/" target="_blank">
+          <img class="max-w-xs" src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/ogp.jpg" alt="概要" />
+        </a>
+      </div>
+
 
 
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
@@ -215,6 +308,7 @@
       -->
 
 
+      <!--
       <h2 class="mt-20 text-2xl border-b border-solid border-amber-400 pb-2 text-center font-serif font-black">
         宮崎県ひなた餃子連合会<br />参加会員店舗
       </h2>
@@ -268,6 +362,7 @@
           <p>【店舗】焼き餃子パン10%引き</p>
         </dd>
       </dl>
+      -->
     </section>
 
     <section id="feature" class="container mx-auto mt-20 max-w-5xl">
@@ -323,6 +418,9 @@ export default {
 </script>
 
 <style scoped lang="postcss">
+strong {
+  @apply font-bold;
+}
 #feature p,
 #feature img {
   @apply mt-4;
