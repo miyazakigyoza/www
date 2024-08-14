@@ -133,7 +133,7 @@
         <div class="mt-8 flex flex-col justify-between">
           <div class="grid sm:grid-cols-2 gap-x-8 gap-y-4">
             <section>
-              <p class="font-bold">■宮崎餃子名店5種食べ比べ [各日30点限り] 税込900円</p>
+              <p class="font-bold">■宮崎餃子名店5種食べ比べ 税込900円 <span class="limited">[各日30点限り]</span></p>
               <p class="text-sm">宮崎餃子を代表する、餃子の馬渡・たかなべギョーザ・中国料理樹樹・藤原牧場 やまんうえのお肉屋さん・一本気の焼き餃子食べ比べ。</p>
               <figure>
                 <img src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/common/items/c05_item01.png" alt="宮崎餃子５種食べ比べ画像" class="w-48 sm:w-64 mx-auto" />
@@ -144,7 +144,7 @@
             </section>
 
             <section>
-              <p class="font-bold">■宮崎餃子食べ比べセット [8月28日 20点限り] 税込3,980円</p>
+              <p class="font-bold">■宮崎餃子食べ比べセット 税込3,980円 <span class="limited">[8月28日 20点限り]</span></p>
               <p class="text-sm">宮崎餃子のなかでも、人気店の餃子を集めた「宮崎餃子食べ比べセット」。1日だけの限定セットです。</p>
               <figure>
                 <img src="https://www.daimaru-fukuoka.jp/contents/miyazakiten/assets/images/common/items/c05_item13.png" alt="宮崎餃子食べ比べセット画像" class="w-48 sm:w-64 mx-auto" />
@@ -160,37 +160,40 @@
             <li>
               <NuxtLink to="/shop/mawatari/">餃子の馬渡</NuxtLink>
               <ul class="ml-4 list-[circle]">
-                <li>馬渡の手羽餃子三昧 [各日10点限り] 税込1,890円</li>
-                <li>馬渡のもっちり餃子 (冷凍) 20個入 [20点限り] 税込1,080円</li>
+                <li>馬渡の手羽餃子三昧 税込1,890円 <span class="limited">[各日10点限り]</span></li>
+                <li>馬渡のもっちり餃子 (冷凍) 20個入 税込1,080円 <span class="limited">[20点限り]</span></li>
               </ul>
             </li>
             <li>
               <NuxtLink to="/shop/takanabegyoza/">たかなべギョーザ</NuxtLink>
+              <ul class="ml-4 list-[circle]">
+                <li>たかなべギョーザ満足セット＋オリジナルエコバック 税込2,160円 <span class="limited">[8月28日限定]</span></li>
+              </ul>
             </li>
             <li>
               <NuxtLink to="/shop/kiki/">中国料理樹樹</NuxtLink>
               <ul class="ml-4 list-[circle]">
-                <li>樹樹のおうちで中華三昧セット [7点限り] 税込6,372円</li>
-                <li>ぎょうざ10個入り3パックセット  [各日10点限り] 税込2,430円</li>
+                <li>樹樹のおうちで中華三昧セット 税込6,372円 <span class="limited">[8月28日限定 7点限り]</span></li>
+                <li>ぎょうざ10個入り3パックセット 税込2,430円 <span class="limited">[各日10点限り]</span></li>
               </ul>
             </li>
             <li>
               <NuxtLink to="/shop/ippongi/">鶏専家 一本気</NuxtLink>
               <ul class="ml-4 list-[circle]">
-                <li>一本気の鶏餃子と鶏炭火焼き食べ比べセット [各日10点限り] 税込1,296円</li>
-                <li>一本気食べ尽くしセット  [10点限り] 税込2,700円</li>
+                <li>一本気の鶏餃子と鶏炭火焼き食べ比べセット 税込1,296円 <span class="limited">[各日10点限り]</span></li>
+                <li>一本気食べ尽くしセット 税込2,700円 <span class="limited">[10点限り]</span></li>
               </ul>
             </li>
             <li>
               <NuxtLink to="/shop/fujiwarafarm/">藤原牧場</NuxtLink>
               <ul class="ml-4 list-[circle]">
-                <li>牛餃子めし(300g) [各日30点限り] 税込1,080円</li>
+                <li>牛餃子めし(300g) 税込1,080円 <span class="limited">[各日30点限り]</span></li>
               </ul>
             </li>
             <li>
               <NuxtLink to="/shop/fufufu/">ベーカリーcafe風々々</NuxtLink>
               <ul class="ml-4 list-[circle]">
-                <li>焼き餃子ぱん [各日100点限り]税込350円</li>
+                <li>焼き餃子ぱん 税込350円 <span class="limited">[各日100点限り]</span></li>
               </ul>
             </li>
           </ul>
@@ -460,5 +463,9 @@ strong {
 
 .button {
   @apply relative inline-block w-full max-w-xs py-2 bg-orange-500 text-white text-center no-underline;
+}
+
+.limited {
+  @apply text-xs bg-amber-100 px-2 py-px ml-2 whitespace-nowrap;
 }
 </style>
