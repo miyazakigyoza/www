@@ -7,10 +7,10 @@
     </h1>
     <div class="mt-4 flex flex-col sm:grid sm:grid-rows-1 sm:grid-flow-col sm:grid-cols-3 gap-4">
       <div class="col-span-2">
-        <img :src="`${spot.profileImage.src}?w=960&ar=16:9&fit=crop`" class="w-full" />
+        <img :src="spot.profileImage.src" class="w-full aspect-video object-cover" />
         <p class="mt-4" v-html="spot.description"></p>
         <div v-if="spot.exterior" class="mt-4">
-          <img :src="`${spot.exterior.src}?w=960&ar=16:9&fit=crop`" class="w-1/2" />
+          <img :src="spot.exterior.src" class="w-1/2 aspect-video object-cover" />
         </div>
       </div>
 

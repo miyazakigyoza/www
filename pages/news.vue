@@ -21,7 +21,7 @@
             <p class="text-right text-xs">{{ entry.user.name }}</p>
           </div>
         <a
-          :href="`https://note.com/${entry.user.urlname}/n/${entry.key}?magazine_key=${$config.NOTE_MAGAZINE_ID}`"
+          :href="`https://note.com/${entry.user.urlname}/n/${entry.key}?magazine_key=${noteMagazineId}`"
           target="_blank"
           class="block absolute inset-0"></a>
       </li>
@@ -42,8 +42,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { NOTE_MAGAZINE_ID } from '~/lib/note'
 
 export default {
+  data: () => ({
+    noteMagazineId: NOTE_MAGAZINE_ID,
+  }),
   head() {
     return {
       title: 'お知らせ',

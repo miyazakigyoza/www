@@ -1,7 +1,7 @@
 <template>
   <main class="pt-8">
     <p class="py-4" v-if="shop.profileImage">
-      <img :src="`${shop.profileImage.src}?w=1200&ar=1200:630&fit=crop`" :alt="shop.name" class="w-full" />
+      <img :src="shop.profileImage.src" :alt="shop.name" class="w-full aspect-[1200/630] object-cover" />
     </p>
 
     <article class="container mx-auto">
@@ -16,7 +16,7 @@
         <div class="flex flex-cols justify-around">
           <section  v-for="product in products.items" :key="product._id" class="product relative w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 h-full">
             <p v-if="product.image" class="overflow-hidden rounded-full my-4">
-              <img :src="product.image.src+'?w=600&ar=1:1&fit=crop'" :alt="product.name" class="image" />
+              <img :src="product.image.src" :alt="product.name" class="image w-full aspect-square object-cover" />
             </p>
             <h3 class="text-center text-lg border-b border-dashed border-amber-400 mb-2 pb-2">
               {{ product.name }}
@@ -36,7 +36,7 @@
       <div class="mt-20 grid sm:grid-cols-2 gap-x-8 gap-y-8">
         <section class="flex flex-col gap-2">
           <div v-if="shop.exterior">
-            <img :src="shop.exterior.src + '?w=960&ar=3:2&fit=crop'" />
+            <img :src="shop.exterior.src" class="w-full aspect-[3/2] object-cover" />
           </div>
           <h2 class="text-xl">店舗情報</h2>
           <dl v-if="shop.address">
@@ -171,6 +171,8 @@
 </template>
 
 <script>
+import { findShop, getRelatedShops, getProductsByCompany } from '~/lib/cms'
+
 export default {
   head() {
     return {
@@ -181,7 +183,7 @@ export default {
         { hid: 'og:description', property: 'og:description', content: this.shop.description.replace(/(\r?\n)|(<([^>]+)>)/gi,'') },
         { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:url', property: 'og:url', content: this.url },
-        { hid: 'og:image', property: 'og:image', content: this.shop.profileImage ? this.shop.profileImage.src + '?w=1200&ar=1200:630&fit=crop' : 'https://miyazakigyoza.jp/img/ogp.png' },
+        { hid: 'og:image', property: 'og:image', content: this.shop.profileImage ? 'https://miyazakigyoza.jp' + this.shop.profileImage.src : 'https://miyazakigyoza.jp/img/ogp.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
       ],
     }
@@ -216,45 +218,19 @@ export default {
       }
     }
   },
-  async asyncData({$axios, $config, params, error}){
-    const id = params.id
+  asyncData({params, error}){
+    const shop = findShop(params.id)
 
-    $axios.setToken($config.TOKEN, 'Bearer')
-    const shops = await $axios.$get($config.API + '/members/shops/', {
-      params: {
-        depth: 2,
-        slug: id,
-      }
-    })
-
-    if( shops.items.length === 0 ) {
+    if( !shop ) {
       error({
         statusCode: 404,
         message: 'Not Found',
       })
-      throw error
+      return
     }
-    
-    const shop = shops.items[0]
 
-    const relateds = shop.company
-      ? await $axios.$get($config.API + '/members/shops', {
-          params: {
-            depth: 1,
-            '_id[ne]': shop._id,
-            'company': shop.company._id
-          }
-        })
-      : {items: []};
-
-    const products = shop.company
-    ? await $axios.$get($config.API + '/members/products', {
-        params: {
-          depth: 1,
-          'company': shop.company._id
-        }
-      })
-    : {items:[]};
+    const relateds = getRelatedShops(shop)
+    const products = getProductsByCompany(shop.company ? shop.company._id : null)
 
     return {
       shop,

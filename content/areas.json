@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "61b168e632470a0018d7a4f6",
+    "_sys": {
+      "raw": {
+        "createdAt": "2021-12-09T02:24:38.853Z",
+        "updatedAt": "2022-10-17T13:44:31.753Z",
+        "firstPublishedAt": "2021-12-09T02:24:38.853Z",
+        "publishedAt": "2022-10-17T13:44:31.753Z"
+      },
+      "createdAt": "2021-12-09T02:24:38.853Z",
+      "updatedAt": "2022-10-17T13:44:31.753Z"
+    },
+    "name": "宮崎市内",
+    "slug": "miyazaki",
+    "order": 1
+  },
+  {
+    "_id": "61b168d632470a0018d7a438",
+    "_sys": {
+      "raw": {
+        "createdAt": "2021-12-09T02:24:22.972Z",
+        "updatedAt": "2022-10-17T13:44:49.666Z",
+        "firstPublishedAt": "2021-12-09T02:24:22.972Z",
+        "publishedAt": "2022-10-17T13:44:49.666Z"
+      },
+      "createdAt": "2021-12-09T02:24:22.972Z",
+      "updatedAt": "2022-10-17T13:44:49.666Z"
+    },
+    "name": "県央",
+    "slug": "center",
+    "order": 2
+  },
+  {
+    "_id": "61b168dd32470a0018d7a486",
+    "_sys": {
+      "raw": {
+        "createdAt": "2021-12-09T02:24:29.389Z",
+        "updatedAt": "2022-10-17T13:44:57.241Z",
+        "firstPublishedAt": "2021-12-09T02:24:29.389Z",
+        "publishedAt": "2022-10-17T13:44:57.241Z"
+      },
+      "createdAt": "2021-12-09T02:24:29.389Z",
+      "updatedAt": "2022-10-17T13:44:57.241Z"
+    },
+    "name": "県北",
+    "slug": "northern",
+    "order": 3
+  }
+]

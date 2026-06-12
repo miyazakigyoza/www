@@ -14,21 +14,13 @@
   </template>
 
 <script>
+  import { getAreas } from '~/lib/cms'
+
   export default {
     props: ['select'],
     data: () =>({
-      areas: [],
+      areas: getAreas(),
     }),
-    async fetch(){
-      this.$axios.setToken(this.$config.TOKEN, 'Bearer')
-      const areas = await this.$axios.$get(this.$config.API + '/members/areas', {
-        params: {
-          select: '_id,slug,name',
-          order: 'order'
-        }
-      })
-      this.areas = areas
-    },
   }
 </script>
   

@@ -89,3 +89,21 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Additional env files
+.env.*
+
+# SSL / PEM
+*.pem
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Claude Code
+.claude/
+
+# Continue AI
+.continue/
+
+# Wrangler (Cloudflare) local state
+.wrangler/

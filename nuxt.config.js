@@ -1,9 +1,8 @@
+import areas from './content/areas.json'
+import shops from './content/shops.json'
+
 export default {
   publicRuntimeConfig: {
-    API: process.env.API_URL,
-    TOKEN: process.env.API_TOKEN,
-    NOTE_API: process.env.NOTE_API,
-    NOTE_MAGAZINE_ID: process.env.NOTE_MAGAZINE_ID,
     HUBSPOT_PORTALID: process.env.HUBSPOT_PORTALID,
     HUBSPOT_FORMID: process.env.HUBSPOT_FORMID,
     GOOGLE_MAP: process.env.GOOGLE_MAP,
@@ -87,7 +86,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios',
     ['@nuxtjs/google-gtag', {
       id: process.env.GTAG_ID,
       debug: false,
@@ -96,6 +94,15 @@ export default {
 
   router: {
     trailingSlash: true,
+  },
+
+  // 店舗データはローカル JSON（content/）から静的生成する
+  generate: {
+    fallback: '404.html', // Cloudflare Pages 用の 404 ページ
+    routes: [
+      ...shops.map((shop) => `/shop/${shop.slug}/`),
+      ...areas.map((area) => `/shop/area/${area.slug}/`),
+    ],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

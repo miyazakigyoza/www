@@ -16,7 +16,11 @@ export const mutations = {
 
 export const actions = {
   async fetchContents({ commit }) {
-    const note = await this.$axios.$get(this.$config.NOTE_API, {params:{page:1}})
+    // Cloudflare Pages Functions の /note（functions/note.js）を呼ぶ
+    // クライアント側（mounted）からのみ実行されるため fetch をそのまま使う
+    const res = await fetch('/note?page=1')
+    if (!res.ok) return
+    const note = await res.json()
     commit('setContents', note.data.section.contents)
   },
 }

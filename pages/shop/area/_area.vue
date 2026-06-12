@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import { findArea, getShops } from '~/lib/cms'
+
 export default {
   head() {
     return {
@@ -48,24 +50,13 @@ export default {
     slug: null,
     area: null,
   }),
-  async asyncData({$axios, $config, params}){
-    const order = 'furigana'
+  asyncData({params}){
     const slug = params.area || null
+    const area = slug ? findArea(slug) : null
 
-    $axios.setToken($config.TOKEN, 'Bearer')
-    const areas = await $axios.$get($config.API + '/members/areas', {
-      params: {
-        select: ['_id', 'slug', 'name'].join(','),
-      }
-    })
-    const area = slug ? areas.items.find(item => item.slug === slug) : null
-
-    const shops = await $axios.$get($config.API + '/members/shops', {
-      params: {
-        select: ['_id','slug', 'name', 'area', 'address', 'profileImage'].join(','),
-        order,
-        area: area ? area._id : null,
-      }
+    const shops = getShops({
+      order: 'furigana',
+      area: area ? area._id : null,
     })
     return {
       shops,

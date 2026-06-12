@@ -7,6 +7,11 @@
       </h1>
     </header>
 
+    <section class="mt-8 container mx-auto max-w-3xl text-center">
+      <p>準備中です。</p>
+    </section>
+
+    <!--
     <section class="mt-4 container mx-auto max-w-3xl text-center">
       <a class="button" href="https://www.google.com/maps/d/viewer?mid=1upVtF9JC5eGLh8YuKEDVRAzMmjr7CJc&hl=ja&usp=sharing" target="_blank">Google Mapで開く</a>
     </section>
@@ -17,6 +22,7 @@
         class="w-full aspect-square"
       ></iframe>
     </section>
+    -->
 
     <!--
     <section class="mt-4 container mx-auto">

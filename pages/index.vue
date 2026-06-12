@@ -17,7 +17,7 @@
           :key="shop._id"
           class="block absolute w-screen inset-0 overflow-hidden"
           v-show="i===n">
-          <img :src="shop.profileImage.src + '?w=1536&ar=16:9&fit=crop'" alt="" class="object-cover h-full w-full" />
+          <img :src="shop.profileImage.src" alt="" class="object-cover h-full w-full" />
           <p class="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 bg-white text-black p-4">
             {{ shop.name }}
           </p>
@@ -63,7 +63,7 @@
               <p class="whitespace-nowrap truncate text-orange-600">{{ entry.name }}</p>
               <p class="text-right text-xs">{{ entry.user.name }}</p>
             <a
-              :href="`https://note.com/${entry.user.urlname}/n/${entry.key}?magazine_key=${$config.NOTE_MAGAZINE_ID}`"
+              :href="`https://note.com/${entry.user.urlname}/n/${entry.key}?magazine_key=${noteMagazineId}`"
               target="_blank"
               class="block absolute inset-0"></a>
           </article>
@@ -198,6 +198,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { getShops } from '~/lib/cms'
+import { NOTE_MAGAZINE_ID } from '~/lib/note'
 
 export default {
   head() {
@@ -207,29 +209,19 @@ export default {
     }
   },
   data: () => ({
-    areas: {},
     shops: {},
     n: null,
     newsIndex: 0,
+    noteMagazineId: NOTE_MAGAZINE_ID,
   }),
   computed: {
     ...mapGetters({
       note: 'note/contents',
     })
   },
-  async asyncData({$axios, $config}){
-    $axios.setToken($config.TOKEN, 'Bearer')
-    const areas = await $axios.$get($config.API + '/members/areas')
-    const shops = await $axios.$get($config.API + '/members/shops', {
-      params: {
-        select: ['_id', 'slug', 'name', 'profileImage', 'slug'].join(','),
-        'feature': true,
-      }
-    })
-
+  asyncData(){
     return {
-      areas,
-      shops,
+      shops: getShops({ feature: true }),
     }
   },
   methods: {

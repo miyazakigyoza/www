@@ -13,20 +13,15 @@
 </template>
 
 <script>
+import { getShops } from '~/lib/cms'
+
 export default {
   data: () => ({
     shops: {}
   }),
-  async asyncData({$axios, $config}){
-    $axios.setToken($config.TOKEN, 'Bearer')
-    const shops = await $axios.$get($config.API + '/members/shops', {
-      params: {
-        depth: 2,
-        order: 'furigana',
-      }
-    })
+  asyncData(){
     return {
-      shops,
+      shops: getShops({ order: 'furigana' }),
     }
   }
 }
