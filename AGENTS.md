@@ -190,7 +190,7 @@ Cloudflare Pages のプロジェクト設定:
 |---|---|
 | ビルドコマンド | `yarn generate` |
 | ビルド出力ディレクトリ | `dist` |
-| Node バージョン | `.nvmrc`（v18）が自動で使用される |
+| Node バージョン | `.nvmrc`（v22）が自動で使用される |
 
 404 ページは `generate.fallback: '404.html'` で生成済み。
 
