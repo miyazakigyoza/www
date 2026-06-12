@@ -15,7 +15,6 @@ import { fileURLToPath } from 'node:url'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const contentDir = path.join(root, 'content')
 const assetsDir = path.join(root, 'static', 'cms') // 配信用（最大 1600px に縮小）
-const originalsDir = path.join(root, 'content', 'originals') // 原寸アーカイブ
 
 // .env.local を読む（dotenv 非依存）
 const env = {}
@@ -75,7 +74,6 @@ function collectAndRewrite(value) {
 
 await mkdir(contentDir, { recursive: true })
 await mkdir(assetsDir, { recursive: true })
-await mkdir(originalsDir, { recursive: true })
 
 const models = {
   areas: await fetchAll('areas', { order: 'order' }),
@@ -101,9 +99,7 @@ async function download(url, dest) {
 
 let done = 0
 for (const [url, name] of downloads) {
-  // 原寸（アーカイブ用）と、imgix で 1600px 以下に縮小した配信用の両方を保存
-  const okOriginal = await download(url, path.join(originalsDir, name))
-  const okWeb = await download(`${url}?w=1600&fit=max&q=80`, path.join(assetsDir, name))
-  if (okOriginal && okWeb) done++
+  // imgix で 1600px 以下に縮小した配信用画像を保存
+  if (await download(`${url}?w=1600&fit=max&q=80`, path.join(assetsDir, name))) done++
 }
-console.log(`画像 ${done}/${downloads.size} 件ダウンロード（static/cms/ と content/originals/）`)
+console.log(`画像 ${done}/${downloads.size} 件ダウンロード（static/cms/）`)

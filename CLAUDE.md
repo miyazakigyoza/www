@@ -41,11 +41,10 @@ Nuxt 2 の `target: 'static'` による静的サイト生成（SSG）で構築�
 
 ```
 miyazakigyoza/
-├── content/                # 店舗データ（旧 Newt CMS から取り込んだ JSON）
+├── content/                # 店舗データ（旧 Newt CMS から取り込んだ JSON。ビルドに必須）
 │   ├── areas.json          # エリア（order 順で保存済み）
 │   ├── shops.json          # 店舗（depth=2 で参照解決済み、furigana 順）
-│   ├── products.json       # 商品
-│   └── originals/          # 画像の原寸アーカイブ（配信には使わない）
+│   └── products.json       # 商品
 ├── functions/              # Cloudflare Pages Functions
 │   └── note.js             # GET /note — note.com マガジン記事一覧のプロキシ（旧 AWS Lambda の置き換え）
 ├── lib/
