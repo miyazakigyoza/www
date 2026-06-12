@@ -2,6 +2,7 @@
   "name": "miyazakigyoza",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "dev": "nuxt --dotenv .env.local",
     "build": "nuxt build",
